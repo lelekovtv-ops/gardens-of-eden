@@ -9,17 +9,16 @@ section). Plain HTML/CSS/JS, no build step.
 
 ## Information architecture
 
-Single-page scroll-hub. Sections (each is a deep-linkable anchor):
+Presentation deck: fixed left sidebar (table of contents) + 15 full-screen
+slides (`#s01`…`#s15`), keyboard navigation (↑ ↓ Space Home End), slide
+counter and progress bar. Groups:
 
-| # | Anchor | What it holds |
-|---|--------|----------------|
-| — | `#hero` | Showreel loop + the one-line hook + primary CTAs |
-| 01 | `#concept` | Creative directions (concept cards; "Gardens of Eden" is one of them) |
-| 02 | `#work` | The three deliverables — Showroom Reel · Brand Film · 20-sec Ad Spots |
-| 03 | `#process` | Pre-production → Production → Post → Delivery + timeline |
-| 04 | `#pricing` | 3 tiers (Essential / Signature / Premiere) + Custom, USD/₽ toggle |
-| 05 | `#about` | Studio positioning, team roles, why-us, clients |
-| 06 | `#contact` | Book a call · WhatsApp/Telegram · Email |
+| Group | Slides |
+|-------|--------|
+| Introduction | 01 Title · 02 About us (Maxim Kaplya, Alexander Lelekov) · 03 How we see content |
+| Concepts | 04 Concept I "Grand Budapest on Bang Tao" (approved) · 05 Concept II · 06 Concept III |
+| Content system | 07 Content map (4 tracks) · 08 Brand film & showroom · 09 YouTube · 10 Reels · 11 VSL · 12 Sales training · 13 Sales & the site |
+| Closing | 14 Packages · 15 Next step |
 
 ## Files
 

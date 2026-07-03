@@ -1,6 +1,7 @@
-/* Campaign proposal site — nav, i18n (RU/EN), currency, reveals.
-   Plain JS, no build. Both languages are complete so the toggle never
-   shows an empty/half-translated section. */
+/* Gardens of Eden — Vision & Concept.
+   Presentation deck: sidebar chapters, keyboard navigation, slide counter,
+   progress, i18n (RU/EN) and currency swap. Plain JS, no build.
+   Both languages are complete so the toggle never shows a half-translated deck. */
 
 (function () {
   "use strict";
@@ -10,139 +11,276 @@
      ============================================================ */
   var I18N = {
     en: {
-      "meta.description": "Video advertising campaign proposal — brand film, showroom reel, ad spots.",
-      "brand.name": "Studio",
-      "nav.concept": "Concept", "nav.work": "Work", "nav.process": "Process",
-      "nav.pricing": "Pricing", "nav.about": "About", "nav.contact": "Contact", "nav.cta": "Discuss",
-      "hero.eyebrow": "Campaign proposal · Client · 2026",
-      "hero.title": "A film that makes the brand impossible to ignore.",
-      "hero.lede": "A brand film, a showroom reel and a series of 20-second ad spots — one campaign, one production team.",
-      "hero.ctaPrimary": "See the work", "hero.ctaSecondary": "Packages & pricing", "hero.scroll": "Begin",
-      "concept.title": "The Concept",
-      "concept.lead": "The creative direction for the campaign — the world, the tone, the feeling the brand should leave behind.",
-      "concept.tagLead": "Direction A", "concept.c1Title": "Gardens of Eden",
-      "concept.c1Text": "Botanical, symmetrical, warm — precise framing and a lush palette. A cinematic, unhurried world.",
-      "concept.tag2": "Direction B", "concept.c2Title": "Concept two",
-      "concept.c2Text": "An alternative creative territory — to be developed together with the client.",
-      "concept.tag3": "More", "concept.c3Title": "Further directions",
-      "concept.c3Text": "Additional creative directions on request.",
-      "work.title": "The Work", "work.lead": "Three products, one production. Each is built to do a specific job.",
-      "work.comingSoon": "Video coming soon",
-      "work.d1Title": "Showroom Reel",
-      "work.d1Purpose": "A seamless loop for the showroom screens — reads with the sound off, always on.",
-      "work.d1Spec": "Looping · no-audio-reliant · 16:9 & vertical for in-store screens",
-      "work.d2Title": "Company / Brand Film",
-      "work.d2Purpose": "A ~2-minute cinematic film that tells the company's story — the anchor of the campaign.",
-      "work.d2Spec": "~2 min · 16:9 cinematic · full sound design",
-      "work.d3Title": "Ad Spots · 20 sec",
-      "work.d3Purpose": "A set of short spots for social and paid media — cut for attention in the first second.",
-      "work.d3Spec": "Several × 20s · 16:9 / 9:16 / 1:1 / 4:5",
-      "process.title": "Process & Timeline",
-      "process.lead": "From first idea to final delivery — a clear path, typically 5–7 weeks.",
-      "process.p1Title": "Pre-production", "process.p1Text": "Script, storyboard, casting, locations.", "process.p1Meta": "~1–2 weeks",
-      "process.p2Title": "Production", "process.p2Text": "The shoot — crew, camera, light, art.", "process.p2Meta": "2–4 shoot days",
-      "process.p3Title": "Post-production", "process.p3Text": "Edit, color, sound design, VFX.", "process.p3Meta": "~2–3 weeks",
-      "process.p4Title": "Delivery", "process.p4Text": "All formats, revisions, handoff.", "process.p4Meta": "~1 week",
-      "pricing.title": "Packages & Pricing",
-      "pricing.lead": "Everything below is produced in-house — from script to final grade. Transparent packages, no surprises.",
-      "pricing.from": "from",
-      "pricing.t1Name": "Essential", "pricing.t1For": "One hero deliverable, done beautifully.",
-      "pricing.t1i1": "Showroom reel OR 3× 20-sec spots", "pricing.t1i2": "1 shoot day", "pricing.t1i3": "1 creative concept",
-      "pricing.t1i4": "Color grade + basic sound", "pricing.t1i5": "HD · 16:9 + vertical", "pricing.t1i6": "2 revision rounds",
-      "pricing.popular": "Most chosen",
-      "pricing.t2Name": "Signature", "pricing.t2For": "The full campaign — film, reel and spots.",
-      "pricing.t2i1": "Brand film (~2 min)", "pricing.t2i2": "Showroom reel + 3× 20-sec spots", "pricing.t2i3": "2 shoot days",
-      "pricing.t2i4": "Up to 2 concepts", "pricing.t2i5": "Full grade + sound design", "pricing.t2i6": "4K · all social formats", "pricing.t2i7": "3 revision rounds",
-      "pricing.t3Name": "Premiere", "pricing.t3For": "The flagship — every format, no compromise.",
-      "pricing.t3i1": "Everything in Signature", "pricing.t3i2": "6× 20-sec spots", "pricing.t3i3": "3 shoot days",
-      "pricing.t3i4": "Original music + motion graphics", "pricing.t3i5": "4K / HDR · all formats", "pricing.t3i6": "Stills + BTS package", "pricing.t3i7": "Priority scheduling",
-      "pricing.t4Name": "Custom", "pricing.t4For": "Bigger scope, multiple locations, a bespoke idea? Let's build it together.",
-      "pricing.choose": "Choose", "pricing.quote": "Request a quote",
-      "pricing.note": "Prices are indicative and confirmed after a short scoping call.",
-      "about.title": "About Us",
-      "about.lead": "A production studio that takes a film from the first word of the script to the final grade — in-house.",
-      "about.r1": "Director", "about.r2": "DP / Cinematographer", "about.r3": "Producer", "about.r4": "Editor / Colorist",
-      "about.n1": "Name", "about.n2": "Name", "about.n3": "Name", "about.n4": "Name",
-      "about.w1t": "In-house, end to end", "about.w1p": "Script, shoot, edit, color and sound under one roof.",
-      "about.w2t": "Our own gear", "about.w2p": "Cinema camera and lighting — no rental delays.",
-      "about.w3t": "Fast turnaround", "about.w3p": "A full campaign in weeks, not months.",
-      "about.clients": "Selected work & clients",
-      "contact.title": "Next Step",
-      "contact.lead": "Pick a package or tell us the idea — a short call is the fastest way to a plan and a number.",
-      "contact.book": "Book a 15-min call", "contact.chat": "WhatsApp / Telegram", "contact.email": "Email us",
-      "footer.tag": "Campaign proposal",
+      "meta.description": "Gardens of Eden Phuket — content vision & concept presentation.",
+      "side.sub": "Vision & Concept",
+      "side.g1": "Introduction", "side.g2": "Concepts", "side.g3": "Content system", "side.g4": "Closing",
+      "side.s01": "Title", "side.s02": "About us", "side.s03": "How we see content",
+      "side.s04": "Concept I", "side.s05": "Concept II", "side.s06": "Concept III",
+      "side.s07": "Content map", "side.s08": "Brand film & showroom", "side.s09": "YouTube",
+      "side.s10": "Reels / Shorts", "side.s11": "VSL", "side.s12": "Sales team training",
+      "side.s13": "Sales & the site", "side.s14": "Packages", "side.s15": "Next step",
+      "side.hint": "Use ↑ ↓ keys",
+
+      "s01.eyebrow": "Content presentation · BPM Media",
+      "s01.sub": "Vision & Concept",
+      "s01.meta": "Bang Tao, Phuket · handover Q4 2026",
+      "s01.hint": "Scroll or press ↓ to begin",
+
+      "s02.title": "About us",
+      "s02.lead": "Two people who take a film from the first word of the script to the final grade.",
+      "s02.photo": "Photo",
+      "s02.p1role": "Role — to be filled",
+      "s02.p2role": "Role — to be filled",
+      "s02.w1t": "Full cycle in-house", "s02.w1p": "Script, shoot, edit, color and sound — one team.",
+      "s02.w2t": "Cinema craft", "s02.w2p": "Film-grade look: staging, light, grade.",
+      "s02.w3t": "AI previz", "s02.w3p": "We preview every frame before the shoot.",
+
+      "s03.title": "How we see content",
+      "s03.lead": "Not a set of clips — one world and one system. Every video speaks the same language and does its own job.",
+      "s03.t1": "Brand", "s03.t1p": "The film and the showroom — they make people fall in love.",
+      "s03.t2": "Sales", "s03.t2p": "VSL, villa tours, ads — they turn love into a deal.",
+      "s03.t3": "Organic", "s03.t3p": "YouTube and Reels — a steady stream of new attention.",
+      "s03.t4": "Team", "s03.t4p": "Training for sellers and brokers — everyone tells the same story.",
+      "s03.funnel": "Discover → fall in love → buy → sell it on.",
+
+      "s04.badge": "Approved by the client · in production",
+      "s04.title": "Concept I — “Grand Budapest on Bang Tao”",
+      "s04.lead": "A legendary Thai concierge answers one question in two minutes — “What is Gardens of Eden?” — and leads us through the garden, the home, the kitchen and the island, helping with his own hands in every story.",
+      "s04.k1": "Symmetry & frontal staging", "s04.k2": "Chapter title cards", "s04.k3": "Deadpan humour",
+      "s04.k4": "Sage green palette", "s04.k5": "60 frames scripted", "s04.k6": "Seamless loop ending",
+      "s04.structLabel": "Film structure:",
+      "s04.struct": "Prologue → Garden → Home → project insert R1–R12 → Kitchen → Phuket → Finale (loops back to frame 1)",
+
+      "s05.badge": "In development", "s05.title": "Concept II",
+      "s05.text": "An alternative creative territory — we will present it at the next meeting.",
+      "s05.soon": "Coming soon",
+      "s06.badge": "In development", "s06.title": "Concept III",
+      "s06.text": "A third direction — so there is a real choice of worlds, not one option.",
+      "s06.soon": "Coming soon",
+
+      "s07.title": "Content map — every position",
+      "s07.lead": "Everything a resort development needs, grouped into four tracks. We start with the film — the rest plugs into the same world.",
+      "s07.c1t": "Brand",
+      "s07.c1i1": "Brand film 2:00", "s07.c1i2": "Lobby loop (silent, seamless)", "s07.c1i3": "Project insert R1–R12",
+      "s07.c1i4": "Cutdowns 30 / 15 sec", "s07.c1i5": "Verticals 9:16 per chapter", "s07.c1i6": "Behind the scenes",
+      "s07.c2t": "Sales",
+      "s07.c2i1": "VSL for the landing page", "s07.c2i2": "Ad spots 15–30 sec", "s07.c2i3": "Villa tours by unit type",
+      "s07.c2i4": "Drone overview of Bang Tao", "s07.c2i5": "Construction updates", "s07.c2i6": "Virtual tour",
+      "s07.c3t": "Organic",
+      "s07.c3i1": "YouTube channel", "s07.c3i2": "Reels / Shorts / TikTok", "s07.c3i3": "Founder & expert interviews",
+      "s07.c3i4": "Buyer testimonials", "s07.c3i5": "Event coverage",
+      "s07.c4t": "Team",
+      "s07.c4i1": "Sales team training library", "s07.c4i2": "Broker & agency kit", "s07.c4i3": "Investor video",
+      "s07.c4i4": "Localisation RU / EN / ZH",
+
+      "s08.title": "Brand film & showroom",
+      "s08.lead": "The anchor of the whole system — one shoot, five deliverables.",
+      "s08.d1": "Master 2:00 with sound — for the website and presentations",
+      "s08.d2": "Lobby loop without sound — seamless, always on in the showroom",
+      "s08.d3": "Project insert R1–R12 — renders of the development for pitches",
+      "s08.d4": "Cutdowns 30 / 15 sec — for advertising",
+      "s08.d5": "Verticals 9:16 from the chapters — for social media",
+      "s08.statusLabel": "Status:",
+      "s08.status": "script of 60 frames done, previz in progress.",
+
+      "s09.title": "YouTube",
+      "s09.lead": "A channel that builds demand for “life on Phuket” — and makes Gardens of Eden its answer.",
+      "s09.f1": "Project overview films", "s09.f2": "Bang Tao neighbourhood guides",
+      "s09.f3": "“Why Phuket” — investor explainers", "s09.f4": "Construction vlog until handover",
+      "s09.f5": "Interviews with the team behind the project",
+      "s09.metaLabel": "Cadence:", "s09.meta": "2–4 videos per month.",
+
+      "s10.title": "Reels / Shorts",
+      "s10.lead": "A vertical stream cut from the film shoots and the site — attention in the first second.",
+      "s10.f1": "8–16 reels per month", "s10.f2": "Hooks from the film world — the concierge, the details, the island",
+      "s10.f3": "Instagram, TikTok, YouTube Shorts", "s10.f4": "RU / EN versions",
+
+      "s11.title": "VSL — video sales letter",
+      "s11.lead": "A selling video for the landing page: it walks a cold visitor to a request.",
+      "s11.f1": "Structure: dream → the project → the offer → call to action",
+      "s11.f2": "3–5 minutes, presenter-led or narrated",
+      "s11.f3": "A/B versions of the opening",
+      "s11.f4": "RU / EN / ZH localisations",
+
+      "s12.title": "Training videos for sellers",
+      "s12.lead": "A closed video library so every seller and agent tells the project the same way.",
+      "s12.f1": "The product by unit type — what to show and say",
+      "s12.f2": "Objection handling — short answer clips",
+      "s12.f3": "Onboarding for new agents",
+      "s12.f4": "Broker & agency kit",
+
+      "s13.title": "Sales & the site",
+      "s13.lead": "Video that shows the development itself — and keeps trust alive until handover in Q4 2026.",
+      "s13.f1": "Drone overview of Bang Tao and the site",
+      "s13.f2": "Villa tours by unit type",
+      "s13.f3": "Monthly construction updates",
+      "s13.f4": "Buyer testimonials after handover",
+
+      "s14.title": "Packages",
+      "s14.lead": "Three ways to start — from the film alone to the full content system.",
+      "s14.from": "from", "s14.choose": "Choose", "s14.popular": "Most chosen",
+      "s14.t1Name": "Film",
+      "s14.t1i1": "Brand film 2:00 + lobby loop", "s14.t1i2": "Insert R1–R12", "s14.t1i3": "Cutdowns + verticals",
+      "s14.t2Name": "Film + Sales",
+      "s14.t2i1": "Everything in “Film”", "s14.t2i2": "VSL + ad spots", "s14.t2i3": "Villa tours + drone",
+      "s14.t2i4": "Sales team training library",
+      "s14.t3Name": "Content system",
+      "s14.t3i1": "Everything in “Film + Sales”", "s14.t3i2": "YouTube + Reels, monthly",
+      "s14.t3i3": "Construction updates", "s14.t3i4": "Localisation RU / EN / ZH",
+      "s14.note": "Numbers are filled in after the scope is agreed — this slide fixes the structure of the offer.",
+
+      "s15.title": "Next step",
+      "s15.lead": "Choose the concept, approve the content map — and we bring the budget and the calendar to the next meeting.",
+      "s15.n1": "Concept — approved / discuss",
+      "s15.n2": "Content map — pick the tracks to start with",
+      "s15.n3": "Budget & timeline — we prepare within 3 days",
+      "s15.chat": "WhatsApp / Telegram", "s15.email": "Email us",
     },
     ru: {
-      "meta.description": "Предложение по видеорекламной кампании — фильм о компании, реел для шоурума, ролики.",
-      "brand.name": "Студия",
-      "nav.concept": "Концепция", "nav.work": "Работы", "nav.process": "Процесс",
-      "nav.pricing": "Стоимость", "nav.about": "О нас", "nav.contact": "Контакт", "nav.cta": "Обсудить",
-      "hero.eyebrow": "Предложение по кампании · Клиент · 2026",
-      "hero.title": "Фильм, после которого бренд невозможно не заметить.",
-      "hero.lede": "Фильм о компании, реел для шоурума и серия 20-секундных роликов — одна кампания, одна команда продакшена.",
-      "hero.ctaPrimary": "Смотреть работы", "hero.ctaSecondary": "Пакеты и цены", "hero.scroll": "Начать",
-      "concept.title": "Концепция",
-      "concept.lead": "Креативное направление кампании — мир, тон и ощущение, которое должен оставлять бренд.",
-      "concept.tagLead": "Направление A", "concept.c1Title": "Gardens of Eden",
-      "concept.c1Text": "Ботаника, симметрия, тепло — выверенные кадры и насыщенная палитра. Кинематографичный, неспешный мир.",
-      "concept.tag2": "Направление B", "concept.c2Title": "Концепция два",
-      "concept.c2Text": "Альтернативное креативное направление — разрабатываем вместе с клиентом.",
-      "concept.tag3": "Ещё", "concept.c3Title": "Другие направления",
-      "concept.c3Text": "Дополнительные направления — по запросу.",
-      "work.title": "Работы", "work.lead": "Три продукта, один продакшен. Каждый решает свою задачу.",
-      "work.comingSoon": "Видео скоро",
-      "work.d1Title": "Реел для шоурума",
-      "work.d1Purpose": "Бесшовная петля для экранов в шоуруме — читается без звука, крутится постоянно.",
-      "work.d1Spec": "Петля · без опоры на звук · 16:9 и вертикаль для экранов в зале",
-      "work.d2Title": "Фильм о компании",
-      "work.d2Purpose": "Кинематографичный фильм ~2 минуты, рассказывающий историю компании — ядро кампании.",
-      "work.d2Spec": "~2 мин · 16:9 кино · полный саунд-дизайн",
-      "work.d3Title": "Рекламные ролики · 20 сек",
-      "work.d3Purpose": "Серия коротких роликов для соцсетей и рекламы — смонтированы, чтобы захватить внимание в первую секунду.",
-      "work.d3Spec": "Несколько × 20 сек · 16:9 / 9:16 / 1:1 / 4:5",
-      "process.title": "Процесс и сроки",
-      "process.lead": "От первой идеи до финальной сдачи — понятный путь, обычно 5–7 недель.",
-      "process.p1Title": "Препродакшн", "process.p1Text": "Сценарий, раскадровка, кастинг, локации.", "process.p1Meta": "~1–2 недели",
-      "process.p2Title": "Съёмка", "process.p2Text": "Съёмочные дни — команда, камера, свет, декорации.", "process.p2Meta": "2–4 съёмочных дня",
-      "process.p3Title": "Постпродакшн", "process.p3Text": "Монтаж, цвет, саунд-дизайн, графика.", "process.p3Meta": "~2–3 недели",
-      "process.p4Title": "Сдача", "process.p4Text": "Все форматы, правки, передача материалов.", "process.p4Meta": "~1 неделя",
-      "pricing.title": "Пакеты и цены",
-      "pricing.lead": "Всё ниже мы делаем сами — от сценария до финального цвета. Прозрачные пакеты, без сюрпризов.",
-      "pricing.from": "от",
-      "pricing.t1Name": "Базовый", "pricing.t1For": "Один ключевой продукт, сделанный красиво.",
-      "pricing.t1i1": "Реел для шоурума ИЛИ 3× ролика по 20 сек", "pricing.t1i2": "1 съёмочный день", "pricing.t1i3": "1 креативная концепция",
-      "pricing.t1i4": "Цветокоррекция + базовый звук", "pricing.t1i5": "HD · 16:9 + вертикаль", "pricing.t1i6": "2 круга правок",
-      "pricing.popular": "Чаще выбирают",
-      "pricing.t2Name": "Оптимальный", "pricing.t2For": "Полная кампания — фильм, реел и ролики.",
-      "pricing.t2i1": "Фильм о компании (~2 мин)", "pricing.t2i2": "Реел для шоурума + 3× ролика по 20 сек", "pricing.t2i3": "2 съёмочных дня",
-      "pricing.t2i4": "До 2 концепций", "pricing.t2i5": "Полный цвет + саунд-дизайн", "pricing.t2i6": "4K · все форматы для соцсетей", "pricing.t2i7": "3 круга правок",
-      "pricing.t3Name": "Премиальный", "pricing.t3For": "Флагман — все форматы, без компромиссов.",
-      "pricing.t3i1": "Всё из «Оптимального»", "pricing.t3i2": "6× роликов по 20 сек", "pricing.t3i3": "3 съёмочных дня",
-      "pricing.t3i4": "Оригинальная музыка + моушн-графика", "pricing.t3i5": "4K / HDR · все форматы", "pricing.t3i6": "Фотографии + backstage-пакет", "pricing.t3i7": "Приоритет в графике",
-      "pricing.t4Name": "Индивидуальный", "pricing.t4For": "Больше масштаб, несколько локаций, особая идея? Соберём под вас.",
-      "pricing.choose": "Выбрать", "pricing.quote": "Запросить смету",
-      "pricing.note": "Цены ориентировочные и подтверждаются после короткого созвона по задаче.",
-      "about.title": "О нас",
-      "about.lead": "Продакшен-студия, которая ведёт фильм от первого слова сценария до финального цвета — своими силами.",
-      "about.r1": "Режиссёр", "about.r2": "Оператор-постановщик", "about.r3": "Продюсер", "about.r4": "Монтаж / колорист",
-      "about.n1": "Имя", "about.n2": "Имя", "about.n3": "Имя", "about.n4": "Имя",
-      "about.w1t": "Полный цикл у нас", "about.w1p": "Сценарий, съёмка, монтаж, цвет и звук — под одной крышей.",
-      "about.w2t": "Своё оборудование", "about.w2p": "Кинокамера и свет — без задержек на аренду.",
-      "about.w3t": "Быстрые сроки", "about.w3p": "Полная кампания за недели, а не месяцы.",
-      "about.clients": "Избранные работы и клиенты",
-      "contact.title": "Следующий шаг",
-      "contact.lead": "Выберите пакет или расскажите идею — короткий созвон это самый быстрый путь к плану и смете.",
-      "contact.book": "Записаться на 15-мин звонок", "contact.chat": "WhatsApp / Telegram", "contact.email": "Написать на почту",
-      "footer.tag": "Предложение по кампании",
+      "meta.description": "Gardens of Eden Пхукет — презентация видения и концепции контента.",
+      "side.sub": "Vision & Concept",
+      "side.g1": "Введение", "side.g2": "Концепции", "side.g3": "Контент-система", "side.g4": "Финал",
+      "side.s01": "Титул", "side.s02": "О нас", "side.s03": "Как мы видим контент",
+      "side.s04": "Концепция I", "side.s05": "Концепция II", "side.s06": "Концепция III",
+      "side.s07": "Карта контента", "side.s08": "Бренд-фильм и шоурум", "side.s09": "YouTube",
+      "side.s10": "Рилсы / Shorts", "side.s11": "VSL", "side.s12": "Обучение селлеров",
+      "side.s13": "Продажи и объект", "side.s14": "Пакеты", "side.s15": "Следующий шаг",
+      "side.hint": "Листайте клавишами ↑ ↓",
+
+      "s01.eyebrow": "Контент-презентация · BPM Media",
+      "s01.sub": "Vision & Concept",
+      "s01.meta": "Банг Тао, Пхукет · сдача Q4 2026",
+      "s01.hint": "Листайте вниз или нажмите ↓",
+
+      "s02.title": "О нас",
+      "s02.lead": "Два человека, которые ведут фильм от первого слова сценария до финального цвета.",
+      "s02.photo": "Фото",
+      "s02.p1role": "Роль — заполним",
+      "s02.p2role": "Роль — заполним",
+      "s02.w1t": "Полный цикл у нас", "s02.w1p": "Сценарий, съёмка, монтаж, цвет и звук — одна команда.",
+      "s02.w2t": "Кино-качество", "s02.w2p": "Плёночный лук: мизансцена, свет, грейд.",
+      "s02.w3t": "AI-превиз", "s02.w3p": "Каждый кадр показываем заранее — до съёмки.",
+
+      "s03.title": "Как мы видим контент",
+      "s03.lead": "Не набор роликов, а один мир и одна система. Каждое видео говорит на одном языке и решает свою задачу.",
+      "s03.t1": "Бренд", "s03.t1p": "Фильм и шоурум — влюбляют в проект.",
+      "s03.t2": "Продажи", "s03.t2p": "VSL, туры по виллам, реклама — превращают любовь в сделку.",
+      "s03.t3": "Органика", "s03.t3p": "YouTube и рилсы — постоянный поток нового внимания.",
+      "s03.t4": "Команда", "s03.t4p": "Обучение селлеров и брокеров — все рассказывают одну историю.",
+      "s03.funnel": "Узнали → влюбились → купили → продают дальше.",
+
+      "s04.badge": "Принята клиентом · в производстве",
+      "s04.title": "Концепция I — «Гранд Будапешт на Банг Тао»",
+      "s04.lead": "Легендарный тайский консьерж за две минуты отвечает на один вопрос — «что такое Gardens of Eden?» — и ведёт через сад, дом, кухню и остров, в каждой истории помогая своими руками.",
+      "s04.k1": "Симметрия и фронтальные мизансцены", "s04.k2": "Главы-титры", "s04.k3": "Деадпан-юмор",
+      "s04.k4": "Палитра sage green", "s04.k5": "60 кадров в сценарии", "s04.k6": "Бесшовный луп в финале",
+      "s04.structLabel": "Структура фильма:",
+      "s04.struct": "Пролог → Сад → Дом → врезка о проекте R1–R12 → Кухня → Пхукет → Финал (стыкуется в кадр 1)",
+
+      "s05.badge": "В разработке", "s05.title": "Концепция II",
+      "s05.text": "Альтернативная креативная территория — представим на следующей встрече.",
+      "s05.soon": "Скоро",
+      "s06.badge": "В разработке", "s06.title": "Концепция III",
+      "s06.text": "Третье направление — чтобы выбор миров был настоящим, а не из одного варианта.",
+      "s06.soon": "Скоро",
+
+      "s07.title": "Карта контента — все позиции",
+      "s07.lead": "Всё, что нужно курортному девелоперу, — в четырёх треках. Начинаем с фильма, остальное подключается к тому же миру.",
+      "s07.c1t": "Бренд",
+      "s07.c1i1": "Бренд-фильм 2:00", "s07.c1i2": "Лобби-луп (без звука, бесшовный)", "s07.c1i3": "Врезка о проекте R1–R12",
+      "s07.c1i4": "Катдауны 30 / 15 сек", "s07.c1i5": "Вертикали 9:16 по главам", "s07.c1i6": "Бэкстейдж",
+      "s07.c2t": "Продажи",
+      "s07.c2i1": "VSL для лендинга", "s07.c2i2": "Рекламные ролики 15–30 сек", "s07.c2i3": "Туры по виллам по типам",
+      "s07.c2i4": "Дрон-обзор Банг Тао", "s07.c2i5": "Стройка-апдейты", "s07.c2i6": "Виртуальный тур",
+      "s07.c3t": "Органика",
+      "s07.c3i1": "YouTube-канал", "s07.c3i2": "Рилсы / Shorts / TikTok", "s07.c3i3": "Интервью с основателями и экспертами",
+      "s07.c3i4": "Отзывы покупателей", "s07.c3i5": "Событийные видео",
+      "s07.c4t": "Команда",
+      "s07.c4i1": "Обучающая библиотека для селлеров", "s07.c4i2": "Пакет для брокеров и агентств", "s07.c4i3": "Инвестор-видео",
+      "s07.c4i4": "Локализация RU / EN / ZH",
+
+      "s08.title": "Бренд-фильм и шоурум",
+      "s08.lead": "Якорь всей системы — одна съёмка, пять деливераблов.",
+      "s08.d1": "Мастер 2:00 со звуком — для сайта и презентаций",
+      "s08.d2": "Лобби-луп без звука — бесшовный, крутится в шоуруме постоянно",
+      "s08.d3": "Врезка о проекте R1–R12 — рендеры объекта для питчей",
+      "s08.d4": "Катдауны 30 / 15 сек — для рекламы",
+      "s08.d5": "Вертикали 9:16 из глав — для соцсетей",
+      "s08.statusLabel": "Статус:",
+      "s08.status": "сценарий на 60 кадров готов, превиз в работе.",
+
+      "s09.title": "YouTube",
+      "s09.lead": "Канал, который создаёт спрос на «жизнь на Пхукете» — и делает Gardens of Eden ответом.",
+      "s09.f1": "Обзорные фильмы о проекте", "s09.f2": "Гиды по району Банг Тао",
+      "s09.f3": "«Почему Пхукет» — ролики для инвесторов", "s09.f4": "Влог стройки до сдачи",
+      "s09.f5": "Интервью с командой проекта",
+      "s09.metaLabel": "Ритм:", "s09.meta": "2–4 видео в месяц.",
+
+      "s10.title": "Рилсы / Shorts",
+      "s10.lead": "Вертикальный поток из съёмок фильма и объекта — внимание в первую секунду.",
+      "s10.f1": "8–16 рилсов в месяц", "s10.f2": "Хуки из мира фильма — консьерж, детали, остров",
+      "s10.f3": "Instagram, TikTok, YouTube Shorts", "s10.f4": "Версии RU / EN",
+
+      "s11.title": "VSL — продающее видео",
+      "s11.lead": "Видео для лендинга: проводит холодного посетителя до заявки.",
+      "s11.f1": "Структура: мечта → проект → оффер → призыв к действию",
+      "s11.f2": "3–5 минут, с ведущим или закадром",
+      "s11.f3": "A/B-версии открытия",
+      "s11.f4": "Локализации RU / EN / ZH",
+
+      "s12.title": "Обучающие видео для селлеров",
+      "s12.lead": "Закрытая видеобиблиотека, чтобы каждый селлер и агент рассказывал проект одинаково.",
+      "s12.f1": "Продукт по типам юнитов — что показывать и говорить",
+      "s12.f2": "Отработка возражений — короткие ролики-ответы",
+      "s12.f3": "Онбординг новых агентов",
+      "s12.f4": "Пакет для брокеров и агентств",
+
+      "s13.title": "Продажи и объект",
+      "s13.lead": "Видео, которое показывает сам объект — и держит доверие до сдачи в Q4 2026.",
+      "s13.f1": "Дрон-обзор Банг Тао и объекта",
+      "s13.f2": "Туры по виллам по типам",
+      "s13.f3": "Ежемесячные стройка-апдейты",
+      "s13.f4": "Отзывы покупателей после сдачи",
+
+      "s14.title": "Пакеты",
+      "s14.lead": "Три способа начать — от одного фильма до полной контент-системы.",
+      "s14.from": "от", "s14.choose": "Выбрать", "s14.popular": "Чаще выбирают",
+      "s14.t1Name": "Фильм",
+      "s14.t1i1": "Бренд-фильм 2:00 + лобби-луп", "s14.t1i2": "Врезка R1–R12", "s14.t1i3": "Катдауны + вертикали",
+      "s14.t2Name": "Фильм + Продажи",
+      "s14.t2i1": "Всё из «Фильма»", "s14.t2i2": "VSL + рекламные ролики", "s14.t2i3": "Туры по виллам + дрон",
+      "s14.t2i4": "Обучающая библиотека для селлеров",
+      "s14.t3Name": "Контент-система",
+      "s14.t3i1": "Всё из «Фильм + Продажи»", "s14.t3i2": "YouTube + рилсы, ежемесячно",
+      "s14.t3i3": "Стройка-апдейты", "s14.t3i4": "Локализация RU / EN / ZH",
+      "s14.note": "Цифры появятся после согласования объёма — этот слайд фиксирует структуру предложения.",
+
+      "s15.title": "Следующий шаг",
+      "s15.lead": "Выбираем концепцию, утверждаем карту контента — и к следующей встрече мы приносим смету и календарь.",
+      "s15.n1": "Концепция — утвердить / обсудить",
+      "s15.n2": "Карта контента — выбрать стартовые треки",
+      "s15.n3": "Смета и график — готовим за 3 дня",
+      "s15.chat": "WhatsApp / Telegram", "s15.email": "Написать на почту",
     },
   };
 
-  var nav = document.getElementById("nav");
-  var navToggle = document.getElementById("navToggle");
-  var navLinks = document.getElementById("navLinks");
-  var links = Array.prototype.slice.call(document.querySelectorAll("[data-nav]"));
+  /* ---- elements ---- */
+  var deck = document.getElementById("deck");
+  var slides = Array.prototype.slice.call(document.querySelectorAll(".slide"));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll("[data-slide]"));
+  var counter = document.getElementById("counter");
+  var counterM = document.getElementById("counterM");
+  var total = document.getElementById("total");
+  var totalM = document.getElementById("totalM");
+  var progress = document.getElementById("progress");
+  var burger = document.getElementById("burger");
+  var current = 0;
 
-  /* ---- i18n apply ---- */
+  function pad2(n) { return n < 10 ? "0" + n : String(n); }
+  if (total) total.textContent = pad2(slides.length);
+  if (totalM) totalM.textContent = pad2(slides.length);
+
+  /* ---- i18n ---- */
   function applyLang(lang) {
     var dict = I18N[lang] || I18N.en;
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
@@ -158,19 +296,17 @@
     });
     try { localStorage.setItem("goe-lang", lang); } catch (e) {}
   }
-
   function initLang() {
     var saved;
     try { saved = localStorage.getItem("goe-lang"); } catch (e) {}
     var nav0 = (navigator.language || "en").toLowerCase();
-    var lang = saved || (nav0.indexOf("ru") === 0 ? "ru" : "en");
-    applyLang(lang);
+    applyLang(saved || (nav0.indexOf("ru") === 0 ? "ru" : "en"));
   }
   document.querySelectorAll(".langswitch button").forEach(function (b) {
     b.addEventListener("click", function () { applyLang(b.getAttribute("data-lang")); });
   });
 
-  /* ---- currency swap ---- */
+  /* ---- currency ---- */
   function applyCurrency(cur) {
     document.querySelectorAll("[data-usd]").forEach(function (el) {
       var v = el.getAttribute(cur === "rub" ? "data-rub" : "data-usd");
@@ -181,65 +317,78 @@
     });
     try { localStorage.setItem("goe-cur", cur); } catch (e) {}
   }
-  function initCurrency() {
-    var saved;
-    try { saved = localStorage.getItem("goe-cur"); } catch (e) {}
-    applyCurrency(saved || "usd");
-  }
   document.querySelectorAll(".curswitch button").forEach(function (b) {
     b.addEventListener("click", function () { applyCurrency(b.getAttribute("data-cur")); });
   });
+  (function initCurrency() {
+    var saved;
+    try { saved = localStorage.getItem("goe-cur"); } catch (e) {}
+    applyCurrency(saved || "usd");
+  })();
 
-  /* ---- Nav background after scroll ---- */
-  function onScroll() {
-    if (window.scrollY > 24) nav.classList.add("is-scrolled");
-    else nav.classList.remove("is-scrolled");
+  /* ---- active slide tracking ---- */
+  function setActive(index) {
+    if (index === current) return;
+    current = index;
+    var id = "#" + slides[index].id;
+    navLinks.forEach(function (a) {
+      a.classList.toggle("is-active", a.getAttribute("href") === id);
+    });
+    var label = pad2(index + 1);
+    if (counter) counter.textContent = label;
+    if (counterM) counterM.textContent = label;
+    if (progress) progress.style.width = ((index + 1) / slides.length) * 100 + "%";
+    if (history.replaceState) history.replaceState(null, "", id);
   }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
 
-  /* ---- Mobile menu ---- */
-  function closeMenu() { nav.classList.remove("is-open"); navToggle.setAttribute("aria-expanded", "false"); }
-  navToggle.addEventListener("click", function () {
-    var open = nav.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  navLinks.addEventListener("click", function (e) { if (e.target.closest("a")) closeMenu(); });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
-
-  /* ---- Active-section highlight ---- */
-  var sections = links
-    .map(function (a) { return document.querySelector(a.getAttribute("href")); })
-    .filter(Boolean);
   if ("IntersectionObserver" in window) {
     var spy = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
-        var id = entry.target.id;
-        links.forEach(function (a) { a.classList.toggle("is-active", a.getAttribute("href") === "#" + id); });
+        var idx = slides.indexOf(entry.target);
+        if (idx >= 0) setActive(idx);
       });
     }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
-    sections.forEach(function (s) { spy.observe(s); });
+    slides.forEach(function (s) { spy.observe(s); });
   }
+  /* Initialize counter/progress for slide 0 */
+  navLinks.forEach(function (a) { a.classList.toggle("is-active", a.getAttribute("href") === "#" + slides[0].id); });
+  if (progress) progress.style.width = (1 / slides.length) * 100 + "%";
 
-  /* ---- Reveal on scroll ---- */
-  var revealEls = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
-  if ("IntersectionObserver" in window) {
-    var revealObs = new IntersectionObserver(function (entries, obs) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) { entry.target.classList.add("is-in"); obs.unobserve(entry.target); }
-      });
-    }, { rootMargin: "0px 0px -10% 0px", threshold: 0.1 });
-    revealEls.forEach(function (el) { revealObs.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add("is-in"); });
+  /* ---- keyboard navigation ---- */
+  function go(index) {
+    var i = Math.max(0, Math.min(slides.length - 1, index));
+    slides[i].scrollIntoView({ behavior: prefersReduced() ? "auto" : "smooth" });
   }
+  function prefersReduced() {
+    return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+  document.addEventListener("keydown", function (e) {
+    if (e.target && /^(input|textarea|select)$/i.test(e.target.tagName)) return;
+    switch (e.key) {
+      case "ArrowDown": case "ArrowRight": case "PageDown": case " ":
+        e.preventDefault(); go(current + 1); break;
+      case "ArrowUp": case "ArrowLeft": case "PageUp":
+        e.preventDefault(); go(current - 1); break;
+      case "Home": e.preventDefault(); go(0); break;
+      case "End": e.preventDefault(); go(slides.length - 1); break;
+      case "Escape": closeMenu(); break;
+    }
+  });
 
-  /* ---- Footer year ---- */
-  var year = document.getElementById("year");
-  if (year) year.textContent = new Date().getFullYear();
+  /* ---- mobile menu ---- */
+  function closeMenu() {
+    document.body.classList.remove("menu-open");
+    if (burger) burger.setAttribute("aria-expanded", "false");
+  }
+  if (burger) {
+    burger.addEventListener("click", function () {
+      var open = document.body.classList.toggle("menu-open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
+  navLinks.forEach(function (a) { a.addEventListener("click", closeMenu); });
 
   /* ---- init ---- */
   initLang();
-  initCurrency();
 })();

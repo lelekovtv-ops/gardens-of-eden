@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Campaign Proposal — Video Production</title>
-  <meta name="description" data-i18n-attr="content" data-i18n="meta.description" content="Video advertising campaign proposal — brand film, showroom reel, ad spots." />
+  <title>Gardens of Eden — Vision &amp; Concept</title>
+  <meta name="description" data-i18n-attr="content" data-i18n="meta.description" content="Gardens of Eden Phuket — content vision & concept presentation." />
 
   <!-- Link preview (WhatsApp / Telegram / email) -->
-  <meta property="og:title" content="Campaign Proposal — Video Production" />
-  <meta property="og:description" content="Brand film · Showroom reel · 20-second ad spots" />
+  <meta property="og:title" content="Gardens of Eden — Vision &amp; Concept" />
+  <meta property="og:description" content="Brand film · Showroom · YouTube · VSL · Reels — the content system" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://lelekovtv-ops.github.io/gardens-of-eden/" />
   <meta property="og:image" content="https://lelekovtv-ops.github.io/gardens-of-eden/assets/og.png" />
@@ -21,315 +21,376 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- ===== Top navigation ===== -->
-  <header class="nav" id="nav">
-    <div class="nav__inner">
-      <a class="brand" href="#hero" aria-label="Home">
-        <span class="brand__mark" aria-hidden="true"></span>
-        <span class="brand__name" data-i18n="brand.name">Studio</span>
-      </a>
+  <!-- ===== Mobile top bar ===== -->
+  <div class="topbar">
+    <button class="topbar__burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="side">
+      <span></span><span></span><span></span>
+    </button>
+    <span class="topbar__brand">Gardens of Eden</span>
+    <span class="topbar__counter"><span id="counterM">01</span>/<span id="totalM">15</span></span>
+  </div>
 
-      <nav class="nav__links" id="navLinks" aria-label="Sections">
-        <a href="#concept" data-nav data-i18n="nav.concept">Concept</a>
-        <a href="#work" data-nav data-i18n="nav.work">Work</a>
-        <a href="#process" data-nav data-i18n="nav.process">Process</a>
-        <a href="#pricing" data-nav class="nav__money" data-i18n="nav.pricing">Pricing</a>
-        <a href="#about" data-nav data-i18n="nav.about">About</a>
-        <a href="#contact" data-nav data-i18n="nav.contact">Contact</a>
-      </nav>
-
-      <div class="nav__actions">
-        <div class="langswitch" role="group" aria-label="Language">
-          <button type="button" data-lang="en" class="is-active">EN</button>
-          <span aria-hidden="true">/</span>
-          <button type="button" data-lang="ru">RU</button>
-        </div>
-        <a href="#contact" class="btn btn--sm nav__cta" data-i18n="nav.cta">Discuss</a>
-        <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
-          <span></span><span></span><span></span>
-        </button>
+  <!-- ===== Left sidebar (table of contents) ===== -->
+  <aside class="side" id="side">
+    <div class="side__brand">
+      <span class="side__mark" aria-hidden="true"></span>
+      <div>
+        <p class="side__title">Gardens of Eden</p>
+        <p class="side__sub" data-i18n="side.sub">Vision &amp; Concept</p>
       </div>
     </div>
-  </header>
 
-  <main>
-    <!-- ===== 1. Hero ===== -->
-    <section class="hero" id="hero">
-      <div class="hero__media" aria-hidden="true">
-        <!-- Showreel loop goes here later:
-             <video autoplay muted loop playsinline poster="assets/hero-poster.jpg">
-               <source src="https://YOUR-HETZNER/showreel.mp4" type="video/mp4" />
-             </video> -->
-        <div class="hero__bg"></div>
+    <nav class="side__nav" id="sideNav" aria-label="Chapters">
+      <p class="side__label" data-i18n="side.g1">Introduction</p>
+      <a href="#s01" data-slide><span>01</span><em data-i18n="side.s01">Title</em></a>
+      <a href="#s02" data-slide><span>02</span><em data-i18n="side.s02">About us</em></a>
+      <a href="#s03" data-slide><span>03</span><em data-i18n="side.s03">How we see content</em></a>
+
+      <p class="side__label" data-i18n="side.g2">Concepts</p>
+      <a href="#s04" data-slide><span>04</span><em data-i18n="side.s04">Concept I</em></a>
+      <a href="#s05" data-slide><span>05</span><em data-i18n="side.s05">Concept II</em></a>
+      <a href="#s06" data-slide><span>06</span><em data-i18n="side.s06">Concept III</em></a>
+
+      <p class="side__label" data-i18n="side.g3">Content system</p>
+      <a href="#s07" data-slide><span>07</span><em data-i18n="side.s07">Content map</em></a>
+      <a href="#s08" data-slide><span>08</span><em data-i18n="side.s08">Brand film &amp; showroom</em></a>
+      <a href="#s09" data-slide><span>09</span><em data-i18n="side.s09">YouTube</em></a>
+      <a href="#s10" data-slide><span>10</span><em data-i18n="side.s10">Reels / Shorts</em></a>
+      <a href="#s11" data-slide><span>11</span><em data-i18n="side.s11">VSL</em></a>
+      <a href="#s12" data-slide><span>12</span><em data-i18n="side.s12">Sales team training</em></a>
+      <a href="#s13" data-slide><span>13</span><em data-i18n="side.s13">Sales &amp; the site</em></a>
+
+      <p class="side__label" data-i18n="side.g4">Closing</p>
+      <a href="#s14" data-slide><span>14</span><em data-i18n="side.s14">Packages</em></a>
+      <a href="#s15" data-slide><span>15</span><em data-i18n="side.s15">Next step</em></a>
+    </nav>
+
+    <div class="side__foot">
+      <div class="langswitch" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="is-active">EN</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-lang="ru">RU</button>
       </div>
-      <div class="hero__content">
-        <p class="eyebrow" data-i18n="hero.eyebrow">Campaign proposal · Client · 2026</p>
-        <h1 class="hero__title" data-i18n="hero.title">A film that makes the brand impossible to ignore.</h1>
-        <p class="hero__lede" data-i18n="hero.lede">A brand film, a showroom reel and a series of 20-second ad spots — one campaign, one production team.</p>
-        <div class="hero__cta">
-          <a class="btn" href="#work" data-i18n="hero.ctaPrimary">See the work</a>
-          <a class="btn btn--ghost" href="#pricing" data-i18n="hero.ctaSecondary">Packages &amp; pricing</a>
+      <div class="side__counter"><span id="counter">01</span> / <span id="total">15</span></div>
+      <div class="side__progress"><span id="progress"></span></div>
+      <p class="side__hint" data-i18n="side.hint">Use ↑ ↓ keys</p>
+    </div>
+  </aside>
+
+  <!-- ===== Deck ===== -->
+  <main class="deck" id="deck">
+
+    <!-- 01 · Title -->
+    <section class="slide slide--dark slide--title" id="s01">
+      <div class="slide__in">
+        <p class="eyebrow" data-i18n="s01.eyebrow">Content presentation · BPM Media</p>
+        <h1 class="title-xl">Gardens of Eden</h1>
+        <p class="title-sub" data-i18n="s01.sub">Vision &amp; Concept</p>
+        <p class="title-meta" data-i18n="s01.meta">Bang Tao, Phuket · handover Q4 2026</p>
+      </div>
+      <p class="slide__hintline" data-i18n="s01.hint">Scroll or press ↓ to begin</p>
+    </section>
+
+    <!-- 02 · About us -->
+    <section class="slide" id="s02">
+      <div class="slide__in">
+        <p class="slide__no">02</p>
+        <h2 class="slide__title" data-i18n="s02.title">About us</h2>
+        <p class="lead" data-i18n="s02.lead">Two people who take a film from the first word of the script to the final grade.</p>
+        <div class="people">
+          <article class="person">
+            <div class="person__photo" aria-hidden="true"><span data-i18n="s02.photo">Photo</span></div>
+            <h3 class="person__name">Максим Капля</h3>
+            <p class="person__role" data-i18n="s02.p1role">Role — to be filled</p>
+          </article>
+          <article class="person">
+            <div class="person__photo" aria-hidden="true"><span data-i18n="s02.photo">Photo</span></div>
+            <h3 class="person__name">Александр Лелеков</h3>
+            <p class="person__role" data-i18n="s02.p2role">Role — to be filled</p>
+          </article>
         </div>
-      </div>
-      <a class="scrollcue" href="#concept" aria-label="Scroll">
-        <span data-i18n="hero.scroll">Begin</span>
-        <span class="scrollcue__line" aria-hidden="true"></span>
-      </a>
-    </section>
-
-    <!-- ===== 2. Concept ===== -->
-    <section class="section" id="concept">
-      <div class="section__head reveal">
-        <p class="section__index">01</p>
-        <h2 class="section__title" data-i18n="concept.title">The Concept</h2>
-      </div>
-      <div class="section__body reveal">
-        <p class="lead" data-i18n="concept.lead">The creative direction for the campaign — the world, the tone, the feeling the brand should leave behind.</p>
-      </div>
-      <div class="cards reveal">
-        <article class="card card--concept">
-          <span class="card__tag" data-i18n="concept.tagLead">Direction A</span>
-          <h3 class="card__title" data-i18n="concept.c1Title">Gardens of Eden</h3>
-          <p class="card__text" data-i18n="concept.c1Text">Botanical, symmetrical, warm — precise framing and a lush palette. A cinematic, unhurried world.</p>
-        </article>
-        <article class="card card--concept">
-          <span class="card__tag" data-i18n="concept.tag2">Direction B</span>
-          <h3 class="card__title" data-i18n="concept.c2Title">Concept two</h3>
-          <p class="card__text" data-i18n="concept.c2Text">An alternative creative territory — to be developed together with the client.</p>
-        </article>
-        <article class="card card--concept card--muted">
-          <span class="card__tag" data-i18n="concept.tag3">More</span>
-          <h3 class="card__title" data-i18n="concept.c3Title">Further directions</h3>
-          <p class="card__text" data-i18n="concept.c3Text">Additional creative directions on request.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== 3. Work / Deliverables ===== -->
-    <section class="section section--tint" id="work">
-      <div class="section__head reveal">
-        <p class="section__index">02</p>
-        <h2 class="section__title" data-i18n="work.title">The Work</h2>
-      </div>
-      <div class="section__body reveal">
-        <p class="lead" data-i18n="work.lead">Three products, one production. Each is built to do a specific job.</p>
-      </div>
-
-      <div class="deliverables">
-        <article class="deliverable reveal">
-          <div class="deliverable__media well well--video">
-            <span class="well__play" aria-hidden="true"></span>
-            <span data-i18n="work.comingSoon">Video coming soon</span>
-          </div>
-          <div class="deliverable__body">
-            <span class="deliverable__num">01</span>
-            <h3 class="deliverable__title" data-i18n="work.d1Title">Showroom Reel</h3>
-            <p class="deliverable__purpose" data-i18n="work.d1Purpose">A seamless loop for the showroom screens — reads with the sound off, always on.</p>
-            <p class="deliverable__spec" data-i18n="work.d1Spec">Looping · no-audio-reliant · 16:9 &amp; vertical for in-store screens</p>
-          </div>
-        </article>
-
-        <article class="deliverable deliverable--reverse reveal">
-          <div class="deliverable__media well well--video">
-            <span class="well__play" aria-hidden="true"></span>
-            <span data-i18n="work.comingSoon">Video coming soon</span>
-          </div>
-          <div class="deliverable__body">
-            <span class="deliverable__num">02</span>
-            <h3 class="deliverable__title" data-i18n="work.d2Title">Company / Brand Film</h3>
-            <p class="deliverable__purpose" data-i18n="work.d2Purpose">A ~2-minute cinematic film that tells the company's story — the anchor of the campaign.</p>
-            <p class="deliverable__spec" data-i18n="work.d2Spec">~2 min · 16:9 cinematic · full sound design</p>
-          </div>
-        </article>
-
-        <article class="deliverable reveal">
-          <div class="deliverable__media">
-            <div class="spots">
-              <div class="well well--spot"><span>20s</span></div>
-              <div class="well well--spot"><span>20s</span></div>
-              <div class="well well--spot"><span>20s</span></div>
-            </div>
-          </div>
-          <div class="deliverable__body">
-            <span class="deliverable__num">03</span>
-            <h3 class="deliverable__title" data-i18n="work.d3Title">Ad Spots · 20 sec</h3>
-            <p class="deliverable__purpose" data-i18n="work.d3Purpose">A set of short spots for social and paid media — cut for attention in the first second.</p>
-            <p class="deliverable__spec" data-i18n="work.d3Spec">Several × 20s · 16:9 / 9:16 / 1:1 / 4:5</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== 4. Process ===== -->
-    <section class="section" id="process">
-      <div class="section__head reveal">
-        <p class="section__index">03</p>
-        <h2 class="section__title" data-i18n="process.title">Process &amp; Timeline</h2>
-      </div>
-      <div class="section__body reveal">
-        <p class="lead" data-i18n="process.lead">From first idea to final delivery — a clear path, typically 5–7 weeks.</p>
-      </div>
-      <ol class="steps reveal">
-        <li class="step">
-          <span class="step__num">01</span>
-          <h3 class="step__title" data-i18n="process.p1Title">Pre-production</h3>
-          <p class="step__text" data-i18n="process.p1Text">Script, storyboard, casting, locations.</p>
-          <span class="step__meta" data-i18n="process.p1Meta">~1–2 weeks</span>
-        </li>
-        <li class="step">
-          <span class="step__num">02</span>
-          <h3 class="step__title" data-i18n="process.p2Title">Production</h3>
-          <p class="step__text" data-i18n="process.p2Text">The shoot — crew, camera, light, art.</p>
-          <span class="step__meta" data-i18n="process.p2Meta">2–4 shoot days</span>
-        </li>
-        <li class="step">
-          <span class="step__num">03</span>
-          <h3 class="step__title" data-i18n="process.p3Title">Post-production</h3>
-          <p class="step__text" data-i18n="process.p3Text">Edit, color, sound design, VFX.</p>
-          <span class="step__meta" data-i18n="process.p3Meta">~2–3 weeks</span>
-        </li>
-        <li class="step">
-          <span class="step__num">04</span>
-          <h3 class="step__title" data-i18n="process.p4Title">Delivery</h3>
-          <p class="step__text" data-i18n="process.p4Text">All formats, revisions, handoff.</p>
-          <span class="step__meta" data-i18n="process.p4Meta">~1 week</span>
-        </li>
-      </ol>
-    </section>
-
-    <!-- ===== 5. Pricing ===== -->
-    <section class="section section--tint" id="pricing">
-      <div class="section__head reveal">
-        <p class="section__index">04</p>
-        <h2 class="section__title" data-i18n="pricing.title">Packages &amp; Pricing</h2>
-      </div>
-      <div class="pricing__intro reveal">
-        <p class="lead" data-i18n="pricing.lead">Everything below is produced in-house — from script to final grade. Transparent packages, no surprises.</p>
-        <div class="curswitch" role="group" aria-label="Currency">
-          <button type="button" data-cur="usd" class="is-active">USD $</button>
-          <span aria-hidden="true">/</span>
-          <button type="button" data-cur="rub">RUB ₽</button>
-        </div>
-      </div>
-
-      <div class="tiers reveal">
-        <article class="tier">
-          <h3 class="tier__name" data-i18n="pricing.t1Name">Essential</h3>
-          <p class="tier__price"><span class="tier__from" data-i18n="pricing.from">from</span>
-            <span class="tier__amount" data-usd="$4,900" data-rub="₽450,000">$4,900</span>
-          </p>
-          <p class="tier__for" data-i18n="pricing.t1For">One hero deliverable, done beautifully.</p>
-          <ul class="tier__list">
-            <li data-i18n="pricing.t1i1">Showroom reel OR 3× 20-sec spots</li>
-            <li data-i18n="pricing.t1i2">1 shoot day</li>
-            <li data-i18n="pricing.t1i3">1 creative concept</li>
-            <li data-i18n="pricing.t1i4">Color grade + basic sound</li>
-            <li data-i18n="pricing.t1i5">HD · 16:9 + vertical</li>
-            <li data-i18n="pricing.t1i6">2 revision rounds</li>
-          </ul>
-          <a class="btn btn--ghost tier__cta" href="#contact" data-i18n="pricing.choose">Choose</a>
-        </article>
-
-        <article class="tier tier--featured">
-          <span class="tier__badge" data-i18n="pricing.popular">Most chosen</span>
-          <h3 class="tier__name" data-i18n="pricing.t2Name">Signature</h3>
-          <p class="tier__price"><span class="tier__from" data-i18n="pricing.from">from</span>
-            <span class="tier__amount" data-usd="$9,900" data-rub="₽900,000">$9,900</span>
-          </p>
-          <p class="tier__for" data-i18n="pricing.t2For">The full campaign — film, reel and spots.</p>
-          <ul class="tier__list">
-            <li data-i18n="pricing.t2i1">Brand film (~2 min)</li>
-            <li data-i18n="pricing.t2i2">Showroom reel + 3× 20-sec spots</li>
-            <li data-i18n="pricing.t2i3">2 shoot days</li>
-            <li data-i18n="pricing.t2i4">Up to 2 concepts</li>
-            <li data-i18n="pricing.t2i5">Full grade + sound design</li>
-            <li data-i18n="pricing.t2i6">4K · all social formats</li>
-            <li data-i18n="pricing.t2i7">3 revision rounds</li>
-          </ul>
-          <a class="btn tier__cta" href="#contact" data-i18n="pricing.choose">Choose</a>
-        </article>
-
-        <article class="tier">
-          <h3 class="tier__name" data-i18n="pricing.t3Name">Premiere</h3>
-          <p class="tier__price"><span class="tier__from" data-i18n="pricing.from">from</span>
-            <span class="tier__amount" data-usd="$18,000" data-rub="₽1,650,000">$18,000</span>
-          </p>
-          <p class="tier__for" data-i18n="pricing.t3For">The flagship — every format, no compromise.</p>
-          <ul class="tier__list">
-            <li data-i18n="pricing.t3i1">Everything in Signature</li>
-            <li data-i18n="pricing.t3i2">6× 20-sec spots</li>
-            <li data-i18n="pricing.t3i3">3 shoot days</li>
-            <li data-i18n="pricing.t3i4">Original music + motion graphics</li>
-            <li data-i18n="pricing.t3i5">4K / HDR · all formats</li>
-            <li data-i18n="pricing.t3i6">Stills + BTS package</li>
-            <li data-i18n="pricing.t3i7">Priority scheduling</li>
-          </ul>
-          <a class="btn btn--ghost tier__cta" href="#contact" data-i18n="pricing.choose">Choose</a>
-        </article>
-
-        <article class="tier tier--custom">
-          <h3 class="tier__name" data-i18n="pricing.t4Name">Custom</h3>
-          <p class="tier__for" data-i18n="pricing.t4For">Bigger scope, multiple locations, a bespoke idea? Let's build it together.</p>
-          <a class="btn btn--ghost tier__cta" href="#contact" data-i18n="pricing.quote">Request a quote</a>
-        </article>
-      </div>
-      <p class="pricing__note reveal" data-i18n="pricing.note">Prices are indicative and confirmed after a short scoping call.</p>
-    </section>
-
-    <!-- ===== 6. About ===== -->
-    <section class="section" id="about">
-      <div class="section__head reveal">
-        <p class="section__index">05</p>
-        <h2 class="section__title" data-i18n="about.title">About Us</h2>
-      </div>
-      <div class="section__body reveal">
-        <p class="lead" data-i18n="about.lead">A production studio that takes a film from the first word of the script to the final grade — in-house.</p>
-      </div>
-      <div class="team reveal">
-        <div class="member"><span class="member__role" data-i18n="about.r1">Director</span><span class="member__name" data-i18n="about.n1">Name</span></div>
-        <div class="member"><span class="member__role" data-i18n="about.r2">DP / Cinematographer</span><span class="member__name" data-i18n="about.n2">Name</span></div>
-        <div class="member"><span class="member__role" data-i18n="about.r3">Producer</span><span class="member__name" data-i18n="about.n3">Name</span></div>
-        <div class="member"><span class="member__role" data-i18n="about.r4">Editor / Colorist</span><span class="member__name" data-i18n="about.n4">Name</span></div>
-      </div>
-      <div class="whyus reveal">
-        <div class="whyus__item"><h4 data-i18n="about.w1t">In-house, end to end</h4><p data-i18n="about.w1p">Script, shoot, edit, color and sound under one roof.</p></div>
-        <div class="whyus__item"><h4 data-i18n="about.w2t">Our own gear</h4><p data-i18n="about.w2p">Cinema camera and lighting — no rental delays.</p></div>
-        <div class="whyus__item"><h4 data-i18n="about.w3t">Fast turnaround</h4><p data-i18n="about.w3p">A full campaign in weeks, not months.</p></div>
-      </div>
-      <div class="clients reveal">
-        <p class="clients__label" data-i18n="about.clients">Selected work &amp; clients</p>
-        <div class="clients__row">
-          <span class="clients__logo">Logo</span>
-          <span class="clients__logo">Logo</span>
-          <span class="clients__logo">Logo</span>
-          <span class="clients__logo">Logo</span>
+        <div class="triplet">
+          <div class="triplet__item"><h4 data-i18n="s02.w1t">Full cycle in-house</h4><p data-i18n="s02.w1p">Script, shoot, edit, color and sound — one team.</p></div>
+          <div class="triplet__item"><h4 data-i18n="s02.w2t">Cinema craft</h4><p data-i18n="s02.w2p">Film-grade look: staging, light, grade.</p></div>
+          <div class="triplet__item"><h4 data-i18n="s02.w3t">AI previz</h4><p data-i18n="s02.w3p">We preview every frame before the shoot.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ===== 7. Contact ===== -->
-    <section class="section section--contact section--tint" id="contact">
-      <div class="section__head reveal">
-        <p class="section__index">06</p>
-        <h2 class="section__title" data-i18n="contact.title">Next Step</h2>
+    <!-- 03 · How we see content -->
+    <section class="slide" id="s03">
+      <div class="slide__in">
+        <p class="slide__no">03</p>
+        <h2 class="slide__title" data-i18n="s03.title">How we see content</h2>
+        <p class="lead" data-i18n="s03.lead">Not a set of clips — one world and one system. Every video speaks the same language and does its own job.</p>
+        <div class="tracks">
+          <div class="track"><span class="track__num">I</span><h4 data-i18n="s03.t1">Brand</h4><p data-i18n="s03.t1p">The film and the showroom — they make people fall in love.</p></div>
+          <div class="track"><span class="track__num">II</span><h4 data-i18n="s03.t2">Sales</h4><p data-i18n="s03.t2p">VSL, villa tours, ads — they turn love into a deal.</p></div>
+          <div class="track"><span class="track__num">III</span><h4 data-i18n="s03.t3">Organic</h4><p data-i18n="s03.t3p">YouTube and Reels — a steady stream of new attention.</p></div>
+          <div class="track"><span class="track__num">IV</span><h4 data-i18n="s03.t4">Team</h4><p data-i18n="s03.t4p">Training for sellers and brokers — everyone tells the same story.</p></div>
+        </div>
+        <p class="funnel" data-i18n="s03.funnel">Discover → fall in love → buy → sell it on.</p>
       </div>
-      <div class="section__body reveal">
-        <p class="lead" data-i18n="contact.lead">Pick a package or tell us the idea — a short call is the fastest way to a plan and a number.</p>
+    </section>
+
+    <!-- 04 · Concept I -->
+    <section class="slide slide--dark" id="s04">
+      <div class="slide__in">
+        <p class="slide__no">04</p>
+        <span class="badge badge--ok" data-i18n="s04.badge">Approved by the client · in production</span>
+        <h2 class="slide__title" data-i18n="s04.title">Concept I — “Grand Budapest on Bang Tao”</h2>
+        <p class="lead" data-i18n="s04.lead">A legendary Thai concierge answers one question in two minutes — “What is Gardens of Eden?” — and leads us through the garden, the home, the kitchen and the island, helping with his own hands in every story.</p>
+        <ul class="pills">
+          <li data-i18n="s04.k1">Symmetry &amp; frontal staging</li>
+          <li data-i18n="s04.k2">Chapter title cards</li>
+          <li data-i18n="s04.k3">Deadpan humour</li>
+          <li data-i18n="s04.k4">Sage green palette</li>
+          <li data-i18n="s04.k5">60 frames scripted</li>
+          <li data-i18n="s04.k6">Seamless loop ending</li>
+        </ul>
+        <p class="struct"><span data-i18n="s04.structLabel">Film structure:</span> <span data-i18n="s04.struct">Prologue → Garden → Home → project insert R1–R12 → Kitchen → Phuket → Finale (loops back to frame 1)</span></p>
+      </div>
+    </section>
+
+    <!-- 05 · Concept II -->
+    <section class="slide" id="s05">
+      <div class="slide__in">
+        <p class="slide__no">05</p>
+        <span class="badge" data-i18n="s05.badge">In development</span>
+        <h2 class="slide__title" data-i18n="s05.title">Concept II</h2>
+        <p class="lead" data-i18n="s05.text">An alternative creative territory — we will present it at the next meeting.</p>
+        <div class="well well--wide"><span data-i18n="s05.soon">Coming soon</span></div>
+      </div>
+    </section>
+
+    <!-- 06 · Concept III -->
+    <section class="slide" id="s06">
+      <div class="slide__in">
+        <p class="slide__no">06</p>
+        <span class="badge" data-i18n="s06.badge">In development</span>
+        <h2 class="slide__title" data-i18n="s06.title">Concept III</h2>
+        <p class="lead" data-i18n="s06.text">A third direction — so there is a real choice of worlds, not one option.</p>
+        <div class="well well--wide"><span data-i18n="s06.soon">Coming soon</span></div>
+      </div>
+    </section>
+
+    <!-- 07 · Content map -->
+    <section class="slide" id="s07">
+      <div class="slide__in slide__in--wide">
+        <p class="slide__no">07</p>
+        <h2 class="slide__title" data-i18n="s07.title">Content map — every position</h2>
+        <p class="lead" data-i18n="s07.lead">Everything a resort development needs, grouped into four tracks. We start with the film — the rest plugs into the same world.</p>
+        <div class="map">
+          <div class="map__col">
+            <h4 data-i18n="s07.c1t">Brand</h4>
+            <ul>
+              <li data-i18n="s07.c1i1">Brand film 2:00</li>
+              <li data-i18n="s07.c1i2">Lobby loop (silent, seamless)</li>
+              <li data-i18n="s07.c1i3">Project insert R1–R12</li>
+              <li data-i18n="s07.c1i4">Cutdowns 30 / 15 sec</li>
+              <li data-i18n="s07.c1i5">Verticals 9:16 per chapter</li>
+              <li data-i18n="s07.c1i6">Behind the scenes</li>
+            </ul>
+          </div>
+          <div class="map__col">
+            <h4 data-i18n="s07.c2t">Sales</h4>
+            <ul>
+              <li data-i18n="s07.c2i1">VSL for the landing page</li>
+              <li data-i18n="s07.c2i2">Ad spots 15–30 sec</li>
+              <li data-i18n="s07.c2i3">Villa tours by unit type</li>
+              <li data-i18n="s07.c2i4">Drone overview of Bang Tao</li>
+              <li data-i18n="s07.c2i5">Construction updates</li>
+              <li data-i18n="s07.c2i6">Virtual tour</li>
+            </ul>
+          </div>
+          <div class="map__col">
+            <h4 data-i18n="s07.c3t">Organic</h4>
+            <ul>
+              <li data-i18n="s07.c3i1">YouTube channel</li>
+              <li data-i18n="s07.c3i2">Reels / Shorts / TikTok</li>
+              <li data-i18n="s07.c3i3">Founder &amp; expert interviews</li>
+              <li data-i18n="s07.c3i4">Buyer testimonials</li>
+              <li data-i18n="s07.c3i5">Event coverage</li>
+            </ul>
+          </div>
+          <div class="map__col">
+            <h4 data-i18n="s07.c4t">Team</h4>
+            <ul>
+              <li data-i18n="s07.c4i1">Sales team training library</li>
+              <li data-i18n="s07.c4i2">Broker &amp; agency kit</li>
+              <li data-i18n="s07.c4i3">Investor video</li>
+              <li data-i18n="s07.c4i4">Localisation RU / EN / ZH</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 · Brand film & showroom -->
+    <section class="slide" id="s08">
+      <div class="slide__in">
+        <p class="slide__no">08</p>
+        <h2 class="slide__title" data-i18n="s08.title">Brand film &amp; showroom</h2>
+        <p class="lead" data-i18n="s08.lead">The anchor of the whole system — one shoot, five deliverables.</p>
+        <ul class="list">
+          <li data-i18n="s08.d1">Master 2:00 with sound — for the website and presentations</li>
+          <li data-i18n="s08.d2">Lobby loop without sound — seamless, always on in the showroom</li>
+          <li data-i18n="s08.d3">Project insert R1–R12 — renders of the development for pitches</li>
+          <li data-i18n="s08.d4">Cutdowns 30 / 15 sec — for advertising</li>
+          <li data-i18n="s08.d5">Verticals 9:16 from the chapters — for social media</li>
+        </ul>
+        <p class="status"><span data-i18n="s08.statusLabel">Status:</span> <span data-i18n="s08.status">script of 60 frames done, previz in progress.</span></p>
+      </div>
+    </section>
+
+    <!-- 09 · YouTube -->
+    <section class="slide" id="s09">
+      <div class="slide__in">
+        <p class="slide__no">09</p>
+        <h2 class="slide__title" data-i18n="s09.title">YouTube</h2>
+        <p class="lead" data-i18n="s09.lead">A channel that builds demand for “life on Phuket” — and makes Gardens of Eden its answer.</p>
+        <ul class="list">
+          <li data-i18n="s09.f1">Project overview films</li>
+          <li data-i18n="s09.f2">Bang Tao neighbourhood guides</li>
+          <li data-i18n="s09.f3">“Why Phuket” — investor explainers</li>
+          <li data-i18n="s09.f4">Construction vlog until handover</li>
+          <li data-i18n="s09.f5">Interviews with the team behind the project</li>
+        </ul>
+        <p class="status"><span data-i18n="s09.metaLabel">Cadence:</span> <span data-i18n="s09.meta">2–4 videos per month.</span></p>
+      </div>
+    </section>
+
+    <!-- 10 · Reels -->
+    <section class="slide" id="s10">
+      <div class="slide__in">
+        <p class="slide__no">10</p>
+        <h2 class="slide__title" data-i18n="s10.title">Reels / Shorts</h2>
+        <p class="lead" data-i18n="s10.lead">A vertical stream cut from the film shoots and the site — attention in the first second.</p>
+        <ul class="list">
+          <li data-i18n="s10.f1">8–16 reels per month</li>
+          <li data-i18n="s10.f2">Hooks from the film world — the concierge, the details, the island</li>
+          <li data-i18n="s10.f3">Instagram, TikTok, YouTube Shorts</li>
+          <li data-i18n="s10.f4">RU / EN versions</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 11 · VSL -->
+    <section class="slide" id="s11">
+      <div class="slide__in">
+        <p class="slide__no">11</p>
+        <h2 class="slide__title" data-i18n="s11.title">VSL — video sales letter</h2>
+        <p class="lead" data-i18n="s11.lead">A selling video for the landing page: it walks a cold visitor to a request.</p>
+        <ul class="list">
+          <li data-i18n="s11.f1">Structure: dream → the project → the offer → call to action</li>
+          <li data-i18n="s11.f2">3–5 minutes, presenter-led or narrated</li>
+          <li data-i18n="s11.f3">A/B versions of the opening</li>
+          <li data-i18n="s11.f4">RU / EN / ZH localisations</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 12 · Sales training -->
+    <section class="slide" id="s12">
+      <div class="slide__in">
+        <p class="slide__no">12</p>
+        <h2 class="slide__title" data-i18n="s12.title">Training videos for sellers</h2>
+        <p class="lead" data-i18n="s12.lead">A closed video library so every seller and agent tells the project the same way.</p>
+        <ul class="list">
+          <li data-i18n="s12.f1">The product by unit type — what to show and say</li>
+          <li data-i18n="s12.f2">Objection handling — short answer clips</li>
+          <li data-i18n="s12.f3">Onboarding for new agents</li>
+          <li data-i18n="s12.f4">Broker &amp; agency kit</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 13 · Sales & the site -->
+    <section class="slide" id="s13">
+      <div class="slide__in">
+        <p class="slide__no">13</p>
+        <h2 class="slide__title" data-i18n="s13.title">Sales &amp; the site</h2>
+        <p class="lead" data-i18n="s13.lead">Video that shows the development itself — and keeps trust alive until handover in Q4 2026.</p>
+        <ul class="list">
+          <li data-i18n="s13.f1">Drone overview of Bang Tao and the site</li>
+          <li data-i18n="s13.f2">Villa tours by unit type</li>
+          <li data-i18n="s13.f3">Monthly construction updates</li>
+          <li data-i18n="s13.f4">Buyer testimonials after handover</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 14 · Packages -->
+    <section class="slide" id="s14">
+      <div class="slide__in slide__in--wide">
+        <p class="slide__no">14</p>
+        <h2 class="slide__title" data-i18n="s14.title">Packages</h2>
+        <div class="pricing__introrow">
+          <p class="lead" data-i18n="s14.lead">Three ways to start — from the film alone to the full content system.</p>
+          <div class="curswitch" role="group" aria-label="Currency">
+            <button type="button" data-cur="usd" class="is-active">USD $</button>
+            <span aria-hidden="true">/</span>
+            <button type="button" data-cur="rub">RUB ₽</button>
+          </div>
+        </div>
+        <div class="tiers">
+          <article class="tier">
+            <h3 class="tier__name" data-i18n="s14.t1Name">Film</h3>
+            <p class="tier__price"><span class="tier__from" data-i18n="s14.from">from</span> <span class="tier__amount" data-usd="$—" data-rub="₽—">$—</span></p>
+            <ul class="tier__list">
+              <li data-i18n="s14.t1i1">Brand film 2:00 + lobby loop</li>
+              <li data-i18n="s14.t1i2">Insert R1–R12</li>
+              <li data-i18n="s14.t1i3">Cutdowns + verticals</li>
+            </ul>
+            <a class="btn btn--ghost tier__cta" href="#s15" data-i18n="s14.choose">Choose</a>
+          </article>
+          <article class="tier tier--featured">
+            <span class="tier__badge" data-i18n="s14.popular">Most chosen</span>
+            <h3 class="tier__name" data-i18n="s14.t2Name">Film + Sales</h3>
+            <p class="tier__price"><span class="tier__from" data-i18n="s14.from">from</span> <span class="tier__amount" data-usd="$—" data-rub="₽—">$—</span></p>
+            <ul class="tier__list">
+              <li data-i18n="s14.t2i1">Everything in “Film”</li>
+              <li data-i18n="s14.t2i2">VSL + ad spots</li>
+              <li data-i18n="s14.t2i3">Villa tours + drone</li>
+              <li data-i18n="s14.t2i4">Sales team training library</li>
+            </ul>
+            <a class="btn tier__cta" href="#s15" data-i18n="s14.choose">Choose</a>
+          </article>
+          <article class="tier">
+            <h3 class="tier__name" data-i18n="s14.t3Name">Content system</h3>
+            <p class="tier__price"><span class="tier__from" data-i18n="s14.from">from</span> <span class="tier__amount" data-usd="$—" data-rub="₽—">$—</span></p>
+            <ul class="tier__list">
+              <li data-i18n="s14.t3i1">Everything in “Film + Sales”</li>
+              <li data-i18n="s14.t3i2">YouTube + Reels, monthly</li>
+              <li data-i18n="s14.t3i3">Construction updates</li>
+              <li data-i18n="s14.t3i4">Localisation RU / EN / ZH</li>
+            </ul>
+            <a class="btn btn--ghost tier__cta" href="#s15" data-i18n="s14.choose">Choose</a>
+          </article>
+        </div>
+        <p class="pricing__note" data-i18n="s14.note">Numbers are filled in after the scope is agreed — this slide fixes the structure of the offer.</p>
+      </div>
+    </section>
+
+    <!-- 15 · Next step -->
+    <section class="slide slide--dark" id="s15">
+      <div class="slide__in">
+        <p class="slide__no">15</p>
+        <h2 class="slide__title" data-i18n="s15.title">Next step</h2>
+        <p class="lead" data-i18n="s15.lead">Choose the concept, approve the content map — and we bring the budget and the calendar to the next meeting.</p>
+        <ol class="nextsteps">
+          <li data-i18n="s15.n1">Concept — approved / discuss</li>
+          <li data-i18n="s15.n2">Content map — pick the tracks to start with</li>
+          <li data-i18n="s15.n3">Budget &amp; timeline — we prepare within 3 days</li>
+        </ol>
         <div class="contact__actions">
-          <a class="btn" href="#" data-i18n="contact.book">Book a 15-min call</a>
-          <a class="btn btn--ghost" href="#" data-i18n="contact.chat">WhatsApp / Telegram</a>
-          <a class="btn btn--ghost" href="mailto:hello@example.com" data-i18n="contact.email">Email us</a>
+          <a class="btn" href="#" data-i18n="s15.chat">WhatsApp / Telegram</a>
+          <a class="btn btn--ghost btn--onDark" href="mailto:hello@example.com" data-i18n="s15.email">Email us</a>
         </div>
       </div>
     </section>
-  </main>
 
-  <footer class="footer">
-    <div class="footer__inner">
-      <span data-i18n="brand.name">Studio</span>
-      <span class="footer__muted"><span data-i18n="footer.tag">Campaign proposal</span> · <span id="year"></span></span>
-    </div>
-  </footer>
+  </main>
 
   <script src="app.js"></script>
 </body>
