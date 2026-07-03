@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Gardens of Eden — Presentation</title>
+  <meta name="description" content="Gardens of Eden — a short film. Presentation." />
+
+  <!-- Open Graph (link preview when shared with the client) -->
+  <meta property="og:title" content="Gardens of Eden" />
+  <meta property="og:description" content="A short film · Phuket — presentation" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== Top navigation ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#cover" aria-label="Gardens of Eden — home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__name">Gardens of Eden</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Sections">
+        <a href="#concept" data-nav>Concept</a>
+        <a href="#story" data-nav>Story</a>
+        <a href="#storyboard" data-nav>Storyboard</a>
+        <a href="#film" data-nav>Film</a>
+        <a href="#contact" data-nav>Contact</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Cover ===== -->
+    <section class="cover" id="cover">
+      <div class="cover__bg" aria-hidden="true"></div>
+      <div class="cover__content">
+        <p class="eyebrow">A short film · Phuket</p>
+        <h1 class="cover__title">Gardens<br />of Eden</h1>
+        <p class="cover__lede">A presentation prepared for review.</p>
+      </div>
+      <a class="scrollcue" href="#concept" aria-label="Scroll to start">
+        <span>Begin</span>
+        <span class="scrollcue__line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ===== Concept ===== -->
+    <section class="section" id="concept">
+      <div class="section__head reveal">
+        <p class="section__index">01</p>
+        <h2 class="section__title">The Concept</h2>
+      </div>
+      <div class="section__body reveal">
+        <p class="lead">The idea, the tone, the world — a short introduction goes here.</p>
+        <div class="placeholder placeholder--text">Content coming soon</div>
+      </div>
+    </section>
+
+    <!-- ===== Story ===== -->
+    <section class="section section--tint" id="story">
+      <div class="section__head reveal">
+        <p class="section__index">02</p>
+        <h2 class="section__title">The Story</h2>
+      </div>
+      <div class="section__body reveal">
+        <p class="lead">Treatment and narrative beats will live here.</p>
+        <div class="placeholder placeholder--text">Content coming soon</div>
+      </div>
+    </section>
+
+    <!-- ===== Storyboard (image grid) ===== -->
+    <section class="section" id="storyboard">
+      <div class="section__head reveal">
+        <p class="section__index">03</p>
+        <h2 class="section__title">Storyboard</h2>
+      </div>
+      <div class="grid reveal">
+        <figure class="well well--image"><span>Frame 01</span></figure>
+        <figure class="well well--image"><span>Frame 02</span></figure>
+        <figure class="well well--image"><span>Frame 03</span></figure>
+        <figure class="well well--image"><span>Frame 04</span></figure>
+        <figure class="well well--image"><span>Frame 05</span></figure>
+        <figure class="well well--image"><span>Frame 06</span></figure>
+      </div>
+    </section>
+
+    <!-- ===== Film (video) ===== -->
+    <section class="section section--tint" id="film">
+      <div class="section__head reveal">
+        <p class="section__index">04</p>
+        <h2 class="section__title">The Film</h2>
+      </div>
+      <div class="section__body reveal">
+        <div class="well well--video">
+          <span class="well__play" aria-hidden="true"></span>
+          <span>Video coming soon</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section section--contact" id="contact">
+      <div class="section__head reveal">
+        <p class="section__index">05</p>
+        <h2 class="section__title">Contact</h2>
+      </div>
+      <div class="section__body reveal">
+        <p class="lead">Let’s talk about the next step.</p>
+        <a class="btn" href="mailto:hello@example.com">Get in touch</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>Gardens of Eden</span>
+      <span class="footer__muted">Presentation · <span id="year"></span></span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
