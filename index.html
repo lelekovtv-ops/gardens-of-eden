@@ -3,13 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Gardens of Eden — Presentation</title>
-  <meta name="description" content="Gardens of Eden — a short film. Presentation." />
+  <title>Campaign Proposal — Video Production</title>
+  <meta name="description" data-i18n-attr="content" data-i18n="meta.description" content="Video advertising campaign proposal — brand film, showroom reel, ad spots." />
 
-  <!-- Open Graph (link preview when shared with the client) -->
-  <meta property="og:title" content="Gardens of Eden" />
-  <meta property="og:description" content="A short film · Phuket — presentation" />
+  <!-- Link preview (WhatsApp / Telegram / email) -->
+  <meta property="og:title" content="Campaign Proposal — Video Production" />
+  <meta property="og:description" content="Brand film · Showroom reel · 20-second ad spots" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lelekovtv-ops.github.io/gardens-of-eden/" />
+  <meta property="og:image" content="https://lelekovtv-ops.github.io/gardens-of-eden/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,111 +24,310 @@
   <!-- ===== Top navigation ===== -->
   <header class="nav" id="nav">
     <div class="nav__inner">
-      <a class="brand" href="#cover" aria-label="Gardens of Eden — home">
+      <a class="brand" href="#hero" aria-label="Home">
         <span class="brand__mark" aria-hidden="true"></span>
-        <span class="brand__name">Gardens of Eden</span>
+        <span class="brand__name" data-i18n="brand.name">Studio</span>
       </a>
 
       <nav class="nav__links" id="navLinks" aria-label="Sections">
-        <a href="#concept" data-nav>Concept</a>
-        <a href="#story" data-nav>Story</a>
-        <a href="#storyboard" data-nav>Storyboard</a>
-        <a href="#film" data-nav>Film</a>
-        <a href="#contact" data-nav>Contact</a>
+        <a href="#concept" data-nav data-i18n="nav.concept">Concept</a>
+        <a href="#work" data-nav data-i18n="nav.work">Work</a>
+        <a href="#process" data-nav data-i18n="nav.process">Process</a>
+        <a href="#pricing" data-nav class="nav__money" data-i18n="nav.pricing">Pricing</a>
+        <a href="#about" data-nav data-i18n="nav.about">About</a>
+        <a href="#contact" data-nav data-i18n="nav.contact">Contact</a>
       </nav>
 
-      <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav__actions">
+        <div class="langswitch" role="group" aria-label="Language">
+          <button type="button" data-lang="en" class="is-active">EN</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" data-lang="ru">RU</button>
+        </div>
+        <a href="#contact" class="btn btn--sm nav__cta" data-i18n="nav.cta">Discuss</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main>
-    <!-- ===== Cover ===== -->
-    <section class="cover" id="cover">
-      <div class="cover__bg" aria-hidden="true"></div>
-      <div class="cover__content">
-        <p class="eyebrow">A short film · Phuket</p>
-        <h1 class="cover__title">Gardens<br />of Eden</h1>
-        <p class="cover__lede">A presentation prepared for review.</p>
+    <!-- ===== 1. Hero ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__media" aria-hidden="true">
+        <!-- Showreel loop goes here later:
+             <video autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+               <source src="https://YOUR-HETZNER/showreel.mp4" type="video/mp4" />
+             </video> -->
+        <div class="hero__bg"></div>
       </div>
-      <a class="scrollcue" href="#concept" aria-label="Scroll to start">
-        <span>Begin</span>
+      <div class="hero__content">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Campaign proposal · Client · 2026</p>
+        <h1 class="hero__title" data-i18n="hero.title">A film that makes the brand impossible to ignore.</h1>
+        <p class="hero__lede" data-i18n="hero.lede">A brand film, a showroom reel and a series of 20-second ad spots — one campaign, one production team.</p>
+        <div class="hero__cta">
+          <a class="btn" href="#work" data-i18n="hero.ctaPrimary">See the work</a>
+          <a class="btn btn--ghost" href="#pricing" data-i18n="hero.ctaSecondary">Packages &amp; pricing</a>
+        </div>
+      </div>
+      <a class="scrollcue" href="#concept" aria-label="Scroll">
+        <span data-i18n="hero.scroll">Begin</span>
         <span class="scrollcue__line" aria-hidden="true"></span>
       </a>
     </section>
 
-    <!-- ===== Concept ===== -->
+    <!-- ===== 2. Concept ===== -->
     <section class="section" id="concept">
       <div class="section__head reveal">
         <p class="section__index">01</p>
-        <h2 class="section__title">The Concept</h2>
+        <h2 class="section__title" data-i18n="concept.title">The Concept</h2>
       </div>
       <div class="section__body reveal">
-        <p class="lead">The idea, the tone, the world — a short introduction goes here.</p>
-        <div class="placeholder placeholder--text">Content coming soon</div>
+        <p class="lead" data-i18n="concept.lead">The creative direction for the campaign — the world, the tone, the feeling the brand should leave behind.</p>
+      </div>
+      <div class="cards reveal">
+        <article class="card card--concept">
+          <span class="card__tag" data-i18n="concept.tagLead">Direction A</span>
+          <h3 class="card__title" data-i18n="concept.c1Title">Gardens of Eden</h3>
+          <p class="card__text" data-i18n="concept.c1Text">Botanical, symmetrical, warm — precise framing and a lush palette. A cinematic, unhurried world.</p>
+        </article>
+        <article class="card card--concept">
+          <span class="card__tag" data-i18n="concept.tag2">Direction B</span>
+          <h3 class="card__title" data-i18n="concept.c2Title">Concept two</h3>
+          <p class="card__text" data-i18n="concept.c2Text">An alternative creative territory — to be developed together with the client.</p>
+        </article>
+        <article class="card card--concept card--muted">
+          <span class="card__tag" data-i18n="concept.tag3">More</span>
+          <h3 class="card__title" data-i18n="concept.c3Title">Further directions</h3>
+          <p class="card__text" data-i18n="concept.c3Text">Additional creative directions on request.</p>
+        </article>
       </div>
     </section>
 
-    <!-- ===== Story ===== -->
-    <section class="section section--tint" id="story">
+    <!-- ===== 3. Work / Deliverables ===== -->
+    <section class="section section--tint" id="work">
       <div class="section__head reveal">
         <p class="section__index">02</p>
-        <h2 class="section__title">The Story</h2>
+        <h2 class="section__title" data-i18n="work.title">The Work</h2>
       </div>
       <div class="section__body reveal">
-        <p class="lead">Treatment and narrative beats will live here.</p>
-        <div class="placeholder placeholder--text">Content coming soon</div>
+        <p class="lead" data-i18n="work.lead">Three products, one production. Each is built to do a specific job.</p>
+      </div>
+
+      <div class="deliverables">
+        <article class="deliverable reveal">
+          <div class="deliverable__media well well--video">
+            <span class="well__play" aria-hidden="true"></span>
+            <span data-i18n="work.comingSoon">Video coming soon</span>
+          </div>
+          <div class="deliverable__body">
+            <span class="deliverable__num">01</span>
+            <h3 class="deliverable__title" data-i18n="work.d1Title">Showroom Reel</h3>
+            <p class="deliverable__purpose" data-i18n="work.d1Purpose">A seamless loop for the showroom screens — reads with the sound off, always on.</p>
+            <p class="deliverable__spec" data-i18n="work.d1Spec">Looping · no-audio-reliant · 16:9 &amp; vertical for in-store screens</p>
+          </div>
+        </article>
+
+        <article class="deliverable deliverable--reverse reveal">
+          <div class="deliverable__media well well--video">
+            <span class="well__play" aria-hidden="true"></span>
+            <span data-i18n="work.comingSoon">Video coming soon</span>
+          </div>
+          <div class="deliverable__body">
+            <span class="deliverable__num">02</span>
+            <h3 class="deliverable__title" data-i18n="work.d2Title">Company / Brand Film</h3>
+            <p class="deliverable__purpose" data-i18n="work.d2Purpose">A ~2-minute cinematic film that tells the company's story — the anchor of the campaign.</p>
+            <p class="deliverable__spec" data-i18n="work.d2Spec">~2 min · 16:9 cinematic · full sound design</p>
+          </div>
+        </article>
+
+        <article class="deliverable reveal">
+          <div class="deliverable__media">
+            <div class="spots">
+              <div class="well well--spot"><span>20s</span></div>
+              <div class="well well--spot"><span>20s</span></div>
+              <div class="well well--spot"><span>20s</span></div>
+            </div>
+          </div>
+          <div class="deliverable__body">
+            <span class="deliverable__num">03</span>
+            <h3 class="deliverable__title" data-i18n="work.d3Title">Ad Spots · 20 sec</h3>
+            <p class="deliverable__purpose" data-i18n="work.d3Purpose">A set of short spots for social and paid media — cut for attention in the first second.</p>
+            <p class="deliverable__spec" data-i18n="work.d3Spec">Several × 20s · 16:9 / 9:16 / 1:1 / 4:5</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- ===== Storyboard (image grid) ===== -->
-    <section class="section" id="storyboard">
+    <!-- ===== 4. Process ===== -->
+    <section class="section" id="process">
       <div class="section__head reveal">
         <p class="section__index">03</p>
-        <h2 class="section__title">Storyboard</h2>
-      </div>
-      <div class="grid reveal">
-        <figure class="well well--image"><span>Frame 01</span></figure>
-        <figure class="well well--image"><span>Frame 02</span></figure>
-        <figure class="well well--image"><span>Frame 03</span></figure>
-        <figure class="well well--image"><span>Frame 04</span></figure>
-        <figure class="well well--image"><span>Frame 05</span></figure>
-        <figure class="well well--image"><span>Frame 06</span></figure>
-      </div>
-    </section>
-
-    <!-- ===== Film (video) ===== -->
-    <section class="section section--tint" id="film">
-      <div class="section__head reveal">
-        <p class="section__index">04</p>
-        <h2 class="section__title">The Film</h2>
+        <h2 class="section__title" data-i18n="process.title">Process &amp; Timeline</h2>
       </div>
       <div class="section__body reveal">
-        <div class="well well--video">
-          <span class="well__play" aria-hidden="true"></span>
-          <span>Video coming soon</span>
+        <p class="lead" data-i18n="process.lead">From first idea to final delivery — a clear path, typically 5–7 weeks.</p>
+      </div>
+      <ol class="steps reveal">
+        <li class="step">
+          <span class="step__num">01</span>
+          <h3 class="step__title" data-i18n="process.p1Title">Pre-production</h3>
+          <p class="step__text" data-i18n="process.p1Text">Script, storyboard, casting, locations.</p>
+          <span class="step__meta" data-i18n="process.p1Meta">~1–2 weeks</span>
+        </li>
+        <li class="step">
+          <span class="step__num">02</span>
+          <h3 class="step__title" data-i18n="process.p2Title">Production</h3>
+          <p class="step__text" data-i18n="process.p2Text">The shoot — crew, camera, light, art.</p>
+          <span class="step__meta" data-i18n="process.p2Meta">2–4 shoot days</span>
+        </li>
+        <li class="step">
+          <span class="step__num">03</span>
+          <h3 class="step__title" data-i18n="process.p3Title">Post-production</h3>
+          <p class="step__text" data-i18n="process.p3Text">Edit, color, sound design, VFX.</p>
+          <span class="step__meta" data-i18n="process.p3Meta">~2–3 weeks</span>
+        </li>
+        <li class="step">
+          <span class="step__num">04</span>
+          <h3 class="step__title" data-i18n="process.p4Title">Delivery</h3>
+          <p class="step__text" data-i18n="process.p4Text">All formats, revisions, handoff.</p>
+          <span class="step__meta" data-i18n="process.p4Meta">~1 week</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== 5. Pricing ===== -->
+    <section class="section section--tint" id="pricing">
+      <div class="section__head reveal">
+        <p class="section__index">04</p>
+        <h2 class="section__title" data-i18n="pricing.title">Packages &amp; Pricing</h2>
+      </div>
+      <div class="pricing__intro reveal">
+        <p class="lead" data-i18n="pricing.lead">Everything below is produced in-house — from script to final grade. Transparent packages, no surprises.</p>
+        <div class="curswitch" role="group" aria-label="Currency">
+          <button type="button" data-cur="usd" class="is-active">USD $</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" data-cur="rub">RUB ₽</button>
+        </div>
+      </div>
+
+      <div class="tiers reveal">
+        <article class="tier">
+          <h3 class="tier__name" data-i18n="pricing.t1Name">Essential</h3>
+          <p class="tier__price"><span class="tier__from" data-i18n="pricing.from">from</span>
+            <span class="tier__amount" data-usd="$4,900" data-rub="₽450,000">$4,900</span>
+          </p>
+          <p class="tier__for" data-i18n="pricing.t1For">One hero deliverable, done beautifully.</p>
+          <ul class="tier__list">
+            <li data-i18n="pricing.t1i1">Showroom reel OR 3× 20-sec spots</li>
+            <li data-i18n="pricing.t1i2">1 shoot day</li>
+            <li data-i18n="pricing.t1i3">1 creative concept</li>
+            <li data-i18n="pricing.t1i4">Color grade + basic sound</li>
+            <li data-i18n="pricing.t1i5">HD · 16:9 + vertical</li>
+            <li data-i18n="pricing.t1i6">2 revision rounds</li>
+          </ul>
+          <a class="btn btn--ghost tier__cta" href="#contact" data-i18n="pricing.choose">Choose</a>
+        </article>
+
+        <article class="tier tier--featured">
+          <span class="tier__badge" data-i18n="pricing.popular">Most chosen</span>
+          <h3 class="tier__name" data-i18n="pricing.t2Name">Signature</h3>
+          <p class="tier__price"><span class="tier__from" data-i18n="pricing.from">from</span>
+            <span class="tier__amount" data-usd="$9,900" data-rub="₽900,000">$9,900</span>
+          </p>
+          <p class="tier__for" data-i18n="pricing.t2For">The full campaign — film, reel and spots.</p>
+          <ul class="tier__list">
+            <li data-i18n="pricing.t2i1">Brand film (~2 min)</li>
+            <li data-i18n="pricing.t2i2">Showroom reel + 3× 20-sec spots</li>
+            <li data-i18n="pricing.t2i3">2 shoot days</li>
+            <li data-i18n="pricing.t2i4">Up to 2 concepts</li>
+            <li data-i18n="pricing.t2i5">Full grade + sound design</li>
+            <li data-i18n="pricing.t2i6">4K · all social formats</li>
+            <li data-i18n="pricing.t2i7">3 revision rounds</li>
+          </ul>
+          <a class="btn tier__cta" href="#contact" data-i18n="pricing.choose">Choose</a>
+        </article>
+
+        <article class="tier">
+          <h3 class="tier__name" data-i18n="pricing.t3Name">Premiere</h3>
+          <p class="tier__price"><span class="tier__from" data-i18n="pricing.from">from</span>
+            <span class="tier__amount" data-usd="$18,000" data-rub="₽1,650,000">$18,000</span>
+          </p>
+          <p class="tier__for" data-i18n="pricing.t3For">The flagship — every format, no compromise.</p>
+          <ul class="tier__list">
+            <li data-i18n="pricing.t3i1">Everything in Signature</li>
+            <li data-i18n="pricing.t3i2">6× 20-sec spots</li>
+            <li data-i18n="pricing.t3i3">3 shoot days</li>
+            <li data-i18n="pricing.t3i4">Original music + motion graphics</li>
+            <li data-i18n="pricing.t3i5">4K / HDR · all formats</li>
+            <li data-i18n="pricing.t3i6">Stills + BTS package</li>
+            <li data-i18n="pricing.t3i7">Priority scheduling</li>
+          </ul>
+          <a class="btn btn--ghost tier__cta" href="#contact" data-i18n="pricing.choose">Choose</a>
+        </article>
+
+        <article class="tier tier--custom">
+          <h3 class="tier__name" data-i18n="pricing.t4Name">Custom</h3>
+          <p class="tier__for" data-i18n="pricing.t4For">Bigger scope, multiple locations, a bespoke idea? Let's build it together.</p>
+          <a class="btn btn--ghost tier__cta" href="#contact" data-i18n="pricing.quote">Request a quote</a>
+        </article>
+      </div>
+      <p class="pricing__note reveal" data-i18n="pricing.note">Prices are indicative and confirmed after a short scoping call.</p>
+    </section>
+
+    <!-- ===== 6. About ===== -->
+    <section class="section" id="about">
+      <div class="section__head reveal">
+        <p class="section__index">05</p>
+        <h2 class="section__title" data-i18n="about.title">About Us</h2>
+      </div>
+      <div class="section__body reveal">
+        <p class="lead" data-i18n="about.lead">A production studio that takes a film from the first word of the script to the final grade — in-house.</p>
+      </div>
+      <div class="team reveal">
+        <div class="member"><span class="member__role" data-i18n="about.r1">Director</span><span class="member__name" data-i18n="about.n1">Name</span></div>
+        <div class="member"><span class="member__role" data-i18n="about.r2">DP / Cinematographer</span><span class="member__name" data-i18n="about.n2">Name</span></div>
+        <div class="member"><span class="member__role" data-i18n="about.r3">Producer</span><span class="member__name" data-i18n="about.n3">Name</span></div>
+        <div class="member"><span class="member__role" data-i18n="about.r4">Editor / Colorist</span><span class="member__name" data-i18n="about.n4">Name</span></div>
+      </div>
+      <div class="whyus reveal">
+        <div class="whyus__item"><h4 data-i18n="about.w1t">In-house, end to end</h4><p data-i18n="about.w1p">Script, shoot, edit, color and sound under one roof.</p></div>
+        <div class="whyus__item"><h4 data-i18n="about.w2t">Our own gear</h4><p data-i18n="about.w2p">Cinema camera and lighting — no rental delays.</p></div>
+        <div class="whyus__item"><h4 data-i18n="about.w3t">Fast turnaround</h4><p data-i18n="about.w3p">A full campaign in weeks, not months.</p></div>
+      </div>
+      <div class="clients reveal">
+        <p class="clients__label" data-i18n="about.clients">Selected work &amp; clients</p>
+        <div class="clients__row">
+          <span class="clients__logo">Logo</span>
+          <span class="clients__logo">Logo</span>
+          <span class="clients__logo">Logo</span>
+          <span class="clients__logo">Logo</span>
         </div>
       </div>
     </section>
 
-    <!-- ===== Contact ===== -->
-    <section class="section section--contact" id="contact">
+    <!-- ===== 7. Contact ===== -->
+    <section class="section section--contact section--tint" id="contact">
       <div class="section__head reveal">
-        <p class="section__index">05</p>
-        <h2 class="section__title">Contact</h2>
+        <p class="section__index">06</p>
+        <h2 class="section__title" data-i18n="contact.title">Next Step</h2>
       </div>
       <div class="section__body reveal">
-        <p class="lead">Let’s talk about the next step.</p>
-        <a class="btn" href="mailto:hello@example.com">Get in touch</a>
+        <p class="lead" data-i18n="contact.lead">Pick a package or tell us the idea — a short call is the fastest way to a plan and a number.</p>
+        <div class="contact__actions">
+          <a class="btn" href="#" data-i18n="contact.book">Book a 15-min call</a>
+          <a class="btn btn--ghost" href="#" data-i18n="contact.chat">WhatsApp / Telegram</a>
+          <a class="btn btn--ghost" href="mailto:hello@example.com" data-i18n="contact.email">Email us</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer__inner">
-      <span>Gardens of Eden</span>
-      <span class="footer__muted">Presentation · <span id="year"></span></span>
+      <span data-i18n="brand.name">Studio</span>
+      <span class="footer__muted"><span data-i18n="footer.tag">Campaign proposal</span> · <span id="year"></span></span>
     </div>
   </footer>
 
