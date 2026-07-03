@@ -156,50 +156,79 @@
       </div>
     </section>
 
-    <!-- 05 · Flagship film -->
+    <!-- 05 · Flagship film — concept pager (whole panel changes with ← →) -->
     <section class="slide slide--dark" id="s05">
-      <div class="slide__in">
-        <p class="slide__no">05</p>
-        <span class="badge badge--ok" data-i18n="s05.badge">Approved by the client · in production</span>
-        <h2 class="slide__title" data-i18n="s05.title">Flagship — narrative film 2:00</h2>
-        <p class="spec" data-i18n="s05.spec">2:00 · 16:9 · website, presentations, events</p>
-        <p class="lead" data-i18n="s05.lead">“Grand Budapest on Bang Tao”: a legendary Thai concierge answers one question in two minutes — “What is Gardens of Eden?” — and leads us through the garden, the home, the kitchen and the island, helping with his own hands in every story.</p>
-
-        <div class="carousel" data-carousel>
-          <p class="carousel__label" data-i18n="s05.reelLabel">Storyboard · preview</p>
-          <div class="carousel__stage">
-            <button class="carousel__arrow carousel__arrow--prev" type="button" data-prev data-i18n="s05.prevAria" data-i18n-attr="aria-label" aria-label="Previous frame">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6" /></svg>
-            </button>
-            <div class="carousel__viewport">
-              <div class="carousel__track" data-track>
-                <figure class="carousel__frame"><span class="frameimg__no">01</span><figcaption class="frameimg__cap" data-i18n="s05.fr1">Prologue</figcaption></figure>
-                <figure class="carousel__frame"><span class="frameimg__no">02</span><figcaption class="frameimg__cap" data-i18n="s05.fr2">Garden</figcaption></figure>
-                <figure class="carousel__frame"><span class="frameimg__no">03</span><figcaption class="frameimg__cap" data-i18n="s05.fr3">Home</figcaption></figure>
-                <figure class="carousel__frame"><span class="frameimg__no">04</span><figcaption class="frameimg__cap" data-i18n="s05.fr4">Kitchen</figcaption></figure>
-                <figure class="carousel__frame"><span class="frameimg__no">05</span><figcaption class="frameimg__cap" data-i18n="s05.fr5">Phuket</figcaption></figure>
-                <figure class="carousel__frame"><span class="frameimg__no">06</span><figcaption class="frameimg__cap" data-i18n="s05.fr6">Finale</figcaption></figure>
-              </div>
+      <div class="slide__in slide__in--wide">
+        <div class="pager" data-carousel>
+          <div class="pagerhead">
+            <div>
+              <p class="slide__no">05</p>
+              <p class="pagerhead__kicker" data-i18n="s05.kicker">Flagship · game film 2:00 — concept</p>
             </div>
-            <button class="carousel__arrow carousel__arrow--next" type="button" data-next data-i18n="s05.nextAria" data-i18n-attr="aria-label" aria-label="Next frame">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6" /></svg>
-            </button>
+            <div class="pager__ctrl">
+              <button class="carousel__arrow" type="button" data-prev data-i18n="s05.prevAria" data-i18n-attr="aria-label" aria-label="Previous concept">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6" /></svg>
+              </button>
+              <span class="pager__counter" data-counter>01 / 03</span>
+              <button class="carousel__arrow" type="button" data-next data-i18n="s05.nextAria" data-i18n-attr="aria-label" aria-label="Next concept">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6" /></svg>
+              </button>
+            </div>
           </div>
-          <div class="carousel__foot">
-            <div class="carousel__dots" data-dots></div>
-            <span class="carousel__counter" data-counter>01 / 06</span>
-          </div>
-        </div>
 
-        <ul class="pills">
-          <li data-i18n="s05.k1">Symmetry &amp; frontal staging</li>
-          <li data-i18n="s05.k2">Chapter title cards</li>
-          <li data-i18n="s05.k3">Deadpan humour</li>
-          <li data-i18n="s05.k4">Sage green palette</li>
-          <li data-i18n="s05.k5">60 frames scripted</li>
-          <li data-i18n="s05.k6">Seamless loop ending</li>
-        </ul>
-        <p class="struct"><span data-i18n="s05.structLabel">Film structure:</span> <span data-i18n="s05.struct">Prologue → Garden → Home → project insert R1–R12 → Kitchen → Phuket → Finale (loops back to frame 1)</span></p>
+          <div class="pager__viewport">
+            <div class="pager__track" data-track>
+
+              <!-- Concept I -->
+              <article class="concept">
+                <div class="concept__text">
+                  <span class="badge badge--ok" data-i18n="s05.p1badge">Approved by the client · in production</span>
+                  <h2 class="concept__title" data-i18n="s05.p1title">Concept I — “Grand Budapest on Bang Tao”</h2>
+                  <p class="spec" data-i18n="s05.p1spec">2:00 · 16:9 · game film</p>
+                  <p class="lead" data-i18n="s05.p1lead">A legendary Thai concierge answers one question in two minutes — “What is Gardens of Eden?” — and leads us through the garden, the home, the kitchen and the island, helping with his own hands in every story.</p>
+                  <ul class="pills">
+                    <li data-i18n="s05.p1k1">Symmetry &amp; frontal staging</li>
+                    <li data-i18n="s05.p1k2">Chapter title cards</li>
+                    <li data-i18n="s05.p1k3">Deadpan humour</li>
+                    <li data-i18n="s05.p1k4">Seamless loop ending</li>
+                  </ul>
+                </div>
+                <div class="concept__media">
+                  <div class="frame16"><span class="frameimg__no">01</span><span class="frame16__cap" data-i18n="s05.p1media">Key frame · Prologue</span></div>
+                </div>
+              </article>
+
+              <!-- Concept II -->
+              <article class="concept">
+                <div class="concept__text">
+                  <span class="badge" data-i18n="s05.p2badge">In development</span>
+                  <h2 class="concept__title" data-i18n="s05.p2title">Concept II</h2>
+                  <p class="spec" data-i18n="s05.p2spec">Alternative direction</p>
+                  <p class="lead" data-i18n="s05.p2lead">An alternative creative territory — we develop it together with the client.</p>
+                </div>
+                <div class="concept__media">
+                  <div class="frame16 frame16--empty"><span class="frame16__cap" data-i18n="s05.p2media">Coming soon</span></div>
+                </div>
+              </article>
+
+              <!-- Concept III -->
+              <article class="concept">
+                <div class="concept__text">
+                  <span class="badge" data-i18n="s05.p3badge">In development</span>
+                  <h2 class="concept__title" data-i18n="s05.p3title">Concept III</h2>
+                  <p class="spec" data-i18n="s05.p3spec">Alternative direction</p>
+                  <p class="lead" data-i18n="s05.p3lead">A third direction — so there is a real choice of worlds, not one option.</p>
+                </div>
+                <div class="concept__media">
+                  <div class="frame16 frame16--empty"><span class="frame16__cap" data-i18n="s05.p3media">Coming soon</span></div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <div class="pager__dots" data-dots></div>
+        </div>
       </div>
     </section>
 

@@ -59,18 +59,21 @@
       "s04.t4": "Team", "s04.t4p": "Training for sellers and brokers — everyone tells the same story.",
       "s04.funnel": "Discover → fall in love → buy → sell it on.",
 
-      "s05.badge": "Approved by the client · in production",
-      "s05.title": "Flagship — narrative film 2:00",
-      "s05.spec": "2:00 · 16:9 · website, presentations, events",
-      "s05.lead": "“Grand Budapest on Bang Tao”: a legendary Thai concierge answers one question in two minutes — “What is Gardens of Eden?” — and leads us through the garden, the home, the kitchen and the island, helping with his own hands in every story.",
-      "s05.k1": "Symmetry & frontal staging", "s05.k2": "Chapter title cards", "s05.k3": "Deadpan humour",
-      "s05.k4": "Sage green palette", "s05.k5": "60 frames scripted", "s05.k6": "Seamless loop ending",
-      "s05.structLabel": "Film structure:",
-      "s05.struct": "Prologue → Garden → Home → project insert R1–R12 → Kitchen → Phuket → Finale (loops back to frame 1)",
-      "s05.reelLabel": "Storyboard · preview",
-      "s05.prevAria": "Previous frame", "s05.nextAria": "Next frame",
-      "s05.fr1": "Prologue", "s05.fr2": "Garden", "s05.fr3": "Home",
-      "s05.fr4": "Kitchen", "s05.fr5": "Phuket", "s05.fr6": "Finale",
+      "s05.kicker": "Flagship · game film 2:00 — concept",
+      "s05.prevAria": "Previous concept", "s05.nextAria": "Next concept",
+      "s05.p1badge": "Approved by the client · in production",
+      "s05.p1title": "Concept I — “Grand Budapest on Bang Tao”",
+      "s05.p1spec": "2:00 · 16:9 · game film",
+      "s05.p1lead": "A legendary Thai concierge answers one question in two minutes — “What is Gardens of Eden?” — and leads us through the garden, the home, the kitchen and the island, helping with his own hands in every story.",
+      "s05.p1k1": "Symmetry & frontal staging", "s05.p1k2": "Chapter title cards",
+      "s05.p1k3": "Deadpan humour", "s05.p1k4": "Seamless loop ending",
+      "s05.p1media": "Key frame · Prologue",
+      "s05.p2badge": "In development", "s05.p2title": "Concept II", "s05.p2spec": "Alternative direction",
+      "s05.p2lead": "An alternative creative territory — we develop it together with the client.",
+      "s05.p2media": "Coming soon",
+      "s05.p3badge": "In development", "s05.p3title": "Concept III", "s05.p3spec": "Alternative direction",
+      "s05.p3lead": "A third direction — so there is a real choice of worlds, not one option.",
+      "s05.p3media": "Coming soon",
 
       "s06.badge": "In development",
       "s06.title": "Company film — the founders",
@@ -219,18 +222,21 @@
       "s04.t4": "Команда", "s04.t4p": "Обучение селлеров и брокеров — все рассказывают одну историю.",
       "s04.funnel": "Узнали → влюбились → купили → продают дальше.",
 
-      "s05.badge": "Принята клиентом · в производстве",
-      "s05.title": "Флагман — игровой фильм 2:00",
-      "s05.spec": "2:00 · 16:9 · сайт, презентации, мероприятия",
-      "s05.lead": "«Гранд Будапешт на Банг Тао»: легендарный тайский консьерж за две минуты отвечает на один вопрос — «что такое Gardens of Eden?» — и ведёт через сад, дом, кухню и остров, в каждой истории помогая своими руками.",
-      "s05.k1": "Симметрия и фронтальные мизансцены", "s05.k2": "Главы-титры", "s05.k3": "Деадпан-юмор",
-      "s05.k4": "Палитра sage green", "s05.k5": "60 кадров в сценарии", "s05.k6": "Бесшовный луп в финале",
-      "s05.structLabel": "Структура фильма:",
-      "s05.struct": "Пролог → Сад → Дом → врезка о проекте R1–R12 → Кухня → Пхукет → Финал (стыкуется в кадр 1)",
-      "s05.reelLabel": "Раскадровка · превью",
-      "s05.prevAria": "Предыдущий кадр", "s05.nextAria": "Следующий кадр",
-      "s05.fr1": "Пролог", "s05.fr2": "Сад", "s05.fr3": "Дом",
-      "s05.fr4": "Кухня", "s05.fr5": "Пхукет", "s05.fr6": "Финал",
+      "s05.kicker": "Флагман · игровой фильм 2:00 — концепция",
+      "s05.prevAria": "Предыдущая концепция", "s05.nextAria": "Следующая концепция",
+      "s05.p1badge": "Принята клиентом · в производстве",
+      "s05.p1title": "Концепция I — «Гранд Будапешт на Банг Тао»",
+      "s05.p1spec": "2:00 · 16:9 · игровой фильм",
+      "s05.p1lead": "Легендарный тайский консьерж за две минуты отвечает на один вопрос — «что такое Gardens of Eden?» — и ведёт через сад, дом, кухню и остров, в каждой истории помогая своими руками.",
+      "s05.p1k1": "Симметрия и фронтальные мизансцены", "s05.p1k2": "Главы-титры",
+      "s05.p1k3": "Деадпан-юмор", "s05.p1k4": "Бесшовный луп в финале",
+      "s05.p1media": "Ключевой кадр · Пролог",
+      "s05.p2badge": "В разработке", "s05.p2title": "Концепция II", "s05.p2spec": "Альтернативное направление",
+      "s05.p2lead": "Альтернативная креативная территория — разрабатываем вместе с клиентом.",
+      "s05.p2media": "Скоро",
+      "s05.p3badge": "В разработке", "s05.p3title": "Концепция III", "s05.p3spec": "Альтернативное направление",
+      "s05.p3lead": "Третье направление — чтобы выбор миров был настоящим, а не из одного варианта.",
+      "s05.p3media": "Скоро",
 
       "s06.badge": "В разработке",
       "s06.title": "Фильм о компании — основатели",
@@ -431,13 +437,21 @@
   function prefersReduced() {
     return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
+  /* ← / → page a pager on the current slide if it has one; else move the deck. */
+  function pageH(dir) {
+    var pager = slides[current] && slides[current].querySelector("[data-carousel]");
+    if (pager && pager._pager) { dir > 0 ? pager._pager.next() : pager._pager.prev(); }
+    else { go(current + dir); }
+  }
   document.addEventListener("keydown", function (e) {
     if (e.target && /^(input|textarea|select)$/i.test(e.target.tagName)) return;
     switch (e.key) {
-      case "ArrowDown": case "ArrowRight": case "PageDown": case " ":
+      case "ArrowDown": case "PageDown": case " ":
         e.preventDefault(); go(current + 1); break;
-      case "ArrowUp": case "ArrowLeft": case "PageUp":
+      case "ArrowUp": case "PageUp":
         e.preventDefault(); go(current - 1); break;
+      case "ArrowRight": e.preventDefault(); pageH(1); break;
+      case "ArrowLeft": e.preventDefault(); pageH(-1); break;
       case "Home": e.preventDefault(); go(0); break;
       case "End": e.preventDefault(); go(slides.length - 1); break;
       case "Escape": closeMenu(); break;
@@ -457,31 +471,32 @@
   }
   navLinks.forEach(function (a) { a.addEventListener("click", closeMenu); });
 
-  /* ---- concept carousels (storyboard preview) ---- */
+  /* ---- pagers: whole panel changes with ← → (concepts, storyboards) ---- */
   function initCarousel(root) {
     var track = root.querySelector("[data-track]");
-    var frames = Array.prototype.slice.call(root.querySelectorAll(".carousel__frame"));
-    if (!track || !frames.length) return;
+    if (!track) return;
+    var items = Array.prototype.slice.call(track.children);
+    if (!items.length) return;
     var dotsWrap = root.querySelector("[data-dots]");
     var counter = root.querySelector("[data-counter]");
     var idx = 0;
     var dots = [];
     if (dotsWrap) {
-      frames.forEach(function (_, n) {
+      items.forEach(function (_, n) {
         var b = document.createElement("button");
         b.type = "button";
-        b.setAttribute("aria-label", "Frame " + (n + 1));
+        b.setAttribute("aria-label", "Slide " + (n + 1));
         b.addEventListener("click", function () { go(n); });
         dotsWrap.appendChild(b);
         dots.push(b);
       });
     }
     function go(n) {
-      idx = (n + frames.length) % frames.length;
+      idx = (n + items.length) % items.length;
       track.style.transform = "translateX(" + -idx * 100 + "%)";
       dots.forEach(function (d, x) { d.classList.toggle("is-active", x === idx); });
-      frames.forEach(function (f, x) { f.setAttribute("aria-hidden", x === idx ? "false" : "true"); });
-      if (counter) counter.textContent = pad2(idx + 1) + " / " + pad2(frames.length);
+      items.forEach(function (f, x) { f.setAttribute("aria-hidden", x === idx ? "false" : "true"); });
+      if (counter) counter.textContent = pad2(idx + 1) + " / " + pad2(items.length);
     }
     var prev = root.querySelector("[data-prev]");
     var next = root.querySelector("[data-next]");
@@ -496,6 +511,7 @@
       x0 = null;
     });
     go(0);
+    root._pager = { prev: function () { go(idx - 1); }, next: function () { go(idx + 1); } };
   }
   Array.prototype.slice.call(document.querySelectorAll("[data-carousel]")).forEach(initCarousel);
 
