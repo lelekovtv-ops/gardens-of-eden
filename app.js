@@ -67,6 +67,10 @@
       "s05.k4": "Sage green palette", "s05.k5": "60 frames scripted", "s05.k6": "Seamless loop ending",
       "s05.structLabel": "Film structure:",
       "s05.struct": "Prologue → Garden → Home → project insert R1–R12 → Kitchen → Phuket → Finale (loops back to frame 1)",
+      "s05.reelLabel": "Storyboard · preview",
+      "s05.prevAria": "Previous frame", "s05.nextAria": "Next frame",
+      "s05.fr1": "Prologue", "s05.fr2": "Garden", "s05.fr3": "Home",
+      "s05.fr4": "Kitchen", "s05.fr5": "Phuket", "s05.fr6": "Finale",
 
       "s06.badge": "In development",
       "s06.title": "Company film — the founders",
@@ -223,6 +227,10 @@
       "s05.k4": "Палитра sage green", "s05.k5": "60 кадров в сценарии", "s05.k6": "Бесшовный луп в финале",
       "s05.structLabel": "Структура фильма:",
       "s05.struct": "Пролог → Сад → Дом → врезка о проекте R1–R12 → Кухня → Пхукет → Финал (стыкуется в кадр 1)",
+      "s05.reelLabel": "Раскадровка · превью",
+      "s05.prevAria": "Предыдущий кадр", "s05.nextAria": "Следующий кадр",
+      "s05.fr1": "Пролог", "s05.fr2": "Сад", "s05.fr3": "Дом",
+      "s05.fr4": "Кухня", "s05.fr5": "Пхукет", "s05.fr6": "Финал",
 
       "s06.badge": "В разработке",
       "s06.title": "Фильм о компании — основатели",
@@ -448,6 +456,48 @@
     });
   }
   navLinks.forEach(function (a) { a.addEventListener("click", closeMenu); });
+
+  /* ---- concept carousels (storyboard preview) ---- */
+  function initCarousel(root) {
+    var track = root.querySelector("[data-track]");
+    var frames = Array.prototype.slice.call(root.querySelectorAll(".carousel__frame"));
+    if (!track || !frames.length) return;
+    var dotsWrap = root.querySelector("[data-dots]");
+    var counter = root.querySelector("[data-counter]");
+    var idx = 0;
+    var dots = [];
+    if (dotsWrap) {
+      frames.forEach(function (_, n) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("aria-label", "Frame " + (n + 1));
+        b.addEventListener("click", function () { go(n); });
+        dotsWrap.appendChild(b);
+        dots.push(b);
+      });
+    }
+    function go(n) {
+      idx = (n + frames.length) % frames.length;
+      track.style.transform = "translateX(" + -idx * 100 + "%)";
+      dots.forEach(function (d, x) { d.classList.toggle("is-active", x === idx); });
+      frames.forEach(function (f, x) { f.setAttribute("aria-hidden", x === idx ? "false" : "true"); });
+      if (counter) counter.textContent = pad2(idx + 1) + " / " + pad2(frames.length);
+    }
+    var prev = root.querySelector("[data-prev]");
+    var next = root.querySelector("[data-next]");
+    if (prev) prev.addEventListener("click", function () { go(idx - 1); });
+    if (next) next.addEventListener("click", function () { go(idx + 1); });
+    var x0 = null;
+    root.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener("touchend", function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) go(dx < 0 ? idx + 1 : idx - 1);
+      x0 = null;
+    });
+    go(0);
+  }
+  Array.prototype.slice.call(document.querySelectorAll("[data-carousel]")).forEach(initCarousel);
 
   /* ---- init ---- */
   initLang();

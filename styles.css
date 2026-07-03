@@ -210,6 +210,51 @@ body.menu-open .topbar__burger span:nth-child(3) { transform: translateY(-6px) r
 .struct { margin-top: 1.7rem; font-size: 0.92rem; color: rgba(244,239,227,0.7); border-top: 1px solid rgba(244,239,227,0.18); padding-top: 1.1rem; }
 .struct span:first-child { font-weight: 700; color: var(--brass-soft); }
 
+/* --- Carousel (concept storyboard preview) --- */
+.carousel { max-width: 640px; margin: 1.7rem 0; }
+.carousel__label { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--brass-soft); margin-bottom: 0.7rem; }
+.carousel__stage { position: relative; }
+.carousel__viewport { overflow: hidden; border-radius: var(--radius); }
+.carousel__track { display: flex; transition: transform 0.55s var(--ease); }
+@media (prefers-reduced-motion: reduce) { .carousel__track { transition: none; } }
+.carousel__frame {
+  flex: 0 0 100%; margin: 0; position: relative;
+  aspect-ratio: 16 / 9; display: grid; place-items: center;
+  border: 1px solid rgba(244, 239, 227, 0.2);
+  background:
+    repeating-linear-gradient(45deg, transparent, transparent 13px, rgba(244,239,227,0.035) 13px, rgba(244,239,227,0.035) 14px),
+    rgba(20, 24, 15, 0.28);
+}
+.frameimg__no { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: rgba(244, 239, 227, 0.32); font-variant-numeric: tabular-nums; }
+.frameimg__cap {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 0.7rem 1rem; text-align: left;
+  font-size: 0.92rem; font-weight: 600; color: var(--cream);
+  background: linear-gradient(transparent, rgba(20, 24, 15, 0.6));
+}
+.carousel__arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 42px; height: 42px; border-radius: 50%;
+  display: grid; place-items: center; cursor: pointer; z-index: 2;
+  background: color-mix(in srgb, var(--sage-ink) 55%, transparent);
+  border: 1px solid rgba(244, 239, 227, 0.28); color: var(--cream);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  transition: background 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.carousel__arrow:hover { border-color: var(--brass-soft); background: color-mix(in srgb, var(--sage-ink) 78%, transparent); }
+.carousel__arrow svg { width: 22px; height: 22px; }
+.carousel__arrow--prev { left: 0.6rem; }
+.carousel__arrow--next { right: 0.6rem; }
+.carousel__foot { display: flex; align-items: center; justify-content: space-between; margin-top: 0.9rem; }
+.carousel__dots { display: flex; gap: 0.45rem; }
+.carousel__dots button {
+  width: 8px; height: 8px; border-radius: 50%; padding: 0; cursor: pointer; border: none;
+  background: rgba(244, 239, 227, 0.28); transition: background 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.carousel__dots button:hover { background: rgba(244, 239, 227, 0.5); }
+.carousel__dots button.is-active { background: var(--mango); transform: scale(1.25); }
+.carousel__counter { font-size: 0.8rem; font-variant-numeric: tabular-nums; color: rgba(244, 239, 227, 0.6); }
+
 /* --- Spec strip (format · duration · where it lives) --- */
 .spec {
   font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em;
