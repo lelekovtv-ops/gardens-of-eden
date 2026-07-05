@@ -77,13 +77,29 @@
       "s03.f10": "Crowds and walk-through grounds", "s03.w10": "50 steps to the sea, gated grounds, privacy",
       "s03.note": "Figures to be cross-checked against the developer's current brochure before client use.",
 
-      "s04.title": "How we see content",
-      "s04.lead": "One world, one system. The flagship film sets the language — every other format reuses its world, footage and tone.",
-      "s04.t1": "Brand", "s04.t1p": "The flagship film and the showroom — they make people fall in love.",
-      "s04.t2": "Sales", "s04.t2p": "Ad spots, VSL, unit tours — they turn love into a deal.",
-      "s04.t3": "Organic", "s04.t3p": "YouTube and Reels — a steady stream of new attention.",
-      "s04.t4": "Team", "s04.t4p": "Training for sellers and brokers — everyone tells the same story.",
-      "s04.funnel": "Discover → fall in love → buy → sell it on.",
+      "s04.kicker": "Our vision",
+      "s04.p1title": "We see Eden as a state of mind",
+      "s04.p1lead": "Not square meters, not amenities, not another Phuket condo. The content should sell the feeling of arriving somewhere quieter, greener and more considered than the market around it.",
+      "s04.p1b1": "peace before promotion", "s04.p1b2": "life before layout", "s04.p1b3": "place before product",
+      "s04.p2title": "Quiet luxury, not loud luxury",
+      "s04.p2lead": "The premium feeling should come from space, privacy, natural materials, soft light, water, service and restraint — not from obvious symbols of wealth.",
+      "s04.p2b1": "no gold clichés", "s04.p2b2": "no overacting", "s04.p2b3": "no aggressive selling",
+      "s04.p3title": "Nature is the main character",
+      "s04.p3lead": "Gardens of Eden already has the rare claim: 30+ acres, 50 meters to Bang Tao, park, lake, water, wellness and car-free ground life. The camera should make buildings feel embedded in the garden.",
+      "s04.p3b1": "green as infrastructure", "s04.p3b2": "water as rhythm", "s04.p3b3": "architecture as background",
+      "s04.p4title": "People should not pose. They should live.",
+      "s04.p4lead": "We show small rituals: breakfast on the terrace, a child walking to the lagoon, a concierge fixing one detail, a dog running through a car-free path. These moments make the place believable.",
+      "s04.p4b1": "rituals over poses", "s04.p4b2": "service through action", "s04.p4b3": "family without stock emotion",
+      "s04.p5title": "Humour should be almost invisible",
+      "s04.p5lead": "The tone is not comedy. It is a tiny eyebrow, a perfectly aligned sunbed, a mango returning in another scene, a very serious concierge solving a very small problem.",
+      "s04.p5b1": "10% humour", "s04.p5b2": "90% elegance", "s04.p5b3": "never cringe",
+      "s04.p6title": "The image should breathe",
+      "s04.p6lead": "Fewer fast tricks. More stillness, symmetry, texture, long shadows, warm skin tones, slow water, palms moving in the background. Expensive content often moves less.",
+      "s04.p6b1": "locked frames", "s04.p6b2": "soft movement", "s04.p6b3": "poster-worthy shots",
+      "s04.p7title": "Every channel gets the same taste",
+      "s04.p7lead": "The website, showroom, reels, VSL, broker materials and ads should feel like one world. Different formats, one visual intelligence.",
+      "s04.p7b1": "brand: desire", "s04.p7b2": "sales: confidence", "s04.p7b3": "organic: attention", "s04.p7b4": "team: one story",
+      "s04.p7bottom": "Discover → feel → trust → buy → retell.",
 
       "s05.kicker": "Flagship · game film 2:00 — concept",
       "s05.prevAria": "Previous concept", "s05.nextAria": "Next concept",
@@ -279,13 +295,29 @@
       "s03.f10": "Толпа и проходной двор", "s03.w10": "50 шагов до моря, закрытая территория, приватность",
       "s03.note": "Цифры сверяются с актуальной брошюрой застройщика перед показом клиенту.",
 
-      "s04.title": "Как мы видим контент",
-      "s04.lead": "Один мир, одна система. Флагманский фильм задаёт язык — все остальные форматы переиспользуют его мир, кадры и тон.",
-      "s04.t1": "Бренд", "s04.t1p": "Флагманский фильм и шоурум — влюбляют в проект.",
-      "s04.t2": "Продажи", "s04.t2p": "Таргет-ролики, VSL, туры по юнитам — превращают любовь в сделку.",
-      "s04.t3": "Органика", "s04.t3p": "YouTube и рилсы — постоянный поток нового внимания.",
-      "s04.t4": "Команда", "s04.t4p": "Обучение селлеров и брокеров — все рассказывают одну историю.",
-      "s04.funnel": "Узнали → влюбились → купили → продают дальше.",
+      "s04.kicker": "Наше видение",
+      "s04.p1title": "Мы видим Eden как состояние",
+      "s04.p1lead": "Не квадратные метры, не список amenities и не ещё один кондо на Пхукете. Контент должен продавать ощущение: ты попал в место тише, зеленее и продуманнее, чем рынок вокруг.",
+      "s04.p1b1": "тишина раньше рекламы", "s04.p1b2": "жизнь раньше планировок", "s04.p1b3": "место раньше продукта",
+      "s04.p2title": "Тихий люкс вместо громкого",
+      "s04.p2lead": "Премиальность должна рождаться из пространства, приватности, натуральных материалов, мягкого света, воды, сервиса и сдержанности — не из очевидных символов богатства.",
+      "s04.p2b1": "без золотых клише", "s04.p2b2": "без переигрывания", "s04.p2b3": "без продажи в лоб",
+      "s04.p3title": "Природа — главный герой",
+      "s04.p3lead": "У Gardens of Eden уже есть редкая основа: 30+ acres, 50 метров до Bang Tao, парк, озеро, вода, wellness и жизнь без машин на земле. Камера должна показать, что здания не стоят на участке, а живут внутри сада.",
+      "s04.p3b1": "зелень как инфраструктура", "s04.p3b2": "вода как ритм", "s04.p3b3": "архитектура как фон",
+      "s04.p4title": "Люди не позируют. Люди живут.",
+      "s04.p4lead": "Мы показываем маленькие ритуалы: завтрак на террасе, ребёнок идёт к лагуне, консьерж поправляет деталь, пёс бежит по дорожке без машин. Такие моменты делают место настоящим.",
+      "s04.p4b1": "ритуалы вместо поз", "s04.p4b2": "сервис через действие", "s04.p4b3": "семья без стоковых эмоций",
+      "s04.p5title": "Юмор должен быть почти невидимым",
+      "s04.p5lead": "Это не комедия. Это лёгкая бровь, идеально выровненный лежак, манго, которое возвращается в другом кадре, очень серьёзный консьерж, решающий очень маленькую проблему.",
+      "s04.p5b1": "10% юмора", "s04.p5b2": "90% элегантности", "s04.p5b3": "никакого кринжа",
+      "s04.p6title": "Картинка должна дышать",
+      "s04.p6lead": "Меньше быстрых трюков. Больше тишины, симметрии, фактуры, длинных теней, тёплой кожи, медленной воды, пальм на фоне. Дорогой контент часто двигается меньше.",
+      "s04.p6b1": "статичные кадры", "s04.p6b2": "мягкое движение", "s04.p6b3": "каждый кадр как постер",
+      "s04.p7title": "У каждого канала один вкус",
+      "s04.p7lead": "Сайт, шоурум, рилсы, VSL, брокерские материалы и реклама должны ощущаться как один мир. Разные форматы, один визуальный интеллект.",
+      "s04.p7b1": "бренд: желание", "s04.p7b2": "продажи: уверенность", "s04.p7b3": "органика: внимание", "s04.p7b4": "команда: одна история",
+      "s04.p7bottom": "Узнал → почувствовал → поверил → купил → пересказал.",
 
       "s05.kicker": "Флагман · игровой фильм 2:00 — концепция",
       "s05.prevAria": "Предыдущая концепция", "s05.nextAria": "Следующая концепция",
@@ -592,6 +624,26 @@
     root._pager = { prev: function () { go(idx - 1); }, next: function () { go(idx + 1); } };
   }
   Array.prototype.slice.call(document.querySelectorAll("[data-carousel]")).forEach(initCarousel);
+
+  /* ---- vision slide: light pointer parallax on the media plane ---- */
+  (function initVisionParallax() {
+    var slide = document.querySelector(".slide--vision");
+    if (!slide || prefersReduced()) return;
+    var raf = null, tx = 0, ty = 0;
+    function apply() {
+      raf = null;
+      slide.style.setProperty("--vision-x", tx.toFixed(2) + "px");
+      slide.style.setProperty("--vision-y", ty.toFixed(2) + "px");
+    }
+    function schedule() { if (!raf) raf = requestAnimationFrame(apply); }
+    slide.addEventListener("pointermove", function (e) {
+      var r = slide.getBoundingClientRect();
+      tx = -(((e.clientX - r.left) / r.width) - 0.5) * 26;
+      ty = -(((e.clientY - r.top) / r.height) - 0.5) * 20;
+      schedule();
+    });
+    slide.addEventListener("pointerleave", function () { tx = 0; ty = 0; schedule(); });
+  })();
 
   /* ---- init ---- */
   initLang();
