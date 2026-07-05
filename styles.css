@@ -363,6 +363,20 @@ body.menu-open .topbar__burger span:nth-child(3) { transform: translateY(-6px) r
 .frameimg--portrait { aspect-ratio: 4 / 5; }
 .frameimg--portrait img { object-position: center 18%; }
 
+/* --- Poster wall (Recognition page) --- */
+.posters {
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  gap: clamp(0.6rem, 1.4vw, 1rem); margin-top: clamp(1.2rem, 3vw, 2rem);
+}
+.posters img {
+  width: 100%; aspect-ratio: 2 / 3; object-fit: contain;
+  border-radius: 10px; background: rgba(12, 15, 9, 0.35);
+  border: 1px solid rgba(244, 239, 227, 0.12);
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+.posters img:hover { transform: translateY(-4px); border-color: var(--brass-soft); }
+@media (max-width: 760px) { .posters { grid-template-columns: repeat(3, 1fr); } }
+
 .stats {
   display: grid; grid-template-columns: repeat(3, 1fr);
   gap: clamp(0.9rem, 2vw, 1.3rem) clamp(1rem, 2.2vw, 1.6rem);
