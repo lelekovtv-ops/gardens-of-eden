@@ -625,6 +625,8 @@
       dots.forEach(function (d, x) { d.classList.toggle("is-active", x === idx); });
       items.forEach(function (f, x) { f.setAttribute("aria-hidden", x === idx ? "false" : "true"); });
       if (counter) counter.textContent = pad2(idx + 1) + " / " + pad2(items.length);
+      var pagerSlide = root.closest ? root.closest(".slide") : null;
+      if (pagerSlide) pagerSlide.setAttribute("data-pager-index", String(idx));
     }
     var prev = root.querySelector("[data-prev]");
     var next = root.querySelector("[data-next]");
