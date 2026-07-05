@@ -340,7 +340,9 @@ body.menu-open .topbar__burger span:nth-child(3) { transform: translateY(-6px) r
   will-change: transform, opacity;
 }
 .bird.is-visible { opacity: 1; }
+.bird.is-dragging { transition: opacity 1s ease; } /* follow the cursor 1:1, no lag */
 .bird__video { width: 100%; height: 100%; object-fit: contain; display: block; }
+body.bird-dragging { user-select: none; -webkit-user-select: none; cursor: grabbing; }
 @media (max-width: 900px) { .bird { display: none; } }
 @media (prefers-reduced-motion: reduce) {
   .bird { transition: opacity 1s ease; }

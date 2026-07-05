@@ -664,18 +664,23 @@
     var video = bird.querySelector(".bird__video");
     var W = 150, H = 150;
     var current = null;
-    var frozen = false; // double-click freezes her in place; another resumes
+    var frozen = false;   // double-click freezes her in place; another resumes
+    var laneX = null;     // horizontal lane set by dragging; null = follow the perch
+    var dragging = false; // true while she is being dragged by the mouse
 
     function perchEl(slide) {
       return slide.querySelector(".vision__media, .frame16, .frameimg, .about-media, .tier--featured, .concept__media, .slide__in") || slide;
     }
     function moveTo(slide) {
-      if (!slide || frozen) return; // while frozen she stays put
+      if (!slide || frozen || dragging) return; // frozen or being dragged: leave her be
       current = slide;
       var r = perchEl(slide).getBoundingClientRect();
       var vw = window.innerWidth, vh = window.innerHeight;
-      // settle near the top-right corner of the perch, as if resting on it
-      var bx = Math.max(12, Math.min(vw - W - 16, r.right - W * 0.86));
+      // horizontal: the lane you dragged her to, else the perch's right edge
+      var bx = (laneX !== null)
+        ? Math.max(0, Math.min(vw - W, laneX))
+        : Math.max(12, Math.min(vw - W - 16, r.right - W * 0.86));
+      // vertical: still driven by scroll (drifts down slide to slide)
       var by = Math.max(64, Math.min(vh - H - 16, r.top - H * 0.34));
       bird.style.setProperty("--bx", bx + "px");
       bird.style.setProperty("--by", by + "px");
@@ -698,13 +703,14 @@
       rt = setTimeout(function () { if (current) moveTo(current); }, 150);
     });
 
-    // double-click on the bird: freeze (pause wings + hold position), then
-    // double-click again to release her. The bird keeps pointer-events:none
-    // so it never blocks the deck; we hit-test the double-click by coordinates.
+    // The bird keeps pointer-events:none so it never blocks the deck; every
+    // interaction below is hit-tested by coordinates against her box.
     function withinBird(x, y) {
       var r = bird.getBoundingClientRect();
       return x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
     }
+
+    // double-click: freeze (pause wings + hold position); double-click again to release.
     function toggleFreeze() {
       frozen = !frozen;
       bird.classList.toggle("is-frozen", frozen);
@@ -715,6 +721,38 @@
     document.addEventListener("dblclick", function (e) {
       if (withinBird(e.clientX, e.clientY)) { e.preventDefault(); toggleFreeze(); }
     });
+
+    // drag: grab the bird and move her; where you drop her sets the horizontal
+    // lane, and scroll keeps driving her vertical drift within that lane.
+    var grabDX = 0, grabDY = 0, dragMoved = false, lastBx = 0;
+    document.addEventListener("pointerdown", function (e) {
+      if (e.button !== 0 || !withinBird(e.clientX, e.clientY)) return;
+      var r = bird.getBoundingClientRect();
+      grabDX = e.clientX - r.left; grabDY = e.clientY - r.top;
+      dragging = true; dragMoved = false;
+      bird.classList.add("is-dragging");
+      document.body.classList.add("bird-dragging");
+    });
+    document.addEventListener("pointermove", function (e) {
+      if (!dragging) return;
+      e.preventDefault();
+      dragMoved = true;
+      var vw = window.innerWidth, vh = window.innerHeight;
+      lastBx = Math.max(0, Math.min(vw - W, e.clientX - grabDX));
+      var by = Math.max(0, Math.min(vh - H, e.clientY - grabDY));
+      bird.style.setProperty("--bx", lastBx + "px");
+      bird.style.setProperty("--by", by + "px");
+      bird.classList.add("is-visible");
+    });
+    function endDrag() {
+      if (!dragging) return;
+      dragging = false;
+      bird.classList.remove("is-dragging");
+      document.body.classList.remove("bird-dragging");
+      if (dragMoved) { laneX = lastBx; } // remember the horizontal lane from the drag itself
+    }
+    document.addEventListener("pointerup", endDrag);
+    document.addEventListener("pointercancel", endDrag);
   })();
 
   /* ---- init ---- */
