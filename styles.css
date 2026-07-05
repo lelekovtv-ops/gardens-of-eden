@@ -310,6 +310,7 @@ body.menu-open .topbar__burger span:nth-child(3) { transform: translateY(-6px) r
 }
 .vision__copy { min-width: 0; }
 .vision__no { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.7rem; }
+.vision__pillar { text-transform: uppercase; letter-spacing: 0.22em; font-size: 0.7rem; font-weight: 700; color: var(--brass-soft); margin-bottom: 0.9rem; }
 .vision__title { font-size: clamp(1.55rem, 3.3vw, 2.55rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.08; margin-bottom: 1rem; }
 .vision__copy .lead { margin-bottom: 1.3rem; }
 .vision__proof { display: flex; flex-direction: column; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
