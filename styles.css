@@ -173,6 +173,21 @@ body.menu-open .topbar__burger span:nth-child(3) { transform: translateY(-6px) r
 .slide--dark .lead { color: rgba(244,239,227,0.82); }
 .slide--dark .slide__no { color: var(--mango); }
 
+/* --- Hero image behind the title slide --- */
+.slide--hero { isolation: isolate; }
+.slide--hero::before {
+  content: ""; position: absolute; inset: 0; z-index: 0;
+  background-image: url('assets/renders/hero-overall.jpg');
+  background-size: cover; background-position: center;
+}
+.slide--hero::after {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background:
+    radial-gradient(85% 78% at 22% 88%, rgba(34,43,34,0.60), transparent 62%),
+    linear-gradient(180deg, rgba(20,24,15,0.40), rgba(20,24,15,0.72));
+}
+.slide--hero > * { position: relative; z-index: 2; }
+
 .slide__in { max-width: 880px; width: 100%; margin: 0 auto; }
 .slide__in--wide { max-width: 1080px; }
 
@@ -256,6 +271,8 @@ body.menu-open .topbar__burger span:nth-child(3) { transform: translateY(-6px) r
   background: linear-gradient(transparent, rgba(20, 24, 15, 0.55));
 }
 .frame16--empty .frame16__cap { position: static; padding: 0; background: none; color: rgba(244, 239, 227, 0.55); }
+.frame16--img { background: none; border-style: solid; overflow: hidden; }
+.frame16--img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
 .pager__dots { display: flex; gap: 0.5rem; margin-top: 1.5rem; }
 .pager__dots button {

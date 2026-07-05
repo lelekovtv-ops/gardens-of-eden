@@ -25,7 +25,7 @@
 
       "s01.eyebrow": "Content presentation · BPM Media",
       "s01.sub": "Vision & Concept",
-      "s01.meta": "Bang Tao, Phuket · 50 m to the beach · handover Q4 2030",
+      "s01.meta": "Bang Tao, Phuket · 50 m to the beach",
       "s01.hint": "Scroll or press ↓ to begin",
 
       "s02.kicker": "About us · BPM media × Happy People",
@@ -112,7 +112,7 @@
       "s06.p2title": "The site & the build",
       "s06.p2spec": "B-roll · renders · drone",
       "s06.p2lead": "B-roll of the site, renders and real construction — the buyer sees a living project in motion, not just a picture.",
-      "s06.p2media": "Coming soon",
+      "s06.p2media": "The site · aerial render",
       "s06.p3badge": "In development",
       "s06.p3title": "For buyers, brokers and investors",
       "s06.p3spec": "One film · three audiences",
@@ -223,7 +223,7 @@
 
       "s01.eyebrow": "Контент-презентация · BPM Media",
       "s01.sub": "Vision & Concept",
-      "s01.meta": "Банг Тао, Пхукет · 50 м до пляжа · сдача Q4 2030",
+      "s01.meta": "Банг Тао, Пхукет · 50 м до пляжа",
       "s01.hint": "Листайте вниз или нажмите ↓",
 
       "s02.kicker": "О нас · BPM media × Happy People",
@@ -310,7 +310,7 @@
       "s06.p2title": "Объект и стройка",
       "s06.p2spec": "B-roll · рендеры · дрон",
       "s06.p2lead": "B-roll объекта, рендеры и реальная стройка — покупатель видит, что это не картинка, а живой проект в движении.",
-      "s06.p2media": "Скоро",
+      "s06.p2media": "Объект · аэрорендер",
       "s06.p3badge": "В разработке",
       "s06.p3title": "Для покупателей, брокеров и инвесторов",
       "s06.p3spec": "Один фильм · три аудитории",
