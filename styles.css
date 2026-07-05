@@ -354,6 +354,33 @@ body.menu-open .topbar__burger span:nth-child(3) { transform: translateY(-6px) r
 .slide--dark .triplet__item h4 { color: var(--cream); }
 .slide--dark .triplet__item p { color: rgba(244, 239, 227, 0.7); }
 
+/* --- Founder profile page (photo + bio + stats) --- */
+.profile {
+  display: grid; grid-template-columns: minmax(230px, 320px) 1fr;
+  gap: clamp(1.4rem, 3vw, 2.8rem); align-items: center;
+}
+.profile__body .concept__title { margin: 0.5rem 0 0.15rem; }
+.frameimg--portrait { aspect-ratio: 4 / 5; }
+.frameimg--portrait img { object-position: center 18%; }
+
+.stats {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: clamp(0.9rem, 2vw, 1.3rem) clamp(1rem, 2.2vw, 1.6rem);
+  margin-top: 1.6rem; list-style: none; padding: 0;
+}
+.stats li { display: flex; flex-direction: column; gap: 0.15rem; }
+.stats b {
+  font-size: clamp(1.5rem, 3vw, 2.05rem); font-weight: 700; line-height: 1;
+  color: var(--brass-soft); font-variant-numeric: tabular-nums; letter-spacing: -0.02em;
+}
+.stats span { font-size: 0.8rem; line-height: 1.3; color: rgba(244, 239, 227, 0.68); }
+
+@media (max-width: 760px) {
+  .profile { grid-template-columns: 1fr; }
+  .profile__photo { max-width: 260px; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 760px) {
   .concept { grid-template-columns: 1fr; }
   .pagerhead { flex-direction: column; align-items: flex-start; }
