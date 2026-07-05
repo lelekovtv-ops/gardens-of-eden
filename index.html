@@ -703,7 +703,10 @@
   <!-- Hummingbird that flies between slides on scroll -->
   <div class="bird" id="bird" aria-hidden="true">
     <video class="bird__video" autoplay muted loop playsinline preload="auto">
-      <source src="https://github.com/lelekovtv-ops/gardens-of-eden/releases/download/media-assets/bird.webm" type="video/webm" />
+      <!-- HEVC with alpha first: Safari can only decode this (it skips webm). -->
+      <source src="assets/media/bird-v2.mp4" type="video/mp4; codecs=hvc1" />
+      <!-- VP9 with alpha: Chrome / Firefox. -->
+      <source src="assets/media/bird-v2.webm" type="video/webm" />
     </video>
   </div>
 
