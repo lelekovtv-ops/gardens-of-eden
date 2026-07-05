@@ -330,21 +330,20 @@ body.menu-open .topbar__burger span:nth-child(3) { transform: translateY(-6px) r
 .vision__no { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.7rem; }
 .vision__pillar { text-transform: uppercase; letter-spacing: 0.22em; font-size: 0.7rem; font-weight: 700; color: var(--brass-soft); margin-bottom: 0.9rem; }
 
-/* --- Hummingbird that flies between slides (episodic: perches, then leaves) --- */
+/* --- Hummingbird: glides between perch points on scroll (never flipped) --- */
 .bird {
   position: fixed; left: 0; top: 0; z-index: 55;
-  width: 168px; height: 168px; pointer-events: none;
+  width: 150px; height: 150px; pointer-events: none;
   opacity: 0;
-  transform: translate3d(var(--bx, -260px), var(--by, 20vh), 0) scaleX(var(--bflip, 1));
-  transition: transform 1.4s var(--ease), opacity 0.5s ease;
+  transform: translate3d(var(--bx, 62vw), var(--by, 30vh), 0);
+  transition: transform 2.4s cubic-bezier(0.45, 0.05, 0.25, 1), opacity 1s ease;
   will-change: transform, opacity;
 }
 .bird.is-visible { opacity: 1; }
-.bird.is-teleporting { transition: none; }
 .bird__video { width: 100%; height: 100%; object-fit: contain; display: block; }
 @media (max-width: 900px) { .bird { display: none; } }
 @media (prefers-reduced-motion: reduce) {
-  .bird { transition: opacity 0.5s ease; }
+  .bird { transition: opacity 1s ease; }
 }
 .vision__title { font-size: clamp(1.55rem, 3.3vw, 2.55rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.08; margin-bottom: 1rem; }
 .vision__copy .lead { margin-bottom: 1.3rem; }

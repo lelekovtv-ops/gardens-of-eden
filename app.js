@@ -655,89 +655,45 @@
     slide.addEventListener("pointerleave", function () { tx = 0; ty = 0; schedule(); });
   })();
 
-  /* ---- hummingbird: appears on a perch, then leaves off-screen and returns
-     later flipped from the other side. The flip is applied only while the
-     bird is fully hidden (teleport step), so it is never seen mirroring. ---- */
+  /* ---- hummingbird: glides between perch points as you scroll. It follows
+     the active slide, settling near a "window" (image / frame) on it. It is
+     never flipped — the bird always faces the same way so its volume holds. ---- */
   (function initBird() {
     var bird = document.getElementById("bird");
     if (!bird) return;
-    var W = 168, H = 168;
-    var current = slides[0] || null;
-    var side = "left"; // edge the bird is about to enter from
+    var W = 150, H = 150;
+    var current = null;
 
     function perchEl(slide) {
       return slide.querySelector(".vision__media, .frame16, .frameimg, .about-media, .tier--featured, .concept__media, .slide__in") || slide;
     }
-    function perchPos(slide) {
+    function moveTo(slide) {
+      if (!slide) return;
+      current = slide;
       var r = perchEl(slide).getBoundingClientRect();
       var vw = window.innerWidth, vh = window.innerHeight;
-      var bx = Math.max(12, Math.min(vw - W - 16, r.right - W * 0.82));
-      var by = Math.max(70, Math.min(vh - H - 16, r.top - H * 0.28));
-      return { bx: bx, by: by };
-    }
-    function offscreenX(edge) {
-      return edge === "left" ? -(W + 100) : window.innerWidth + 100;
-    }
-    function setPerch(slide) {
-      if (!slide) return;
-      var p = perchPos(slide);
-      bird.style.setProperty("--bx", p.bx + "px");
-      bird.style.setProperty("--by", p.by + "px");
+      // settle near the top-right corner of the perch, as if resting on it
+      var bx = Math.max(12, Math.min(vw - W - 16, r.right - W * 0.86));
+      var by = Math.max(64, Math.min(vh - H - 16, r.top - H * 0.34));
+      bird.style.setProperty("--bx", bx + "px");
+      bird.style.setProperty("--by", by + "px");
+      bird.classList.add("is-visible");
     }
 
     if ("IntersectionObserver" in window) {
       var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { if (e.isIntersecting) current = e.target; });
+        entries.forEach(function (e) { if (e.isIntersecting) moveTo(e.target); });
       }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
       slides.forEach(function (s) { io.observe(s); });
     }
 
-    if (prefersReduced()) {
-      setPerch(current);
-      bird.classList.add("is-visible");
-      window.addEventListener("resize", function () { setPerch(current); });
-      return;
-    }
+    // land on the first slide shortly after load
+    setTimeout(function () { moveTo(current || slides[0]); }, 700);
 
-    var PERCH_HOLD_MS = 4200; // how long she sits once she has flown in
-    var HIDDEN_WAIT_MS = 2600; // how long she stays gone before returning
-    var FLY_MS = 1450; // must match the CSS transform transition duration
-
-    function teleportTo(edge) {
-      bird.classList.add("is-teleporting");
-      bird.classList.remove("is-visible");
-      bird.style.setProperty("--bflip", edge === "left" ? "1" : "-1");
-      bird.style.setProperty("--bx", offscreenX(edge) + "px");
-      bird.style.setProperty("--by", (60 + Math.random() * (window.innerHeight * 0.5)) + "px");
-      void bird.offsetWidth; // force reflow before re-enabling the transition
-      bird.classList.remove("is-teleporting");
-    }
-
-    function flyIn() {
-      teleportTo(side);
-      setTimeout(function () {
-        setTimeout(function () {
-          setPerch(current || slides[0]);
-          bird.classList.add("is-visible");
-          setTimeout(leave, FLY_MS + PERCH_HOLD_MS);
-        }, 16);
-      }, 16);
-    }
-
-    function leave() {
-      var nextSide = side === "left" ? "right" : "left";
-      bird.classList.remove("is-visible");
-      bird.style.setProperty("--bx", offscreenX(nextSide) + "px");
-      setTimeout(function () {
-        side = nextSide;
-        setTimeout(flyIn, HIDDEN_WAIT_MS);
-      }, FLY_MS);
-    }
-
-    setTimeout(flyIn, 900);
-
+    var rt = null;
     window.addEventListener("resize", function () {
-      if (bird.classList.contains("is-visible")) setPerch(current);
+      clearTimeout(rt);
+      rt = setTimeout(function () { if (current) moveTo(current); }, 150);
     });
   })();
 
