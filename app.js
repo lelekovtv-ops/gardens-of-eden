@@ -25,7 +25,7 @@
 
       "s01.eyebrow": "Content presentation · BPM Media",
       "s01.sub": "Vision & Concept",
-      "s01.meta": "Bang Tao, Phuket · 50 m to the beach · handover Q4 2026",
+      "s01.meta": "Bang Tao, Phuket · 50 m to the beach · handover Q4 2030",
       "s01.hint": "Scroll or press ↓ to begin",
 
       "s02.title": "About us",
@@ -188,7 +188,7 @@
 
       "s01.eyebrow": "Контент-презентация · BPM Media",
       "s01.sub": "Vision & Concept",
-      "s01.meta": "Банг Тао, Пхукет · 50 м до пляжа · сдача Q4 2026",
+      "s01.meta": "Банг Тао, Пхукет · 50 м до пляжа · сдача Q4 2030",
       "s01.hint": "Листайте вниз или нажмите ↓",
 
       "s02.title": "О нас",
