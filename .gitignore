@@ -4,3 +4,6 @@ assets/*.tmp
 /Renders/
 /photo /
 /video/
+
+/assets/concierge-squares/
+.claude/

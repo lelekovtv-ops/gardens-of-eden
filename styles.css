@@ -292,6 +292,77 @@ body.menu-open .topbar__burger span:nth-child(3) { transform: translateY(-6px) r
 .frame16--img { background: none; border-style: solid; overflow: hidden; }
 .frame16--img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
+/* --- Concept I · Concierge (mosaic) --- */
+.concept--concierge {
+  display: grid; grid-template-columns: 0.82fr 1.18fr;
+  gap: clamp(1.4rem, 3vw, 2.8rem); align-items: center;
+}
+.concierge__eyebrow {
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--brass-soft); margin: 0.9rem 0 0.15rem;
+}
+.concierge__title {
+  font-size: clamp(2rem, 5.2vw, 3.2rem); font-weight: 800; letter-spacing: 0.14em;
+  margin: 0 0 0.7rem; color: var(--cream); line-height: 1.02;
+}
+.concierge__text .lead { margin-bottom: 1rem; }
+.concierge__note {
+  max-width: 46ch; color: rgba(244, 239, 227, 0.78);
+  font-size: clamp(0.92rem, 1.4vw, 1.02rem); line-height: 1.5; margin: 0 0 0.9rem;
+}
+.concierge__note--close { color: rgba(244, 239, 227, 0.62); }
+.concierge__text .pills { margin-top: 1.1rem; }
+
+.concierge__mosaic {
+  display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr;
+  gap: clamp(0.5rem, 1.1vw, 0.85rem); aspect-ratio: 3 / 3; min-width: 0;
+  grid-template-areas:
+    "hero hero soup"
+    "hero hero dog"
+    "balcony sea aerial";
+}
+.cm {
+  position: relative; margin: 0; overflow: hidden;
+  border-radius: calc(var(--radius) * 0.75);
+  border: 1px solid rgba(244, 239, 227, 0.12);
+}
+.cm img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s var(--ease); }
+.cm:hover img { transform: scale(1.06); }
+.cm--hero { grid-area: hero; }
+.cm--soup { grid-area: soup; }
+.cm--dog { grid-area: dog; }
+.cm--balcony { grid-area: balcony; }
+.cm--sea { grid-area: sea; }
+.cm--aerial { grid-area: aerial; }
+.cm--hero img { height: 120%; margin-top: -10%; will-change: transform; transform: translateY(var(--par, 0)); }
+.cm--hero:hover img { transform: translateY(var(--par, 0)) scale(1.04); }
+.cm figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 0.5rem 0.7rem;
+  font-size: 0.72rem; font-weight: 600; color: var(--cream); letter-spacing: 0.01em;
+  background: linear-gradient(transparent, rgba(16, 20, 12, 0.72));
+  opacity: 0; transform: translateY(0.4rem); transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+}
+.cm--hero figcaption { opacity: 1; transform: none; font-size: 0.8rem; }
+.cm:hover figcaption, .cm:focus-within figcaption { opacity: 1; transform: none; }
+@media (max-width: 860px) {
+  .concept--concierge { grid-template-columns: 1fr; }
+  .concierge__note { max-width: none; }
+}
+@media (max-width: 520px) {
+  .concierge__mosaic {
+    aspect-ratio: auto; grid-template-columns: 1fr 1fr;
+    grid-template-areas: "hero hero" "soup dog" "balcony sea" "aerial aerial";
+  }
+  .concierge__mosaic .cm { aspect-ratio: 1 / 1; }
+  .cm--hero { aspect-ratio: 16 / 10; }
+  .cm--aerial { aspect-ratio: 16 / 8; }
+  .cm figcaption { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cm img, .cm figcaption { transition: none; }
+  .cm--hero img { transform: none !important; }
+}
+
 .pager__dots { display: flex; gap: 0.5rem; margin-top: 1.5rem; }
 .pager__dots button {
   width: 9px; height: 9px; border-radius: 50%; padding: 0; cursor: pointer; border: none;

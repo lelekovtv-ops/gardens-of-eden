@@ -108,11 +108,20 @@
       "s05.kicker": "Flagship · game film 2:00 — concept",
       "s05.prevAria": "Previous concept", "s05.nextAria": "Next concept",
       "s05.p1badge": "Approved by the client · in production",
-      "s05.p1title": "Concept I — “Grand Budapest on Bang Tao”",
+      "s05.p1title": "CONCIERGE",
+      "s05.p1sub": "“Grand Budapest on Bang Tao” · 2:00 · 16:9",
       "s05.p1spec": "2:00 · 16:9 · game film",
-      "s05.p1lead": "A legendary Thai concierge answers one question in two minutes — “What is Gardens of Eden?” — and leads us through the garden, the home, the kitchen and the island, helping with his own hands in every story.",
+      "s05.p1lead": "A distinguished Thai concierge answers one question in two minutes — “What is Gardens of Eden?” He leads us through the garden, the home, the kitchen and the island, helping with his own hands in every story.",
+      "s05.p1note": "But the answer is born not from his words — from the life around him. A dog carries off a ball, a child counts the steps to the sea, a chef slips him a spoon of soup. Not an ad — dozens of living scenes, and from them, like a mosaic, the answer takes shape.",
+      "s05.p1close": "Each scene quietly shows one advantage — not a line from a brochure, but a moment that makes you smile. Silence, space, the sea nearby, care, taste, privacy — lived, not told.",
       "s05.p1k1": "Symmetry & frontal staging", "s05.p1k2": "Chapter title cards",
       "s05.p1k3": "Deadpan humour", "s05.p1k4": "Seamless loop ending",
+      "s05.p1cap0": "Prologue · the concierge opens the gates",
+      "s05.p1cap1": "A spoonful from the chef",
+      "s05.p1cap2": "A ball by the pond",
+      "s05.p1cap3": "Evening tea on the balcony",
+      "s05.p1cap4": "Fifty steps to the sea",
+      "s05.p1cap5": "The car-free alley",
       "s05.p1media": "Key frame · Prologue",
       "s05.p2badge": "In development", "s05.p2title": "Concept II", "s05.p2spec": "Alternative direction",
       "s05.p2lead": "An alternative creative territory — we develop it together with the client.",
@@ -330,11 +339,20 @@
       "s05.kicker": "Флагман · игровой фильм 2:00 — концепция",
       "s05.prevAria": "Предыдущая концепция", "s05.nextAria": "Следующая концепция",
       "s05.p1badge": "Принята клиентом · в производстве",
-      "s05.p1title": "Концепция I — «Гранд Будапешт на Банг Тао»",
+      "s05.p1title": "КОНСЬЕРЖ",
+      "s05.p1sub": "«Гранд Будапешт на Банг Тао» · 2:00 · 16:9",
       "s05.p1spec": "2:00 · 16:9 · игровой фильм",
-      "s05.p1lead": "Легендарный тайский консьерж за две минуты отвечает на один вопрос — «что такое Gardens of Eden?» — и ведёт через сад, дом, кухню и остров, в каждой истории помогая своими руками.",
+      "s05.p1lead": "Взрослый тайский консьерж за две минуты отвечает на один вопрос — «что такое Gardens of Eden?». Он ведёт нас через сад, дом, кухню и остров, и в каждой истории помогает своими руками.",
+      "s05.p1note": "Но ответ рождается не из его слов, а из жизни вокруг. Где-то пёс уносит мяч, где-то ребёнок считает шаги до моря, где-то повар сует ложку супа, а кто-то за кадром задаёт неудобный вопрос. Мы не смотрим рекламу — мы проваливаемся в десятки живых сцен, и из них, как из мозаики, складывается ответ.",
+      "s05.p1close": "Каждая сцена незаметно показывает одно преимущество — не строчкой из брошюры, а моментом, с которого улыбаешься. Тишина, простор, море рядом, забота, вкус, приватность — всё это прожито, а не рассказано.",
       "s05.p1k1": "Симметрия и фронтальные мизансцены", "s05.p1k2": "Главы-титры",
       "s05.p1k3": "Деадпан-юмор", "s05.p1k4": "Бесшовный луп в финале",
+      "s05.p1cap0": "Пролог · консьерж открывает ворота",
+      "s05.p1cap1": "Ложка супа от повара",
+      "s05.p1cap2": "Мяч у пруда",
+      "s05.p1cap3": "Вечерний чай на балконе",
+      "s05.p1cap4": "Пятьдесят шагов до моря",
+      "s05.p1cap5": "Аллея без машин",
       "s05.p1media": "Ключевой кадр · Пролог",
       "s05.p2badge": "В разработке", "s05.p2title": "Концепция II", "s05.p2spec": "Альтернативное направление",
       "s05.p2lead": "Альтернативная креативная территория — разрабатываем вместе с клиентом.",
@@ -753,6 +771,33 @@
     }
     document.addEventListener("pointerup", endDrag);
     document.addEventListener("pointercancel", endDrag);
+  })();
+
+  /* ---- Concierge hero parallax (subtle, deck-scroll driven) ---- */
+  (function initParallax() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var deck = document.getElementById("deck");
+    var nodes = Array.prototype.slice.call(document.querySelectorAll("[data-parallax] img"));
+    if (!deck || !nodes.length) return;
+    var AMP = 26; // px of travel
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var vh = window.innerHeight;
+      nodes.forEach(function (img) {
+        var fig = img.parentElement;
+        var r = fig.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > vh) return; // off-screen, skip
+        var progress = (r.top + r.height / 2) / vh - 0.5; // -0.5..0.5
+        img.style.setProperty("--par", (progress * AMP).toFixed(1) + "px");
+      });
+    }
+    function onScroll() {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }
+    deck.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    update();
   })();
 
   /* ---- init ---- */
