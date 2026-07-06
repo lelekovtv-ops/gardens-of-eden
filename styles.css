@@ -363,9 +363,21 @@ body.menu-open .topbar__burger span:nth-child(3) { transform: translateY(-6px) r
   .cm--hero img { transform: none !important; }
 }
 
-/* Concept II · combined-shooting duo */
-.concept--tech { grid-template-columns: 1.12fr 0.88fr; }
+/* Concept II · combined-shooting clip + duo */
+.concept--tech { grid-template-columns: 1.02fr 0.98fr; }
 .concept--tech .concierge__note { max-width: 52ch; }
+.concierge__clip {
+  position: relative; margin: 0; min-width: 0; overflow: hidden;
+  aspect-ratio: 1 / 1; border-radius: var(--radius);
+  border: 1px solid rgba(244, 239, 227, 0.14);
+  background: rgba(20, 24, 15, 0.4);
+}
+.concierge__clip video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.concierge__clip figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 0.6rem 0.85rem;
+  font-size: 0.78rem; font-weight: 600; color: var(--cream); letter-spacing: 0.01em;
+  background: linear-gradient(transparent, rgba(16, 20, 12, 0.72));
+}
 .concierge__duo {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: clamp(0.6rem, 1.4vw, 1rem); min-width: 0;
