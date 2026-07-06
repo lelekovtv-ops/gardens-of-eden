@@ -363,6 +363,18 @@ body.menu-open .topbar__burger span:nth-child(3) { transform: translateY(-6px) r
   .cm--hero img { transform: none !important; }
 }
 
+/* Concept II · combined-shooting duo */
+.concept--tech { grid-template-columns: 1.12fr 0.88fr; }
+.concept--tech .concierge__note { max-width: 52ch; }
+.concierge__duo {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(0.6rem, 1.4vw, 1rem); min-width: 0;
+}
+.cm--duo { aspect-ratio: 3 / 4; }
+.cm--duo figcaption { opacity: 1; transform: none; font-size: 0.76rem; }
+@media (max-width: 860px) { .concierge__duo { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .cm--duo { aspect-ratio: 4 / 5; } }
+
 .pager__dots { display: flex; gap: 0.5rem; margin-top: 1.5rem; }
 .pager__dots button {
   width: 9px; height: 9px; border-radius: 50%; padding: 0; cursor: pointer; border: none;
