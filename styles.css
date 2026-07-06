@@ -571,6 +571,26 @@ body.bird-dragging { user-select: none; -webkit-user-select: none; cursor: grabb
 }
 .usp__win::before { content: "→"; position: absolute; left: 0; top: 0; color: var(--accent); font-weight: 700; }
 
+/* --- Film timeline (beat-by-beat structure) --- */
+.filmtimeline { display: grid; gap: 0.6rem; margin-top: 1.6rem; max-width: 760px; }
+.filmtimeline__row {
+  display: grid; grid-template-columns: 84px 1fr; gap: 1rem;
+  padding: 0.85rem 1.05rem; border-radius: var(--radius);
+  border: 1px solid var(--line); background: var(--bg);
+}
+.slide:nth-child(even) .filmtimeline__row { background: var(--cream); }
+.filmtimeline__time { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 0.85rem; color: var(--accent); }
+.filmtimeline__title { font-weight: 600; margin-bottom: 0.2rem; }
+.filmtimeline__text { color: var(--fg-muted); font-size: 0.88rem; line-height: 1.45; }
+.filmtimeline__row--beat {
+  background: color-mix(in srgb, var(--sage) 14%, var(--bg));
+  border-color: color-mix(in srgb, var(--sage) 40%, var(--line));
+}
+.filmtimeline__row--beat .filmtimeline__time { color: var(--sage-deep); }
+@media (max-width: 560px) {
+  .filmtimeline__row { grid-template-columns: 1fr; gap: 0.3rem; }
+}
+
 /* --- Sidebar status dot (in production) --- */
 .side__dot {
   width: 7px; height: 7px; border-radius: 50%;
