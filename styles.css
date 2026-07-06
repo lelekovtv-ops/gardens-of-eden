@@ -571,6 +571,23 @@ body.bird-dragging { user-select: none; -webkit-user-select: none; cursor: grabb
 }
 .usp__win::before { content: "→"; position: absolute; left: 0; top: 0; color: var(--accent); font-weight: 700; }
 
+/* --- Value → voice grid (company film, values not fears) --- */
+.valuegrid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(0.7rem, 1.5vw, 1rem); margin-top: 1.6rem;
+}
+.valuecard {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 0.9rem 1.05rem; background: var(--bg);
+}
+.slide:nth-child(even) .valuecard { background: var(--cream); }
+.valuecard__topic { font-size: 0.82rem; font-weight: 600; color: var(--fg-muted); margin-bottom: 0.35rem; }
+.valuecard__voice {
+  position: relative; padding-left: 1.25rem;
+  font-size: 0.94rem; font-weight: 600; color: var(--fg);
+}
+.valuecard__voice::before { content: "→"; position: absolute; left: 0; top: 0; color: var(--accent); font-weight: 700; }
+
 /* --- Film timeline (beat-by-beat structure) --- */
 .filmtimeline { display: grid; gap: 0.6rem; margin-top: 1.6rem; max-width: 760px; }
 .filmtimeline__row {
