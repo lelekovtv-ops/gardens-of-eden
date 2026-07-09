@@ -7,3 +7,5 @@ assets/*.tmp
 
 /assets/concierge-squares/
 .claude/
+
+/reference/
