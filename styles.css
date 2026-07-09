@@ -363,6 +363,62 @@ body.menu-open .topbar__burger span:nth-child(3) { transform: translateY(-6px) r
   .cm--hero img { transform: none !important; }
 }
 
+/* --- Film chapter panels (garden / home / table & island) --- */
+.concept--chapter { grid-template-columns: 0.8fr 1.2fr; align-items: center; }
+.chapter__beats {
+  list-style: none; margin: 0.5rem 0 0; padding: 0;
+  display: grid; gap: 0.5rem; max-width: 48ch;
+}
+.chapter__beats li {
+  position: relative; padding-left: 1.05rem; line-height: 1.42;
+  color: rgba(244, 239, 227, 0.8); font-size: clamp(0.9rem, 1.35vw, 1rem);
+}
+.chapter__beats li::before {
+  content: ""; position: absolute; left: 0; top: 0.6em;
+  width: 0.36rem; height: 0.36rem; border-radius: 50%; background: var(--brass-soft);
+}
+.chapter__vo {
+  margin: 1rem 0 0; max-width: 46ch; padding-left: 0.9rem;
+  border-left: 2px solid var(--brass-soft);
+  color: var(--cream); font-weight: 300; line-height: 1.4;
+  font-size: clamp(1rem, 1.5vw, 1.16rem);
+}
+.scene-mosaic {
+  display: grid; grid-template-columns: repeat(5, 1fr); grid-auto-rows: 1fr;
+  gap: clamp(0.4rem, 0.9vw, 0.7rem); min-width: 0;
+}
+.scene-mosaic .cm { aspect-ratio: 1 / 1; }
+@media (max-width: 860px) {
+  .concept--chapter { grid-template-columns: 1fr; }
+  .chapter__beats { max-width: none; }
+  .scene-mosaic { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 520px) {
+  .scene-mosaic { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* --- Mood · reference reel (replaces Concept III) --- */
+.concept--mood {
+  display: flex; flex-direction: column; justify-content: center;
+  gap: clamp(1rem, 2.4vw, 1.8rem);
+}
+.mood__head { max-width: 64ch; }
+.mood-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: clamp(0.6rem, 1.4vw, 1.1rem); min-width: 0;
+}
+.moodclip { margin: 0; min-width: 0; }
+.moodclip video {
+  width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;
+  border-radius: var(--radius); border: 1px solid rgba(244, 239, 227, 0.14);
+  background: #000;
+}
+.moodclip figcaption {
+  margin-top: 0.45rem; font-size: 0.78rem; font-weight: 600;
+  color: rgba(244, 239, 227, 0.72); letter-spacing: 0.01em;
+}
+@media (max-width: 860px) { .mood-grid { grid-template-columns: 1fr; } }
+
 /* Concept II · combined-shooting clip + duo */
 .concept--tech { grid-template-columns: 1.02fr 0.98fr; }
 .concept--tech .concierge__note { max-width: 52ch; }
