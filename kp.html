@@ -42,6 +42,31 @@
   .js .rv.in{ opacity:1; transform:none; }
   @media (prefers-reduced-motion:reduce){ .js .rv{opacity:1;transform:none;} }
 
+  /* ---------- readability additions ---------- */
+  section{ scroll-margin-top:70px; }
+  .nav{ display:flex; gap:1.15rem; font-size:.72rem; font-weight:600; letter-spacing:.04em; }
+  .nav a{ text-decoration:none; color:var(--fg-muted); transition:color .2s; white-space:nowrap; }
+  .nav a:hover{ color:var(--sage-deep); }
+  @media(max-width:1020px){ .nav{ display:none; } }
+  .subhead{ font-size:1.02rem; font-weight:800; letter-spacing:.01em; margin:0 0 .3rem; }
+  .twocol{ display:grid; grid-template-columns:1fr 1fr; gap:1.6rem 2.6rem; margin-top:2.2rem; max-width:900px; }
+  .twocol p{ font-size:.92rem; margin-top:.5rem; line-height:1.6; }
+  @media(max-width:720px){ .twocol{ grid-template-columns:1fr; } }
+  .steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:1.4rem 0 2.4rem; }
+  .step{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:.95rem 1.05rem; }
+  .step .sn{ font-size:.64rem; letter-spacing:.22em; color:var(--brass); font-weight:700; }
+  .step .st{ font-weight:800; font-size:.95rem; margin-top:.2rem; }
+  .step .sd{ font-size:.79rem; color:var(--fg-muted); margin-top:.25rem; line-height:1.45; }
+  @media(max-width:860px){ .steps{ grid-template-columns:repeat(2,1fr); } }
+  .docstrip{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:0 0 .5rem; }
+  .docstrip figure{ aspect-ratio:16/9; border-radius:8px; overflow:hidden; background:var(--cream-dim); }
+  .docstrip img{ width:100%; height:100%; object-fit:cover; }
+  .doccap{ font-size:.78rem; color:var(--fg-muted); margin:0 0 1.2rem; line-height:1.5; }
+  .terms .term{ background:var(--card); border:1px solid var(--line-soft); border-radius:14px; padding:1.2rem 1.35rem; }
+  .term li{ font-size:.92rem; margin-bottom:.55rem; }
+  table.cost td{ padding:.85rem 0; }
+  table.cost tr.tot td.p{ font-size:1.35rem; }
+
   /* ---------- topbar ---------- */
   .top{ position:sticky; top:0; z-index:50; background:rgba(244,239,227,.86);
     backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
@@ -213,6 +238,15 @@
 <header class="top">
   <div class="top__in">
     <a href="index.html" class="brand" style="text-decoration:none">Gardens <b>of</b> Eden</a>
+    <nav class="nav">
+      <a href="#approach" data-i18n="nav.1">Подход</a>
+      <a href="#frames" data-i18n="nav.2">Кадры</a>
+      <a href="#packages" data-i18n="nav.3">Смета</a>
+      <a href="#compare" data-i18n="nav.4">Сравнение</a>
+      <a href="#project" data-i18n="nav.5">Объект</a>
+      <a href="#terms" data-i18n="nav.6">Условия</a>
+      <a href="#team" data-i18n="nav.7">Команда</a>
+    </nav>
     <div class="top__ctrls">
       <div class="seg" id="lang">
         <button data-lang="ru" class="on">RU</button>
@@ -241,7 +275,7 @@
 </section>
 
 <!-- ===== APPROACH ===== -->
-<section>
+<section id="approach">
   <div class="wrap">
     <div class="sec-tag rv"><span class="n">01</span><h2 data-i18n="ap.h">Подход</h2></div>
     <p class="lead-lg rv" data-i18n="ap.lead">Мы делаем не promo-ролик, а <b>бренд-фильм уровня международного проекта</b>: с авторской режиссурой, кастингом главного героя-рассказчика, плёночным луком и продуманной драматургией. Это тот класс визуального высказывания, которым люксовый девелопмент отстраивается от рынка — и который работает в шоуруме, в digital и в продажах на годы вперёд.</p>
@@ -249,14 +283,25 @@
       <b data-i18n="ap.vb.t">Почему это премиальный уровень, а не съёмка «под ключ»</b>
       <p data-i18n="ap.vb.p">Полноценный съёмочный цех (оператор-постановщик, художник-постановщик, гримёр, стилист, свет, актёрский каст), кинооптика и профессиональный постпродакшн — монтаж, цветокоррекция под плёнку, звукорежиссура и CG. Отдельная ценность — бесшовный «лобби-луп» для шоурума и набор форматов под все площадки из одной съёмки.</p>
     </div>
+    <div class="twocol rv">
+      <div>
+        <div class="kicker" data-i18n="ap.get.h">Что вы получаете</div>
+        <p class="muted" data-i18n="ap.get.p">Готовый бренд-фильм 2:00 и — в расширенном пакете — документальный фильм-интервью о компании и системный контент для соцсетей. Все материалы — в форматах под шоурум, YouTube и вертикаль.</p>
+      </div>
+      <div>
+        <div class="kicker" data-i18n="ap.calc.h">Как мы считаем</div>
+        <p class="muted" data-i18n="ap.calc.p">Три статьи: креатив и управление проектом · съёмочный процесс и постпродакшн · аренда техники. Диапазон отражает сложность реализации — от базовой до максимальной постановочной.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ===== WHAT WE MAKE (film frames) ===== -->
-<section style="padding-top:0">
+<section id="frames" style="padding-top:0">
   <div class="wrap">
     <div class="sec-tag rv"><span class="n">02</span><h2 data-i18n="fr.h">Как это выглядит</h2></div>
-    <p class="muted rv" data-i18n="fr.sub" style="max-width:820px">Кадры из разработки: симметрия, фронтальные мизансцены, плёночный грейд Kodak Portra, сквозные герои и предметы. Единый визуальный язык для фильма, шоурума и соцсетей.</p>
+    <h3 class="subhead rv" data-i18n="fr.g1">Кадры из разработки</h3>
+    <p class="muted rv" data-i18n="fr.sub" style="max-width:820px">Симметрия, фронтальные мизансцены, плёночный грейд Kodak Portra, сквозные герои и предметы — единый визуальный язык для фильма, шоурума и соцсетей.</p>
     <div class="filmgrid rv">
       <figure><img loading="lazy" src="assets/film-squares/01-title-gates.jpg" alt="Title gates"></figure>
       <figure><img loading="lazy" src="assets/film-squares/04-main-character-portrait.jpg" alt="Concierge portrait"></figure>
@@ -267,7 +312,8 @@
       <figure><img loading="lazy" src="assets/film-squares/13-recurring-heroes-tableau.jpg" alt="Recurring heroes tableau"></figure>
       <figure><img loading="lazy" src="assets/film-squares/15-final-project-vision.jpg" alt="Final project vision"></figure>
     </div>
-    <p class="muted rv" data-i18n="cc.sub" style="max-width:820px;margin-top:2.4rem">Главный герой — консьерж-рассказчик, «месье Густав» этого фильма: один и тот же персонаж во всех главах, показывает сервис руками.</p>
+    <h3 class="subhead rv" data-i18n="cc.h" style="margin-top:2.8rem">Главный герой — консьерж-рассказчик</h3>
+    <p class="muted rv" data-i18n="cc.sub" style="max-width:820px">«Месье Густав» этого фильма: один и тот же персонаж во всех главах, показывает сервис руками.</p>
     <div class="strip rv">
       <figure><img loading="lazy" src="assets/concierge/concierge-open.jpg" alt="Concierge"></figure>
       <figure><img loading="lazy" src="assets/concierge/concierge-soup.jpg" alt="Concierge kitchen"></figure>
@@ -280,9 +326,16 @@
 </section>
 
 <!-- ===== PACKAGES ===== -->
-<section class="pkgs">
+<section id="packages" class="pkgs">
   <div class="wrap">
     <div class="sec-tag rv"><span class="n">03</span><h2 data-i18n="pk.h">Пакеты и смета</h2></div>
+    <p class="muted rv" data-i18n="pk.intro" style="max-width:820px">Обе сметы собраны из трёх статей: креатив и управление · съёмка и постпродакшн · техника. Как устроена работа:</p>
+    <div class="steps rv">
+      <div class="step"><div class="sn">01</div><div class="st" data-i18n="st1.t">Препродакшн</div><div class="sd" data-i18n="st1.d">Сценарий, кастинг, локации, съёмочный план</div></div>
+      <div class="step"><div class="sn">02</div><div class="st" data-i18n="st2.t">Съёмочный блок</div><div class="sd" data-i18n="st2.d">Смены на объекте и по Пхукету</div></div>
+      <div class="step"><div class="sn">03</div><div class="st" data-i18n="st3.t">Постпродакшн</div><div class="sd" data-i18n="st3.d">Монтаж, цвет, звук, CG</div></div>
+      <div class="step"><div class="sn">04</div><div class="st" data-i18n="st4.t">Сдача</div><div class="sd" data-i18n="st4.d">Мастера во всех форматах + правки</div></div>
+    </div>
 
     <!-- Package I -->
     <article class="pkg rv">
@@ -300,20 +353,20 @@
         </div>
         <table class="cost">
           <tr>
-            <td data-i18n="row.creative">Креатив и управление проектом<span class="d" data-i18n="row.creative.d">Разработка креатива и сценария, режиссура, продюсирование (Лелеков / Капля)</span></td>
+            <td><span data-i18n="row.creative">Креатив и управление проектом</span><span class="d" data-i18n="row.creative.d">Разработка креатива и сценария, режиссура, продюсирование (Лелеков / Капля)</span></td>
             <td class="p num price" data-thb="1 000 000 ฿" data-usd="$29,000">1 000 000 ฿</td>
           </tr>
           <tr>
-            <td data-i18n="row.prod">Съёмочный процесс и постпродакшн<span class="d" data-i18n="row.prod.d">Съёмочная группа, актёры, монтаж, цвет, звук, CG</span></td>
+            <td><span data-i18n="row.prod">Съёмочный процесс и постпродакшн</span><span class="d" data-i18n="row.prod.d">Съёмочная группа, актёры, монтаж, цвет, звук, CG</span></td>
             <td class="p num price" data-thb="500 000 – 2 000 000 ฿" data-usd="$14,000 – 57,000">500 000 – 2 000 000 ฿</td>
           </tr>
           <tr>
-            <td data-i18n="row.gear">Аренда техники<span class="d" data-i18n="row.gear.d">Кинокамеры, оптика, свет</span></td>
+            <td><span data-i18n="row.gear">Аренда техники</span><span class="d" data-i18n="row.gear.d">Кинокамеры, оптика, свет</span></td>
             <td class="p num price" data-thb="~100 000 ฿" data-usd="~$3,000">~100 000 ฿</td>
           </tr>
           <tr class="tot">
             <td data-i18n="row.total">Итого по пакету</td>
-            <td class="p num price" data-thb="1,6 – 3,1 млн ฿" data-usd="$46,000 – 89,000">1,6 – 3,1 млн ฿</td>
+            <td class="p num price" data-thb="1,6 – 3,1 млн ฿" data-thb-en="1.6 – 3.1M ฿" data-usd="$46,000 – 89,000">1,6 – 3,1 млн ฿</td>
           </tr>
         </table>
         <div class="pkg__meta">
@@ -326,33 +379,39 @@
 
     <!-- Package II -->
     <article class="pkg rv">
-      <div class="pkg__media" style="background-image:url('assets/concierge/concierge-soup.jpg')">
+      <div class="pkg__media" style="background-image:url('assets/interview/interview-1.jpg')">
         <div class="pkg__badge" data-i18n="pk2.badge">Пакет II</div>
       </div>
       <div class="pkg__body">
         <div class="pkg__name" data-i18n="pk2.name">Ролик · Фильм о компании · Контент</div>
-        <div class="pkg__sub" data-i18n="pk2.sub">Полная контент-система: бренд-фильм, документальный фильм и соцсети · срок 6 месяцев</div>
+        <div class="pkg__sub" data-i18n="pk2.sub">Полная контент-система: бренд-фильм, документальный фильм-интервью о компании и соцсети · срок 6 месяцев</div>
         <div class="chips">
           <span class="chip" data-i18n="pk2.c1">Бренд-фильм 2:00 + форматы</span>
-          <span class="chip" data-i18n="pk2.c2">Документальный фильм до 10:00</span>
+          <span class="chip" data-i18n="pk2.c2">Фильм-интервью до 10:00</span>
           <span class="chip" data-i18n="pk2.c3">10–15 роликов для Reels</span>
         </div>
+        <div class="docstrip">
+          <figure><img loading="lazy" src="assets/interview/interview-3.jpg" alt="Interview format reference"></figure>
+          <figure><img loading="lazy" src="assets/interview/interview-5.jpg" alt="Interview format reference"></figure>
+          <figure><img loading="lazy" src="assets/interview/interview-6.jpg" alt="Interview format reference"></figure>
+        </div>
+        <p class="doccap" data-i18n="pk2.doccap">Фильм о компании — тёплый формат интервью: люди проекта говорят своими словами, между ними — фактура места (референсы формата).</p>
         <table class="cost">
           <tr>
-            <td data-i18n="row.creative2">Креатив и управление проектом<span class="d" data-i18n="row.creative2.d">Разработка, режиссура и продюсирование всей контент-системы (Лелеков / Капля)</span></td>
+            <td><span data-i18n="row.creative2">Креатив и управление проектом</span><span class="d" data-i18n="row.creative2.d">Разработка, режиссура и продюсирование всей контент-системы (Лелеков / Капля)</span></td>
             <td class="p num price" data-thb="1 500 000 ฿" data-usd="$43,000">1 500 000 ฿</td>
           </tr>
           <tr>
-            <td data-i18n="row.prod">Съёмочный процесс и постпродакшн<span class="d" data-i18n="row.prod2.d">Съёмочная группа и постпродакшн по всем деливераблам</span></td>
+            <td><span data-i18n="row.prod">Съёмочный процесс и постпродакшн</span><span class="d" data-i18n="row.prod2.d">Съёмочная группа и постпродакшн по всем деливераблам</span></td>
             <td class="p num price" data-thb="1 000 000 – 2 500 000 ฿" data-usd="$29,000 – 71,000">1 000 000 – 2 500 000 ฿</td>
           </tr>
           <tr>
-            <td data-i18n="row.gear">Аренда техники<span class="d" data-i18n="row.gear.d">Кинокамеры, оптика, свет</span></td>
+            <td><span data-i18n="row.gear">Аренда техники</span><span class="d" data-i18n="row.gear.d">Кинокамеры, оптика, свет</span></td>
             <td class="p num price" data-thb="~200 000 ฿" data-usd="~$6,000">~200 000 ฿</td>
           </tr>
           <tr class="tot">
             <td data-i18n="row.total">Итого по пакету</td>
-            <td class="p num price" data-thb="2,7 – 4,2 млн ฿" data-usd="$77,000 – 120,000">2,7 – 4,2 млн ฿</td>
+            <td class="p num price" data-thb="2,7 – 4,2 млн ฿" data-thb-en="2.7 – 4.2M ฿" data-usd="$77,000 – 120,000">2,7 – 4,2 млн ฿</td>
           </tr>
         </table>
         <div class="pkg__meta">
@@ -368,7 +427,7 @@
 </section>
 
 <!-- ===== COMPARE ===== -->
-<section>
+<section id="compare">
   <div class="wrap">
     <div class="sec-tag rv"><span class="n">04</span><h2 data-i18n="cmp.h">Сравнение пакетов</h2></div>
     <div class="cmp-wrap rv">
@@ -385,13 +444,13 @@
           <tr><td class="lab" data-i18n="cmp.r1">Бренд-фильм 2:00 (+ форматы)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
           <tr><td class="lab" data-i18n="cmp.r2">Лобби-луп для шоурума</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
           <tr><td class="lab" data-i18n="cmp.r3">Катдауны 0:30 / 0:15 + 9:16</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-          <tr><td class="lab" data-i18n="cmp.r4">Документальный фильм (до 10:00)</td><td class="c no">—</td><td class="c yes">✓</td></tr>
+          <tr><td class="lab" data-i18n="cmp.r4">Документальный фильм-интервью (до 10:00)</td><td class="c no">—</td><td class="c yes">✓</td></tr>
           <tr><td class="lab" data-i18n="cmp.r5">Контент для соцсетей (10–15 Reels)</td><td class="c no">—</td><td class="c yes">✓</td></tr>
           <tr><td class="lab" data-i18n="cmp.r6">Срок реализации</td><td class="c" data-i18n="pk1.term">3 месяца</td><td class="c" data-i18n="pk2.term">6 месяцев</td></tr>
           <tr class="sum">
             <td class="lab" style="color:var(--fg)" data-i18n="cmp.budget"><b>Ориентировочный бюджет</b></td>
-            <td class="c"><span class="price num" data-thb="1,6 – 3,1 млн ฿" data-usd="$46–89k">1,6 – 3,1 млн ฿</span></td>
-            <td class="c"><span class="price num" data-thb="2,7 – 4,2 млн ฿" data-usd="$77–120k">2,7 – 4,2 млн ฿</span></td>
+            <td class="c"><span class="price num" data-thb="1,6 – 3,1 млн ฿" data-thb-en="1.6 – 3.1M ฿" data-usd="$46–89k">1,6 – 3,1 млн ฿</span></td>
+            <td class="c"><span class="price num" data-thb="2,7 – 4,2 млн ฿" data-thb-en="2.7 – 4.2M ฿" data-usd="$77–120k">2,7 – 4,2 млн ฿</span></td>
           </tr>
         </tbody>
       </table>
@@ -404,7 +463,7 @@
 </section>
 
 <!-- ===== THE PROJECT ===== -->
-<section class="proj">
+<section id="project" class="proj">
   <div class="wrap">
     <div class="sec-tag rv"><span class="n">05</span><h2 data-i18n="proj.h">Объект</h2></div>
     <p class="rv" data-i18n="proj.sub" style="max-width:820px;color:rgba(244,239,227,.85)">Люксовые брендовые резиденции на Банг Тао: три жилые фазы и Etro Residences, инфинити-пул с видом на Андаманское море, 24/7-консьерж. Награды за архитектуру и интеграцию с природой.</p>
@@ -423,7 +482,7 @@
 </section>
 
 <!-- ===== TERMS ===== -->
-<section>
+<section id="terms">
   <div class="wrap">
     <div class="sec-tag rv"><span class="n">06</span><h2 data-i18n="tr.h">Условия сотрудничества</h2></div>
     <div class="terms rv">
@@ -478,7 +537,7 @@
 </section>
 
 <!-- ===== TEAM ===== -->
-<section style="background:var(--cream-dim)">
+<section id="team" style="background:var(--cream-dim)">
   <div class="wrap">
     <div class="sec-tag rv"><span class="n">07</span><h2 data-i18n="tm.h">Команда</h2></div>
     <div class="team rv">
@@ -537,6 +596,7 @@
     ru:{}, // RU is the source in HTML; filled below for round-trip
     en:{
       "pdf":"Download PDF",
+      "nav.1":"Approach","nav.2":"Frames","nav.3":"Estimate","nav.4":"Compare","nav.5":"The project","nav.6":"Terms","nav.7":"Team",
       "hero.kick":"Commercial proposal · Brand content production",
       "hero.thin":"Brand film",
       "hero.lead":"An international-grade brand film in the style of “Grand Budapest on Bang Tao”: service shown, not named — a legendary concierge-narrator answers one question in two minutes: “what is Gardens of Eden?”",
@@ -545,16 +605,28 @@
       "ap.lead":"This is not a promo clip but a <b>brand film at international-project level</b>: authored direction, casting of the lead narrator, a film look and considered dramaturgy. It is the class of visual statement luxury development uses to stand apart — and it works in the showroom, in digital and in sales for years.",
       "ap.vb.t":"Why this is a premium level, not a turnkey shoot",
       "ap.vb.p":"A full production crew (DoP, production designer, make-up, stylist, lighting, cast), cine glass and professional post — edit, film-grade color, sound design and CG. A separate value is the seamless silent “lobby loop” for the showroom and a full set of formats from a single shoot.",
+      "ap.get.h":"What you get",
+      "ap.get.p":"A finished 2:00 brand film and — in the extended package — an interview documentary about the company plus systematic social content. All materials delivered in formats for the showroom, YouTube and vertical.",
+      "ap.calc.h":"How we price",
+      "ap.calc.p":"Three lines: creative & project management · production & post · equipment rental. The range reflects staging complexity — from basic to maximum.",
       "fr.h":"How it looks",
-      "fr.sub":"Frames from development: symmetry, frontal staging, a Kodak Portra film grade, recurring characters and objects. One visual language for the film, the showroom and social.",
-      "cc.sub":"The lead is the concierge-narrator, this film’s “Monsieur Gustave”: the same character across every chapter, showing service with his own hands.",
+      "fr.g1":"Frames from development",
+      "fr.sub":"Symmetry, frontal staging, a Kodak Portra film grade, recurring characters and objects — one visual language for the film, the showroom and social.",
+      "cc.h":"The lead — a concierge-narrator",
+      "cc.sub":"This film’s “Monsieur Gustave”: the same character across every chapter, showing service with his own hands.",
       "pk.h":"Packages & estimate",
+      "pk.intro":"Both estimates are built from three lines: creative & management · production & post · equipment. How the work is structured:",
+      "st1.t":"Pre-production","st1.d":"Script, casting, locations, shoot plan",
+      "st2.t":"Shoot block","st2.d":"Days on site and across Phuket",
+      "st3.t":"Post-production","st3.d":"Edit, color, sound, CG",
+      "st4.t":"Delivery","st4.d":"Masters in all formats + revisions",
       "pk1.badge":"Package I","pk1.name":"Advertising film",
       "pk1.sub":"A 2:00 brand film · delivery in 3 months",
       "pk1.c1":"2:00 master with sound","pk1.c2":"Lobby loop for the showroom","pk1.c3":"Cutdowns 0:30 / 0:15","pk1.c4":"Vertical 9:16",
       "pk2.badge":"Package II","pk2.name":"Film · Company film · Content",
-      "pk2.sub":"A full content system: brand film, documentary and social · 6 months",
-      "pk2.c1":"2:00 brand film + formats","pk2.c2":"Documentary up to 10:00","pk2.c3":"10–15 Reels clips",
+      "pk2.sub":"A full content system: brand film, an interview documentary about the company and social · 6 months",
+      "pk2.c1":"2:00 brand film + formats","pk2.c2":"Interview film up to 10:00","pk2.c3":"10–15 Reels clips",
+      "pk2.doccap":"The company film is a warm interview format: the people of the project speak in their own words, with the texture of the place in between (format references).",
       "row.creative":"Creative & project management","row.creative.d":"Creative & script development, direction, producing (Lelekov / Kaplya)",
       "row.creative2":"Creative & project management","row.creative2.d":"Development, direction and producing of the whole content system (Lelekov / Kaplya)",
       "row.prod":"Production & post-production","row.prod.d":"Crew, cast, edit, color, sound, CG","row.prod2.d":"Crew and post across all deliverables",
@@ -567,7 +639,7 @@
       "pk.disc":"Every figure is a range depending on the number of shoot days, the pool of specialists and the amount of CG. The final estimate is fixed after the script and shoot plan are approved.",
       "cmp.h":"Package comparison","cmp.pk2":"Film · Documentary · Content",
       "cmp.r1":"Brand film 2:00 (+ formats)","cmp.r2":"Lobby loop for the showroom","cmp.r3":"Cutdowns 0:30 / 0:15 + 9:16",
-      "cmp.r4":"Documentary (up to 10:00)","cmp.r5":"Social content (10–15 Reels)","cmp.r6":"Timeline",
+      "cmp.r4":"Interview documentary (up to 10:00)","cmp.r5":"Social content (10–15 Reels)","cmp.r6":"Timeline",
       "cmp.budget":"<b>Indicative budget</b>",
       "cmp.rec.t":"Recommendation",
       "cmp.rec.p":"For the Q4 2026 handover, Package II is optimal: in a single production wave you get the flagship brand film, the company documentary and a systematic stream of short clips — with one direction and a shared visual language. Package I is a point solution if only the flagship film is needed now.",
@@ -627,11 +699,14 @@
       if(v != null) el.innerHTML = v;
     });
     document.querySelectorAll('#lang button').forEach(function(b){ b.classList.toggle('on', b.dataset.lang===l); });
+    applyCur(state.cur);
   }
   function applyCur(c){
     state.cur = c; localStorage.setItem('goe_cur', c);
     prices.forEach(function(el){
-      var v = c==='usd' ? el.getAttribute('data-usd') : el.getAttribute('data-thb');
+      var v;
+      if(c==='usd'){ v = el.getAttribute('data-usd'); }
+      else { v = (state.lang==='en' && el.getAttribute('data-thb-en')) || el.getAttribute('data-thb'); }
       if(v) el.textContent = v;
     });
     document.querySelectorAll('#cur button').forEach(function(b){ b.classList.toggle('on', b.dataset.cur===c); });
