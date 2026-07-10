@@ -140,6 +140,8 @@
   .pkg__body{ padding:clamp(1.4rem,3vw,2.2rem); }
   .pkg__name{ font-size:clamp(1.4rem,2.6vw,1.9rem); font-weight:800; letter-spacing:-.01em; line-height:1.1; }
   .pkg__sub{ color:var(--fg-muted); margin:.4rem 0 1.1rem; font-size:.95rem; }
+  .hl-term{ display:inline-block; font-weight:700; font-style:normal; color:var(--sage-ink);
+    background:var(--mango); border-radius:999px; padding:.16rem .7rem; margin-left:.15rem; }
   .chips{ display:flex; flex-wrap:wrap; gap:.4rem; margin-bottom:1.2rem; }
   .chip{ font-size:.72rem; font-weight:600; padding:.34rem .7rem; border-radius:999px;
     background:rgba(91,111,91,.1); color:var(--sage-deep); border:1px solid var(--line-soft); }
@@ -350,7 +352,7 @@
       </div>
       <div class="pkg__body">
         <div class="pkg__name" data-i18n="pk1.name">Рекламный ролик</div>
-        <div class="pkg__sub" data-i18n="pk1.sub">Бренд-фильм хронометражом 2:00 · срок реализации 3 месяца</div>
+        <div class="pkg__sub" data-i18n="pk1.sub">Бренд-фильм хронометражом 2:00 · <span class="hl-term">срок реализации 3–4 месяца</span></div>
         <div class="chips">
           <span class="chip" data-i18n="pk1.c1">Мастер 2:00 со звуком</span>
           <span class="chip" data-i18n="pk1.c2">Лобби-луп для шоурума</span>
@@ -393,7 +395,7 @@
           </tr>
         </table>
         <div class="pkg__meta">
-          <div><div class="k" data-i18n="m.term">Срок</div><div class="v" data-i18n="pk1.term">3 месяца</div></div>
+          <div><div class="k" data-i18n="m.term">Срок</div><div class="v" data-i18n="pk1.term"><b>3–4 месяца</b></div></div>
           <div><div class="k" data-i18n="m.res">Результат</div><div class="v" data-i18n="pk1.res">Бренд-фильм 2:00 + форматы</div></div>
         </div>
         <div class="crewline"><b data-i18n="m.crew">Команда</b> · <span data-i18n="crew.list">оператор-постановщик · художник-постановщик · гримёр · стилист · кастинг · актёры · свет · монтажёр · колорист · звукорежиссёр · CG</span></div>
@@ -469,7 +471,7 @@
           <tr><td class="lab" data-i18n="cmp.r3">Катдауны 0:30 / 0:15 + 9:16</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
           <tr><td class="lab" data-i18n="cmp.r4">Документальный фильм-интервью (до 10:00)</td><td class="c no">—</td><td class="c yes">✓</td></tr>
           <tr><td class="lab" data-i18n="cmp.r5">Контент для соцсетей (10–15 Reels)</td><td class="c no">—</td><td class="c yes">✓</td></tr>
-          <tr><td class="lab" data-i18n="cmp.r6">Срок реализации</td><td class="c" data-i18n="pk1.term">3 месяца</td><td class="c" data-i18n="pk2.term">6 месяцев</td></tr>
+          <tr><td class="lab" data-i18n="cmp.r6">Срок реализации</td><td class="c" data-i18n="pk1.term"><b>3–4 месяца</b></td><td class="c" data-i18n="pk2.term">6 месяцев</td></tr>
           <tr class="sum">
             <td class="lab" style="color:var(--fg)" data-i18n="cmp.budget"><b>Ориентировочный бюджет</b></td>
             <td class="c"><span class="price num" data-thb="1,6 – 3,1 млн ฿" data-thb-en="1.6 – 3.1M ฿" data-usd="$46–89k">1,6 – 3,1 млн ฿</span></td>
@@ -643,7 +645,7 @@
       "st3.t":"Post-production","st3.d":"Edit, color, sound, CG",
       "st4.t":"Delivery","st4.d":"Masters in all formats + revisions",
       "pk1.badge":"Package I","pk1.name":"Advertising film",
-      "pk1.sub":"A 2:00 brand film · delivery in 3 months",
+      "pk1.sub":"A 2:00 brand film · <span class='hl-term'>delivery in 3–4 months</span>",
       "pk1.c1":"2:00 master with sound","pk1.c2":"Lobby loop for the showroom","pk1.c3":"Cutdowns 0:30 / 0:15","pk1.c4":"Vertical 9:16",
       "pk2.badge":"Package II","pk2.name":"Film · Company film · Content",
       "pk2.sub":"A full content system: brand film, an interview documentary about the company and social · 6 months",
@@ -656,7 +658,7 @@
       "row.total":"Package total",
       "m.term":"Timeline","m.res":"Result","m.crew":"Crew",
       "crew.list":"DoP · production designer · make-up · stylist · casting · cast · lighting · editor · colorist · sound · CG",
-      "pk1.term":"3 months","pk1.res":"Brand film 2:00 + formats",
+      "pk1.term":"<b>3–4 months</b>","pk1.res":"Brand film 2:00 + formats",
       "pk2.term":"6 months","pk2.res":"Film + doc + 10–15 Reels",
       "pk.disc":"Every figure is a range depending on the number of shoot days, the pool of specialists and the amount of CG. The final estimate is fixed after the script and shoot plan are approved.",
       "cmp.h":"Package comparison","cmp.pk2":"Film · Documentary · Content",
