@@ -631,6 +631,7 @@ body.bird-dragging { user-select: none; -webkit-user-select: none; cursor: grabb
   display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: clamp(0.7rem, 1.5vw, 1rem); margin-top: 1.6rem;
 }
+@media (max-width: 520px) { .usps { grid-template-columns: 1fr; } }
 .usp {
   border: 1px solid var(--line); border-radius: var(--radius);
   padding: 0.9rem 1.05rem; background: var(--bg);
