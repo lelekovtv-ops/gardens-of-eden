@@ -266,7 +266,7 @@
       "s10.title": "YouTube",
       "s10.lead": "A channel that builds demand for “life on Phuket” — and makes Gardens of Eden its answer.",
       "s10.f1": "Project overview films", "s10.f2": "Bang Tao neighbourhood guides",
-      "s10.f3": "“Why Phuket” — investor explainers", "s10.f4": "Construction vlog until handover",
+      "s10.f3": "“Why Phuket” — investor explainers", "s10.f4": "Construction vlog",
       "s10.f5": "Interviews with the team behind the project",
       "s10.metaLabel": "Cadence:", "s10.meta": "2–4 videos per month.",
 
@@ -290,11 +290,11 @@
       "s13.f4": "Broker & agency kit",
 
       "s14.title": "The site on camera",
-      "s14.lead": "Video that shows the development itself — and keeps trust alive until handover in Q4 2026.",
+      "s14.lead": "Video that shows the development itself — and keeps trust alive through construction.",
       "s14.f1": "Drone overview of Bang Tao and the site",
       "s14.f2": "Unit tours by type",
       "s14.f3": "Monthly construction updates",
-      "s14.f4": "Buyer testimonials after handover",
+      "s14.f4": "Buyer testimonials",
 
       "s15.title": "Packages",
       "s15.lead": "The full line-up of packages and the detailed estimate live in the commercial proposal.",
@@ -574,7 +574,7 @@
       "s10.title": "YouTube",
       "s10.lead": "Канал, который создаёт спрос на «жизнь на Пхукете» — и делает Gardens of Eden ответом.",
       "s10.f1": "Обзорные фильмы о проекте", "s10.f2": "Гиды по району Банг Тао",
-      "s10.f3": "«Почему Пхукет» — ролики для инвесторов", "s10.f4": "Влог стройки до сдачи",
+      "s10.f3": "«Почему Пхукет» — ролики для инвесторов", "s10.f4": "Влог стройки",
       "s10.f5": "Интервью с командой проекта",
       "s10.metaLabel": "Ритм:", "s10.meta": "2–4 видео в месяц.",
 
@@ -598,11 +598,11 @@
       "s13.f4": "Пакет для брокеров и агентств",
 
       "s14.title": "Объект в кадре",
-      "s14.lead": "Видео, которое показывает сам объект — и держит доверие до сдачи в Q4 2026.",
+      "s14.lead": "Видео, которое показывает сам объект — и держит доверие на всём протяжении стройки.",
       "s14.f1": "Дрон-обзор Банг Тао и объекта",
       "s14.f2": "Туры по юнитам по типам",
       "s14.f3": "Ежемесячные стройка-апдейты",
-      "s14.f4": "Отзывы покупателей после сдачи",
+      "s14.f4": "Отзывы покупателей",
 
       "s15.title": "Пакеты",
       "s15.lead": "Полный состав пакетов и подробная смета — в коммерческом предложении.",
