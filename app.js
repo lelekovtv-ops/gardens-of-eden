@@ -297,7 +297,8 @@
       "s14.f4": "Buyer testimonials after handover",
 
       "s15.title": "Packages",
-      "s15.lead": "Three ways to start — from the flagship film alone to the full content system.",
+      "s15.lead": "The full line-up of packages and the detailed estimate live in the commercial proposal.",
+      "s15.open": "Open the proposal — packages & estimate →",
       "s15.from": "from", "s15.choose": "Choose", "s15.popular": "Most chosen",
       "s15.t1Name": "Films",
       "s15.t1i1": "Flagship film 2:00 + lobby loop", "s15.t1i2": "Company film (founders)",
@@ -604,7 +605,8 @@
       "s14.f4": "Отзывы покупателей после сдачи",
 
       "s15.title": "Пакеты",
-      "s15.lead": "Три способа начать — от одного флагманского фильма до полной контент-системы.",
+      "s15.lead": "Полный состав пакетов и подробная смета — в коммерческом предложении.",
+      "s15.open": "Открыть КП — пакеты и смета →",
       "s15.from": "от", "s15.choose": "Выбрать", "s15.popular": "Чаще выбирают",
       "s15.t1Name": "Фильмы",
       "s15.t1i1": "Флагманский фильм 2:00 + лобби-луп", "s15.t1i2": "Фильм о компании (основатели)",
