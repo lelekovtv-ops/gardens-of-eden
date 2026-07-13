@@ -30,6 +30,8 @@
 
       "s02.kicker": "About us · BPM media × Happy People",
       "s02.mebadge": "Founder · Creative producer",
+      "s02.melead_s": "Fifteen years in production — director, DP and content producer. Top-15 in Moscow, shooting for international brands. Founder of BPM Media on Phuket and of Piece — an operating system for video production.",
+      "s02.p5bio_s": "A visionary with 20 years in film. 30+ international festivals, films shown in 50 countries, 200+ delivered projects — leading creative teams at international scale.",
       "s02.mespec": "Director · DP · Content producer",
       "s02.melead": "Fifteen years in production — trained as a motion designer, screenwriter, director and cinematographer. Ranked Top-15 in Moscow by Russia's videographers' association, shooting for international brands and large-scale events across dozens of countries.",
       "s02.menow": "Four years on Phuket: founded BPM Media — the island's leading podcast studio — and became a content producer, including for real-estate sales. He reads both the Russian and international content markets first-hand, speaks at business-community events, and is building Piece — an operating system for video production, from Phuket to the world.",
@@ -335,6 +337,8 @@
 
       "s02.kicker": "О нас · BPM media × Happy People",
       "s02.mebadge": "Основатель · Креативный продюсер",
+      "s02.melead_s": "Пятнадцать лет в продакшене — режиссёр, оператор и продюсер контента. Топ-15 Москвы, съёмки для международных брендов. Основатель BPM Media на Пхукете и Piece — операционной системы для видеопроизводства.",
+      "s02.p5bio_s": "Визионер с 20-летним опытом в кино. 30+ международных фестивалей, показы в 50 странах, 200+ реализованных проектов — во главе творческих команд международного уровня.",
       "s02.mespec": "Режиссёр · Оператор · Продюсер контента",
       "s02.melead": "Пятнадцать лет в продакшене — школа моушн-дизайна, сценаристики, режиссуры и операторского мастерства. Входил в топ-15 Москвы в ассоциации лучших видеографов России, снимал для международных брендов и крупных мероприятий в десятках стран.",
       "s02.menow": "Четыре года на Пхукете: основал BPM Media — лучшую подкаст-студию острова — и стал продюсером контента, в том числе для продаж недвижимости. Хорошо знает и российский, и международный рынок контента, выступает на мероприятиях бизнес-сообщества и строит Piece — операционную систему для видеопроизводства, от Пхукета до всего мира.",

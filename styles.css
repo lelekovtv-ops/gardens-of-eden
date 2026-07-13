@@ -550,6 +550,26 @@ body.bird-dragging { user-select: none; -webkit-user-select: none; cursor: grabb
 .frameimg--portrait { aspect-ratio: 4 / 5; }
 .frameimg--portrait img { object-position: center 18%; }
 
+/* --- Founders — Alexander & Maxim on one page --- */
+.founders {
+  flex: 0 0 100%; width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(1.6rem, 4vw, 3.2rem); align-items: start;
+}
+.founder {
+  display: grid; grid-template-columns: minmax(140px, 190px) 1fr;
+  gap: clamp(1rem, 2vw, 1.5rem); align-items: center;
+}
+.founder .frameimg { aspect-ratio: 4 / 5; max-height: 44vh; }
+.founder .frameimg img { object-position: center 20%; }
+.founder__body .concept__title { font-size: clamp(1.25rem, 2.3vw, 1.85rem); margin: 0.45rem 0 0.12rem; }
+.founder__body .spec { margin: 0 0 0.7rem; }
+.founder__body .lead { font-size: clamp(0.85rem, 1.05vw, 0.97rem); line-height: 1.5; }
+@media (max-width: 900px) {
+  .founders { grid-template-columns: 1fr; gap: 1.6rem; }
+  .founder { grid-template-columns: minmax(120px, 160px) 1fr; }
+}
+
 /* --- Poster wall (Recognition page) --- */
 .posters {
   display: grid; grid-template-columns: repeat(6, 1fr);
